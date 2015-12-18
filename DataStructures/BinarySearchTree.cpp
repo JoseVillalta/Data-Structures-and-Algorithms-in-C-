@@ -205,3 +205,48 @@ void BST::TraceInderOrder(TreeNode * node)
     }
     cout << "U";
 }
+
+void BST::Display()
+{
+    cout << "node->data\t";
+    cout << "left->data\t";
+    cout << "right->data\t";
+    cout << endl;
+    cout << "==========\t";
+    cout << "==========\t";
+    cout << "==========\t";
+    cout << endl;
+
+
+
+    DisplayPreOrder(m_root);
+}
+
+void BST::DisplayPreOrder(TreeNode * node)
+{
+    if (node != nullptr)
+    {
+        cout << node->data;
+        if (node->left != nullptr)
+        {
+            cout << "\t\t" << node->left->data;
+        }
+        else
+        {
+            cout << "\t\t-";
+        }
+
+        if (node->right != nullptr)
+        {
+            cout << "\t\t" << node->right->data;
+        }
+        else
+        {
+            cout << "\t\t-";
+        }
+        cout << endl;
+
+        DisplayPreOrder(node->left);
+        DisplayPreOrder(node->right);
+    }
+}

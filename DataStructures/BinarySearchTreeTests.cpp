@@ -125,4 +125,7 @@ void BSTTests::InOrderTraverseTest()
     cout << "Trace in Order" << endl;
     tree->Trace();
     cout << "***********************" << endl;
+    cout << "Display Pre Order" << endl;
+    tree->Display();
+    cout << "***********************" << endl;
 }
