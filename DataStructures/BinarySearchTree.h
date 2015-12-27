@@ -14,9 +14,11 @@ public:
     void TraverseInOrder();
     void TraversePreOrder();
     void TraversePostOrder();
+    void InOrder();
     void Trace();
     void Display();
     int Height();
+    int LeafCount();
 
 
 private:
@@ -25,6 +27,7 @@ private:
     TreeNode * SearchNode(TreeNode * root, int key);
     int RecLevelNode(TreeNode * root, int key);
     int HeightNode(TreeNode * root);
+    int LeafCountNode(TreeNode * root);
     void InOrderTrav(TreeNode * root);
     void PreOrderTrav(TreeNode * root);
     void PostOrderTrav(TreeNode * root);

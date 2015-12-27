@@ -1,6 +1,7 @@
 #include "BinarySearchTree.h"
 #include <iostream>
 #include <algorithm>
+#include <stack>
 using namespace std;
 
 BST::BST()
@@ -249,4 +250,50 @@ void BST::DisplayPreOrder(TreeNode * node)
         DisplayPreOrder(node->left);
         DisplayPreOrder(node->right);
     }
+}
+
+int BST::LeafCount()
+{
+    return LeafCountNode(m_root);
+}
+
+int BST::LeafCountNode(TreeNode * node)
+{
+    if (node == nullptr) return 0;
+    if ((node->left == nullptr) && (node->right == nullptr)) return 1;
+
+    return LeafCountNode(node->left) + LeafCountNode(node->right);
+}
+
+void BST::InOrder()
+{
+    auto node = m_root;
+    stack<TreeNode*> stack;
+    if (node == nullptr) return;
+
+    stack.push(node);
+
+    while (!stack.empty()) 
+    {
+        while (node->left != nullptr)
+        {
+            stack.push(node);
+            node = node->left;          
+        }
+      
+        cout << node->data << " ";    
+
+        while (node->right == nullptr)
+        {        
+            node = stack.top();
+            stack.pop();
+            cout << node->data << " ";
+        }
+        if (node->right != nullptr)
+        {
+            node = node->right;          
+        }
+  
+    }
+
 }

@@ -12,4 +12,6 @@ private:
    void InOrderTraverseTest();
    void PreOrderTraverseTest();
    void PostOrderTraverseTest();
+   void LeafCountTest();
+   void InOrderTest();
 };

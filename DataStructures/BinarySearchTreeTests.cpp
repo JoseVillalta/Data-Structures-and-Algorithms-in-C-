@@ -10,6 +10,8 @@ void BSTTests::DoTests()
     RecLevelTest();
     HeightTest();
     InOrderTraverseTest();
+    LeafCountTest();
+    InOrderTest();
 }
 
 void BSTTests::SearchTests()
@@ -128,4 +130,77 @@ void BSTTests::InOrderTraverseTest()
     cout << "Display Pre Order" << endl;
     tree->Display();
     cout << "***********************" << endl;
+}
+
+void BSTTests::LeafCountTest()
+{
+    cout << "********************************" << endl;
+    cout << "          Leaf Count Test       " << endl;
+    cout << "********************************" << endl;
+
+    auto tree = new BST();
+    tree->Insert(50);
+    tree->Insert(15);
+    tree->Insert(62);
+    tree->Insert(5);
+    tree->Insert(20);
+    tree->Insert(58);
+    tree->Insert(91);
+    tree->Insert(3);
+    tree->Insert(8);
+    tree->Insert(37);
+    tree->Insert(24);
+    tree->Insert(60);
+
+    auto leafCount = tree->LeafCount();
+    _ASSERT(leafCount == 5);
+
+    cout << "********************************" << endl;
+    cout << "        LEAF COUNT TEST PASS    " << endl;
+    cout << "********************************" << endl;
+
+
+
+}
+
+void BSTTests::InOrderTest()
+{
+    cout << "*************************************" << endl;
+    cout << "Non Recursive in Order Traversal Test" << endl;
+    cout << "*************************************" << endl;
+
+    auto tree = new BST();
+    tree->Insert(50);
+    tree->Insert(15);
+    tree->Insert(62);
+    tree->Insert(5);
+    tree->Insert(20);
+    tree->Insert(58);
+    tree->Insert(91);
+    tree->Insert(3);
+    tree->Insert(8);
+    tree->Insert(37);
+    tree->Insert(24);
+    tree->Insert(60);
+
+    tree->InOrder();
+    cout << endl;
+
+    cout << endl;
+    cout << "**********" << endl;
+
+    auto tree2 = new BST();
+    tree2->Insert(10);
+    tree2->Insert(9);
+    tree2->Insert(8);
+    tree2->Insert(7);
+    tree2->Insert(11);
+    tree2->Insert(12);
+    tree2->Insert(13);
+    tree2->InOrder();
+    cout << endl;
+
+    cout << "****************" << endl;
+    cout << "   End of Test  " << endl;
+    cout << "****************" << endl;
 }
