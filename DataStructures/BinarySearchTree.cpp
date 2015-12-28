@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include <stack>
+#include <queue>
 using namespace std;
 
 BST::BST()
@@ -300,8 +301,35 @@ void BST::InOrder()
             done = true;
         }
 
-       
-  
     }
+}
 
+void BST::LevelByLevel()
+{
+    auto node = m_root;
+    if (node == nullptr) return;
+    queue<TreeNode *> queue;
+    bool done = false;
+
+    while (!done)
+    {
+        if (node->left != nullptr)
+        {
+            queue.push(node->left);
+        }
+        if (node->right != nullptr)
+        {
+            queue.push(node->right);
+        }
+        cout << node->data << " ";
+        if (!queue.empty())
+        {
+            node = queue.front();
+            queue.pop();
+        }
+        else
+        {
+            done = true;
+        }
+    }
 }

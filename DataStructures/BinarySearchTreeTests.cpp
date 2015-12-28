@@ -12,6 +12,7 @@ void BSTTests::DoTests()
     InOrderTraverseTest();
     LeafCountTest();
     InOrderTest();
+    LelvelByLevelTest();
 }
 
 void BSTTests::SearchTests()
@@ -203,4 +204,47 @@ void BSTTests::InOrderTest()
     cout << "****************" << endl;
     cout << "   End of Test  " << endl;
     cout << "****************" << endl;
+}
+
+void BSTTests::LelvelByLevelTest()
+{
+    cout << "*************************************" << endl;
+    cout << "    Level by Level Traversal Test    " << endl;
+    cout << "*************************************" << endl;
+
+    auto tree = new BST();
+    tree->Insert(50);
+    tree->Insert(15);
+    tree->Insert(62);
+    tree->Insert(5);
+    tree->Insert(20);
+    tree->Insert(58);
+    tree->Insert(91);
+    tree->Insert(3);
+    tree->Insert(8);
+    tree->Insert(37);
+    tree->Insert(24);
+    tree->Insert(60);
+
+    tree->LevelByLevel();
+    cout << endl;
+
+    cout << endl;
+    cout << "**********" << endl;
+
+    auto tree2 = new BST();
+    tree2->Insert(10);
+    tree2->Insert(9);
+    tree2->Insert(8);
+    tree2->Insert(7);
+    tree2->Insert(11);
+    tree2->Insert(12);
+    tree2->Insert(13);
+    tree2->LevelByLevel();
+    cout << endl;
+
+    cout << "****************" << endl;
+    cout << "   End of Test  " << endl;
+    cout << "****************" << endl;
+
 }

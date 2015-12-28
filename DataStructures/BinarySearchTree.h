@@ -15,6 +15,7 @@ public:
     void TraversePreOrder();
     void TraversePostOrder();
     void InOrder();
+    void LevelByLevel();
     void Trace();
     void Display();
     int Height();
