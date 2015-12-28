@@ -271,9 +271,8 @@ void BST::InOrder()
     stack<TreeNode*> stack;
     if (node == nullptr) return;
 
-    stack.push(node);
-
-    while (!stack.empty()) 
+    bool done = false;
+    while (!done)
     {
         while (node->left != nullptr)
         {
@@ -281,18 +280,27 @@ void BST::InOrder()
             node = node->left;          
         }
       
-        cout << node->data << " ";    
+        cout << node->data << " ";
 
-        while (node->right == nullptr)
-        {        
-            node = stack.top();
-            stack.pop();
-            cout << node->data << " ";
-        }
-        if (node->right != nullptr)
+        if (!stack.empty())
         {
-            node = node->right;          
+            while (node->right == nullptr)
+            {
+                node = stack.top();
+                stack.pop();
+                cout << node->data << " ";
+            }
+            if (node->right != nullptr)
+            {
+                node = node->right;
+            }
         }
+        else
+        {
+            done = true;
+        }
+
+       
   
     }
 
