@@ -10,7 +10,7 @@ public:
     void Insert(int Item);
     int Level(int Item);
     int RecLevel(int Item);
-    void Delete();
+    bool Delete(int Item);
     void TraverseInOrder();
     void TraversePreOrder();
     void TraversePostOrder();

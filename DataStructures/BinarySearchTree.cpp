@@ -333,3 +333,49 @@ void BST::LevelByLevel()
         }
     }
 }
+
+bool BST::Delete(int item)
+{
+    auto node = m_root;
+    if (node == nullptr) return false;
+
+    bool found = false;
+    while (!found && node != nullptr)
+    {
+        if (node->data > item)
+        {
+            node = node->left;
+        }
+        else if (node->data < item)
+        {
+            node = node->right;
+        }
+        else
+        {
+            found = true;
+        }
+    }
+    if (!found) return false;
+
+    if (node->left == nullptr && node->right == nullptr)
+    {
+        delete node;
+        node = nullptr;
+        return true;
+    }
+    else if (node->left != nullptr && node->right == nullptr)
+    {
+        node->data = node->left->data;
+        delete node->left;
+        node->left = nullptr;
+        return true;
+    }
+    else if (node->right != nullptr && node->left == nullptr)
+    {
+        node->data = node->right->data;
+        delete node->right;
+        node->right = nullptr;
+        return true;
+    }
+
+}
