@@ -5,6 +5,10 @@ class BSTTests
 public:
    void DoTests();
 private:
+
+   BST * m_tree;
+   void Init();
+   void CleanUp();
    void SearchTests();
    void LevelTest();
    void RecLevelTest();
@@ -15,4 +19,7 @@ private:
    void LeafCountTest();
    void InOrderTest();
    void LelvelByLevelTest();
+   void DeleteTest();
+   void NodeCountTest();
+   void RecDeleteTest();
 };

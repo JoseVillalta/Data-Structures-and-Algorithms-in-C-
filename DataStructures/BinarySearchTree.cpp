@@ -340,14 +340,17 @@ bool BST::Delete(int item)
     if (node == nullptr) return false;
 
     bool found = false;
+    auto parent = m_root;
     while (!found && node != nullptr)
     {
         if (node->data > item)
         {
+            parent = node;
             node = node->left;
         }
         else if (node->data < item)
         {
+            parent = node;
             node = node->right;
         }
         else
@@ -359,8 +362,15 @@ bool BST::Delete(int item)
 
     if (node->left == nullptr && node->right == nullptr)
     {
+        if (parent->left != nullptr && parent->left->data == node->data)
+        {
+            parent->left = nullptr;
+        }
+        else
+        {
+            parent->right = nullptr;
+        }
         delete node;
-        node = nullptr;
         return true;
     }
     else if (node->left != nullptr && node->right == nullptr)
@@ -376,6 +386,122 @@ bool BST::Delete(int item)
         delete node->right;
         node->right = nullptr;
         return true;
+    }
+
+    else if (node->left != nullptr && node->right != nullptr)
+    {
+        auto suc = node->right;
+        auto par = node;
+        while (suc->left != nullptr)
+        {
+            par = suc;
+            suc = suc->left;
+        }
+        
+        node->data = suc->data;
+        par->right = suc->right;
+        delete suc;
+        suc = nullptr;
+        return true;
+        
+       
+    }
+
+    return false;
+
+}
+
+int BST::NodeCount()
+{
+    return NodeCountAux(m_root);
+}
+
+int BST::NodeCountAux(TreeNode * node)
+{
+    if (node == nullptr) return 0;
+
+    return 1 + NodeCountAux(node->left) + NodeCountAux(node->right);
+}
+
+bool BST::DeleteRec(int val)
+{
+    TreeNode * parent = nullptr;
+    return DeleteRecAux(val, m_root,parent);
+}
+
+bool BST::DeleteRecAux(int val, TreeNode * node, TreeNode * par)
+{
+    if (node->data > val)
+    {
+        par = node;
+        return DeleteRecAux(val, node->left, par);
+    }
+    else if (node->data < val)
+    {
+        par = node;
+        return DeleteRecAux(val, node->right, par);
+    }
+    else
+    {
+        if (node->data != val) return false;
+    }
+
+    auto ptr = node;
+
+    if (node->left == nullptr && node->right == nullptr)
+    {
+        if (par->left != nullptr && par->left->data == val)
+        {
+            par->left = nullptr;
+        }
+        else
+        {
+            par->right = nullptr;
+        }
+    }
+
+    else if (node->left == nullptr)
+    { 
+        ptr = node->right;
+        if (par->right != nullptr && par->right->data == node->data)
+        {
+            par->right = ptr;
+        }
+        else
+        {
+            par->left = ptr;
+        }
+        delete node;
+        node = ptr;
+        return true;
+    }
+
+    else if (node->right == nullptr)
+    {
+        ptr = node->left;
+        if (par->right != nullptr && par->right->data == node->data)
+        {
+            par->right = ptr;
+        }
+        else
+        {
+            par->left = ptr;
+        }
+        delete node;
+        node = ptr;
+        return true;
+    }
+    else
+    {
+        auto suc = node->right;
+        auto par = node;
+        while (suc->left != nullptr)
+        {
+            par = suc;
+            suc = suc->left;
+        }
+        node->data = suc->data;
+        return DeleteRecAux(suc->data, suc, par);
     }
 
 }

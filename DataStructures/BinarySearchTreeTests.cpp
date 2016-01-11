@@ -5,6 +5,7 @@ using namespace std;
 
 void BSTTests::DoTests()
 {
+    Init();
     SearchTests();
     LevelTest();
     RecLevelTest();
@@ -13,6 +14,31 @@ void BSTTests::DoTests()
     LeafCountTest();
     InOrderTest();
     LelvelByLevelTest();
+    NodeCountTest();
+    DeleteTest();
+    RecDeleteTest();
+}
+
+void BSTTests::Init()
+{
+    m_tree = new BST();
+    m_tree->Insert(50);
+    m_tree->Insert(15);
+    m_tree->Insert(62);
+    m_tree->Insert(5);
+    m_tree->Insert(20);
+    m_tree->Insert(58);
+    m_tree->Insert(91);
+    m_tree->Insert(3);
+    m_tree->Insert(8);
+    m_tree->Insert(37);
+    m_tree->Insert(24);
+    m_tree->Insert(60);
+}
+
+void BSTTests::CleanUp()
+{
+    delete m_tree;
 }
 
 void BSTTests::SearchTests()
@@ -166,25 +192,14 @@ void BSTTests::LeafCountTest()
 
 void BSTTests::InOrderTest()
 {
+    Init();
     cout << "*************************************" << endl;
     cout << "Non Recursive in Order Traversal Test" << endl;
     cout << "*************************************" << endl;
 
-    auto tree = new BST();
-    tree->Insert(50);
-    tree->Insert(15);
-    tree->Insert(62);
-    tree->Insert(5);
-    tree->Insert(20);
-    tree->Insert(58);
-    tree->Insert(91);
-    tree->Insert(3);
-    tree->Insert(8);
-    tree->Insert(37);
-    tree->Insert(24);
-    tree->Insert(60);
+    
 
-    tree->InOrder();
+    m_tree->InOrder();
     cout << endl;
 
     cout << endl;
@@ -204,29 +219,19 @@ void BSTTests::InOrderTest()
     cout << "****************" << endl;
     cout << "   End of Test  " << endl;
     cout << "****************" << endl;
+    CleanUp();
 }
 
 void BSTTests::LelvelByLevelTest()
 {
+    Init();
     cout << "*************************************" << endl;
     cout << "    Level by Level Traversal Test    " << endl;
     cout << "*************************************" << endl;
 
-    auto tree = new BST();
-    tree->Insert(50);
-    tree->Insert(15);
-    tree->Insert(62);
-    tree->Insert(5);
-    tree->Insert(20);
-    tree->Insert(58);
-    tree->Insert(91);
-    tree->Insert(3);
-    tree->Insert(8);
-    tree->Insert(37);
-    tree->Insert(24);
-    tree->Insert(60);
+   
 
-    tree->LevelByLevel();
+    m_tree->LevelByLevel();
     cout << endl;
 
     cout << endl;
@@ -246,5 +251,91 @@ void BSTTests::LelvelByLevelTest()
     cout << "****************" << endl;
     cout << "   End of Test  " << endl;
     cout << "****************" << endl;
+    CleanUp();
+}
 
+void BSTTests::DeleteTest()
+{
+    Init();
+    cout << "*************************************" << endl;
+    cout << "    Delete Test                      " << endl;
+    cout << "*************************************" << endl;
+
+
+    int nodeCount = m_tree->NodeCount();
+    _ASSERT(nodeCount == 12);
+    m_tree->Delete(58);
+    nodeCount = m_tree->NodeCount();
+    _ASSERT(nodeCount == 11);
+
+    m_tree->Delete(62);
+    nodeCount = m_tree->NodeCount();
+    _ASSERT(nodeCount == 10);
+    m_tree->Display();
+
+#ifdef DONE
+    //TODO Fix this. WHen deleting root node with 2 children. Pointer to root 
+    //gets wiped out.
+    m_tree->Delete(50);
+    nodeCount = m_tree->NodeCount();
+    _ASSERT(nodeCount == 9);
+    m_tree->Display();
+
+#endif
+
+    auto tree2 = new BST();
+    tree2->Insert(50);
+    tree2->Insert(40);
+    tree2->Insert(60);
+    tree2->Insert(55);
+    nodeCount = tree2->NodeCount();
+    _ASSERT(nodeCount == 4);
+    tree2->Display();
+
+    tree2->Delete(60);
+    nodeCount = tree2->NodeCount();
+    _ASSERT(nodeCount == 3);
+    tree2->Display();
+
+
+
+}
+
+void BSTTests::NodeCountTest()
+{
+    Init();
+    cout << "*************************************" << endl;
+    cout << "    Node Count Test                  " << endl;
+    cout << "*************************************" << endl;
+
+    
+
+    int nodeCount = m_tree->NodeCount();
+    _ASSERT(nodeCount == 12);
+
+    cout << "Node Count is: " << nodeCount << endl;
+
+    cout << "****************" << endl;
+    cout << "   End of Test  " << endl;
+    cout << "****************" << endl;
+    CleanUp();
+}
+
+
+void BSTTests::RecDeleteTest()
+{
+    Init();
+    cout << "*************************************" << endl;
+    cout << "    Recursive Delete Test            " << endl;
+    cout << "*************************************" << endl;
+
+    m_tree->DeleteRec(50);
+    int nodeCount = m_tree->NodeCount();
+    _ASSERT(nodeCount == 11);
+    
+
+    m_tree->Delete(91);
+    nodeCount = m_tree->NodeCount();
+    _ASSERT(nodeCount == 10);
+    m_tree->Display();
 }

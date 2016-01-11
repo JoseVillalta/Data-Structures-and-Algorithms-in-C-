@@ -11,6 +11,7 @@ public:
     int Level(int Item);
     int RecLevel(int Item);
     bool Delete(int Item);
+    bool DeleteRec(int Item);
     void TraverseInOrder();
     void TraversePreOrder();
     void TraversePostOrder();
@@ -20,6 +21,7 @@ public:
     void Display();
     int Height();
     int LeafCount();
+    int NodeCount();
 
 
 private:
@@ -34,7 +36,8 @@ private:
     void PostOrderTrav(TreeNode * root);
     void TraceInderOrder(TreeNode * root);
     void DisplayPreOrder(TreeNode * root);
-
+    int NodeCountAux(TreeNode* root);
+    bool DeleteRecAux(int key, TreeNode* root, TreeNode* parent);
 };
 
 
