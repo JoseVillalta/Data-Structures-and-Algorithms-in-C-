@@ -273,15 +273,10 @@ void BSTTests::DeleteTest()
     _ASSERT(nodeCount == 10);
     m_tree->Display();
 
-#ifdef DONE
-    //TODO Fix this. WHen deleting root node with 2 children. Pointer to root 
-    //gets wiped out.
     m_tree->Delete(50);
     nodeCount = m_tree->NodeCount();
     _ASSERT(nodeCount == 9);
     m_tree->Display();
-
-#endif
 
     auto tree2 = new BST();
     tree2->Insert(50);

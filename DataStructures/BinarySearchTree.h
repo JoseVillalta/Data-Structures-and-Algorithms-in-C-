@@ -10,7 +10,7 @@ public:
     void Insert(int Item);
     int Level(int Item);
     int RecLevel(int Item);
-    bool Delete(int Item);
+    void Delete(int Item);
     bool DeleteRec(int Item);
     void TraverseInOrder();
     void TraversePreOrder();
@@ -37,6 +37,7 @@ private:
     void TraceInderOrder(TreeNode * root);
     void DisplayPreOrder(TreeNode * root);
     int NodeCountAux(TreeNode* root);
+    void DeleteAux(int item, TreeNode* root);
     bool DeleteRecAux(int key, TreeNode* root, TreeNode* parent);
 };
 

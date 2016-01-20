@@ -334,13 +334,15 @@ void BST::LevelByLevel()
     }
 }
 
-bool BST::Delete(int item)
-{
-    auto node = m_root;
-    if (node == nullptr) return false;
+void BST::Delete(int item)
+{    
+    DeleteAux(item, m_root);
+}
 
+void BST::DeleteAux(int item, TreeNode * node)
+{
     bool found = false;
-    auto parent = m_root;
+    TreeNode * parent = nullptr;
     while (!found && node != nullptr)
     {
         if (node->data > item)
@@ -358,57 +360,91 @@ bool BST::Delete(int item)
             found = true;
         }
     }
-    if (!found) return false;
+    if (!found) return;
 
+    //No children
     if (node->left == nullptr && node->right == nullptr)
     {
-        if (parent->left != nullptr && parent->left->data == node->data)
+        if (parent != nullptr)
         {
-            parent->left = nullptr;
+            if (parent->left->data == node->data)
+            {
+                parent->left = nullptr;
+            }
+            else
+            {
+                parent->right = nullptr;
+            }
         }
         else
         {
-            parent->right = nullptr;
+            if (m_root->data == node->data)
+            {
+                m_root = nullptr;
+            }
         }
         delete node;
-        return true;
     }
+    //one child on left 
     else if (node->left != nullptr && node->right == nullptr)
     {
-        node->data = node->left->data;
-        delete node->left;
-        node->left = nullptr;
-        return true;
+        if (parent != nullptr)
+        {
+            if (parent->left->data == node->data)
+            {
+                parent->left = node->left;
+            }
+            else
+            {
+                parent->right = node->left;
+            }
+        }
+        else
+        {
+            if (m_root->data == node->data)
+            {
+                m_root = node->left;
+            }
+        }
+        delete node;
     }
+    //one child on right
     else if (node->right != nullptr && node->left == nullptr)
     {
-        node->data = node->right->data;
-        delete node->right;
-        node->right = nullptr;
-        return true;
+        if (parent != nullptr)
+        {
+            if (parent->right->data == node->data)
+            {
+                parent->right = node->right;
+            }
+            else
+            {
+                parent->left = node->right;
+            }
+        }
+        else
+        {
+            if (m_root->data == node->data)
+            {
+                m_root = node->right;
+            }
+        }
+        delete node;
     }
-
-    else if (node->left != nullptr && node->right != nullptr)
+    else
     {
-        auto suc = node->right;
-        auto par = node;
+        TreeNode * suc = node->right;
         while (suc->left != nullptr)
         {
-            par = suc;
             suc = suc->left;
         }
-        
-        node->data = suc->data;
-        par->right = suc->right;
-        delete suc;
-        suc = nullptr;
-        return true;
-        
-       
+
+        auto temp = suc->data;
+        DeleteAux(temp, node);
+        node->data = temp;
+    
+
     }
-
-    return false;
-
 }
 
 int BST::NodeCount()
@@ -458,6 +494,7 @@ bool BST::DeleteRecAux(int val, TreeNode * node, TreeNode * par)
         {
             par->right = nullptr;
         }
+        return true;
     }
 
     else if (node->left == nullptr)
