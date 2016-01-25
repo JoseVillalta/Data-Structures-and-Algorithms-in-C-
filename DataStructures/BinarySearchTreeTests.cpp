@@ -21,7 +21,7 @@ void BSTTests::DoTests()
 
 void BSTTests::Init()
 {
-    m_tree = new BST();
+    m_tree = new BST<int>();
     m_tree->Insert(50);
     m_tree->Insert(15);
     m_tree->Insert(62);
@@ -47,7 +47,7 @@ void BSTTests::SearchTests()
     cout << "Binary Tree Search Test" << endl;
     cout << "***********************" << endl;
 
-    BST * tree = new BST();
+    BST<int> * tree = new BST<int>();
     tree->Insert(5);
     tree->Insert(6);
     tree->Insert(4);
@@ -66,7 +66,7 @@ void BSTTests::LevelTest()
     cout << "Level Test " << endl;
     cout << "***********" << endl;
 
-    auto tree = new BST();
+    auto tree = new BST<int>();
     tree->Insert(5);
     tree->Insert(3);
     tree->Insert(8);
@@ -86,7 +86,7 @@ void BSTTests::RecLevelTest()
     cout << "Recursive Level Test" << endl;
     cout << "*********************" << endl;
 
-    auto tree = new BST();
+    auto tree = new BST<int>();
     tree->Insert(5);
     tree->Insert(3);
     tree->Insert(8);
@@ -109,7 +109,7 @@ void BSTTests::HeightTest()
     cout << "  Tree Height  Test  " << endl;
     cout << "*********************" << endl;
 
-    auto tree = new BST();
+    auto tree = new BST<int>();
     tree->Insert(5);
     tree->Insert(3);
     tree->Insert(8);
@@ -128,7 +128,7 @@ void BSTTests::InOrderTraverseTest()
     cout << "     Tree Traversal Test     " << endl;
     cout << "*****************************" << endl;
 
-    auto tree = new BST();
+    auto tree = new BST<int>();
     tree->Insert(50);
     tree->Insert(15);
     tree->Insert(62);
@@ -165,7 +165,7 @@ void BSTTests::LeafCountTest()
     cout << "          Leaf Count Test       " << endl;
     cout << "********************************" << endl;
 
-    auto tree = new BST();
+    auto tree = new BST<int>();
     tree->Insert(50);
     tree->Insert(15);
     tree->Insert(62);
@@ -205,7 +205,7 @@ void BSTTests::InOrderTest()
     cout << endl;
     cout << "**********" << endl;
 
-    auto tree2 = new BST();
+    auto tree2 = new BST<int>();
     tree2->Insert(10);
     tree2->Insert(9);
     tree2->Insert(8);
@@ -237,7 +237,7 @@ void BSTTests::LelvelByLevelTest()
     cout << endl;
     cout << "**********" << endl;
 
-    auto tree2 = new BST();
+    auto tree2 = new BST<int>();
     tree2->Insert(10);
     tree2->Insert(9);
     tree2->Insert(8);
@@ -278,7 +278,7 @@ void BSTTests::DeleteTest()
     _ASSERT(nodeCount == 9);
     m_tree->Display();
 
-    auto tree2 = new BST();
+    auto tree2 = new BST<int>();
     tree2->Insert(50);
     tree2->Insert(40);
     tree2->Insert(60);

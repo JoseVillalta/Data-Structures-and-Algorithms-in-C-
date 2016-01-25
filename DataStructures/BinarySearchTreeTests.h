@@ -5,8 +5,7 @@ class BSTTests
 public:
    void DoTests();
 private:
-
-   BST * m_tree;
+   BST<int> * m_tree;
    void Init();
    void CleanUp();
    void SearchTests();

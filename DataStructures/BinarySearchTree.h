@@ -1,17 +1,17 @@
 #ifndef _BINARY_SEARCH_TREE_H__
 #define _BINARY_SEARCH_TREE_H__
 #include "TreeNode.h"
-
+template<typename T>
 class BST
 {
 public:
     BST();
-    TreeNode * Search(int Item);
-    void Insert(int Item);
-    int Level(int Item);
-    int RecLevel(int Item);
-    void Delete(int Item);
-    bool DeleteRec(int Item);
+    TreeNode<T> * Search(T Item);
+    void Insert(T Item);
+    int Level(T Item);
+    int RecLevel(T Item);
+    void Delete(T Item);
+    bool DeleteRec(T Item);
     void TraverseInOrder();
     void TraversePreOrder();
     void TraversePostOrder();
@@ -25,20 +25,20 @@ public:
 
 
 private:
-    TreeNode * m_root;
-    void InsertNode(TreeNode* root, int val);
-    TreeNode * SearchNode(TreeNode * root, int key);
-    int RecLevelNode(TreeNode * root, int key);
-    int HeightNode(TreeNode * root);
-    int LeafCountNode(TreeNode * root);
-    void InOrderTrav(TreeNode * root);
-    void PreOrderTrav(TreeNode * root);
-    void PostOrderTrav(TreeNode * root);
-    void TraceInderOrder(TreeNode * root);
-    void DisplayPreOrder(TreeNode * root);
-    int NodeCountAux(TreeNode* root);
-    void DeleteAux(int item, TreeNode* root);
-    bool DeleteRecAux(int key, TreeNode* root, TreeNode* parent);
+    TreeNode<T> * m_root;
+    void InsertNode(TreeNode<T>* root, T val);
+    TreeNode<T> * SearchNode(TreeNode<T> * root, T key);
+    int RecLevelNode(TreeNode<T> * root, T key);
+    int HeightNode(TreeNode<T> * root);
+    int LeafCountNode(TreeNode<T> * root);
+    void InOrderTrav(TreeNode<T> * root);
+    void PreOrderTrav(TreeNode<T> * root);
+    void PostOrderTrav(TreeNode<T> * root);
+    void TraceInderOrder(TreeNode<T> * root);
+    void DisplayPreOrder(TreeNode<T> * root);
+    int NodeCountAux(TreeNode<T>* root);
+    void DeleteAux(T item, TreeNode<T>* root);
+    bool DeleteRecAux(T key, TreeNode<T>* root, TreeNode<T>* parent);
 };
 
 
