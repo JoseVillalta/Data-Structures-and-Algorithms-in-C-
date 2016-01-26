@@ -21,4 +21,6 @@ private:
    void DeleteTest();
    void NodeCountTest();
    void RecDeleteTest();
+   void SearchFloatTest();
+   void InOrderTraversalStrings();
 };

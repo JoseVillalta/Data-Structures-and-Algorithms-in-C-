@@ -17,6 +17,8 @@ void BSTTests::DoTests()
     NodeCountTest();
     DeleteTest();
     RecDeleteTest();
+    SearchFloatTest();
+    InOrderTraversalStrings();
 }
 
 void BSTTests::Init()
@@ -58,6 +60,26 @@ void BSTTests::SearchTests()
     _ASSERT(node2->data == 6);
     cout << "Test pass" << endl;
     cout << endl;
+}
+
+void BSTTests::SearchFloatTest()
+{
+    cout << "***********************" << endl;
+    cout << "Binary Tree Search Floats" << endl;
+    cout << "***********************" << endl;
+
+    BST<double> * tree = new BST<double>();
+    tree->Insert(5.5);
+    tree->Insert(6.6);
+    tree->Insert(4.4);
+    auto node = tree->Search(5.5);
+    _ASSERT(node->data == 5.5);
+    auto node2 = tree->Search(6.6);
+    _ASSERT(node2 != nullptr);
+    _ASSERT(node2->data == 6.6);
+    cout << "Test pass" << endl;
+    cout << endl;
+
 }
 
 void BSTTests::LevelTest()
@@ -141,6 +163,43 @@ void BSTTests::InOrderTraverseTest()
     tree->Insert(37);
     tree->Insert(24);
     tree->Insert(60);
+
+    cout << "In Order " << endl;
+    tree->TraverseInOrder();
+    cout << "*******************" << endl;
+    cout << "Pre Order" << endl;
+    tree->TraversePreOrder();
+    cout << "********************" << endl;
+    cout << "Post Order" << endl;
+    tree->TraversePostOrder();
+    cout << "********************" << endl;
+    cout << "Trace in Order" << endl;
+    tree->Trace();
+    cout << "***********************" << endl;
+    cout << "Display Pre Order" << endl;
+    tree->Display();
+    cout << "***********************" << endl;
+}
+
+void BSTTests::InOrderTraversalStrings()
+{
+    cout << "************************************" << endl;
+    cout << "     Tree Traversal Test  Strings   " << endl;
+    cout << "************************************" << endl;
+
+    auto tree = new BST<char>();
+    tree->Insert('G');
+    tree->Insert('F');
+    tree->Insert('J');
+    tree->Insert('A');
+    tree->Insert('H');
+    tree->Insert('O');
+    tree->Insert('E');
+    tree->Insert('M');
+    tree->Insert('P');
+    tree->Insert('C');
+    tree->Insert('B');
+    tree->Insert('L');
 
     cout << "In Order " << endl;
     tree->TraverseInOrder();
