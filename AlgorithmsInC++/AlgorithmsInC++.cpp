@@ -2,10 +2,15 @@
 //
 
 #include "stdafx.h"
-
+#include <iostream>
+#include "LinearSearchTests.h"
+using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	return 0;
+
+    auto lst = new LinearSearchTest();
+    lst->DoTests();
+    return 0;
 }
 
