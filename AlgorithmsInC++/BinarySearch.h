@@ -6,6 +6,6 @@ class BinarySearch
 {
 public:
     template<typename T>
-    bool Search(vector<T>& vector, T& item, int start, int end);
+    bool Search(vector<T>& vector, int& loc, T item, int start, int end);
 };
 
