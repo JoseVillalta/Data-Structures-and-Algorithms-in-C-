@@ -8,6 +8,7 @@ public:
 private:
     void Init(void);
     void SearchInts(void);
+    void SearchWBadInputs(void);
     BinarySearch * m_binarySearcher;
 
 };

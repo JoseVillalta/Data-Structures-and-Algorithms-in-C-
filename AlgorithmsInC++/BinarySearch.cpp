@@ -4,6 +4,7 @@
 template<typename T>
 bool BinarySearch::Search(vector<T>& v, int& loc, T item, int start, int end)
 {
+    if (v.size() < end) return false;
     if (end < start) return false;
     int mid = (start + end) / 2;
 
