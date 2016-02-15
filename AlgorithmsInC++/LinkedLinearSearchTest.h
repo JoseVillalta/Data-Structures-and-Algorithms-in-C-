@@ -1,7 +1,15 @@
 #pragma once
+#include<vector>
+
+using namespace std;
 class LinkedLinearSearchTest
 {
 public:
-    void DoTest();
+    void DoTests();
+    void Init();
+    void SearchTest();
+    void IterativeSearchTest();
+private:
+    
 };
 

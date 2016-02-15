@@ -4,7 +4,7 @@
 class BinarySearchTest
 {
 public:
-    void DoTest(void);
+    void DoTests(void);
 private:
     void Init(void);
     void SearchInts(void);

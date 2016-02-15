@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void BinarySearchTest::DoTest()
+void BinarySearchTest::DoTests()
 {
     Init();
     SearchInts();
