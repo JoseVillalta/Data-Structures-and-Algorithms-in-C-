@@ -45,6 +45,9 @@
     <ClInclude Include="BinarySearchTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="SearchPerformanceTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -63,6 +66,9 @@
       <Filter>Search</Filter>
     </ClCompile>
     <ClCompile Include="BinarySearchTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchPerformanceTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>
