@@ -48,6 +48,12 @@
     <ClInclude Include="SearchPerformanceTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedLinearSearch.h">
+      <Filter>Search</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedLinearSearchTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -69,6 +75,12 @@
       <Filter>Tests</Filter>
     </ClCompile>
     <ClCompile Include="SearchPerformanceTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedLinearSearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedLinearSearchTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

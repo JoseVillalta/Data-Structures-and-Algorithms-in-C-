@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="BinarySearchTreeTests.h" />
+    <ClInclude Include="LinkedListNode.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TreeNode.h" />

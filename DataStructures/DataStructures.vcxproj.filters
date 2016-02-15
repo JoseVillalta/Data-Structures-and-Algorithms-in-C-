@@ -19,6 +19,9 @@
     <Filter Include="Tests">
       <UniqueIdentifier>{82c40e1e-aff2-42b9-ac3d-ef1a5a14bb49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LinkedLists">
+      <UniqueIdentifier>{f229a319-7695-48a6-9a63-39065a585444}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -38,6 +41,9 @@
     </ClInclude>
     <ClInclude Include="TreeNode.h">
       <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListNode.h">
+      <Filter>LinkedLists</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
