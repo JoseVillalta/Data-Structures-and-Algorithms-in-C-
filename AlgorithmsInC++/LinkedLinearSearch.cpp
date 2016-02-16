@@ -37,6 +37,7 @@ bool LinkedLinearSearch::SearchIt(ListNode<T> * head, ListNode<T> &loc, T item)
             temp = temp->next;
         }
     }
+    return found;
 }
 
 template bool LinkedLinearSearch::Search(ListNode<int>* head, ListNode<int>& node, int item);
