@@ -84,6 +84,7 @@
     <ClInclude Include="BinarySearchTest.h" />
     <ClInclude Include="LinearSearch.h" />
     <ClInclude Include="LinearSearchTests.h" />
+    <ClInclude Include="LinkedBinarySearch.h" />
     <ClInclude Include="LinkedLinearSearch.h" />
     <ClInclude Include="LinkedLinearSearchTest.h" />
     <ClInclude Include="SearchPerformanceTest.h" />
@@ -96,6 +97,7 @@
     <ClCompile Include="BinarySearchTest.cpp" />
     <ClCompile Include="LinearSearchTest.cpp" />
     <ClCompile Include="LinearSearch.cpp" />
+    <ClCompile Include="LinkedBinarySearch.cpp" />
     <ClCompile Include="LinkedLinearSearch.cpp" />
     <ClCompile Include="LinkedLinearSearchTest.cpp" />
     <ClCompile Include="SearchPerformanceTest.cpp" />

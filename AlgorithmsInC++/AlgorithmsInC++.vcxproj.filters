@@ -54,6 +54,9 @@
     <ClInclude Include="LinkedLinearSearchTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedBinarySearch.h">
+      <Filter>Search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -82,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="LinkedLinearSearchTest.cpp">
       <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedBinarySearch.cpp">
+      <Filter>Search</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

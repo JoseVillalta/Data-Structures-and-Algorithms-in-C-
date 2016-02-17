@@ -2,13 +2,14 @@
 #include "LinkedLinearSearchTest.h"
 #include "LinkedLinearSearch.h"
 #include "LinkedListNode.h"
-
+#include "LinkedBinarySearch.h"
 
 void LinkedLinearSearchTest::DoTests()
 {
     Init();
     SearchTest();
     IterativeSearchTest();
+    BinarySearchTest();
     CleanUp();
 
 }
@@ -56,4 +57,23 @@ void LinkedLinearSearchTest::IterativeSearchTest()
     _ASSERT(locPtr->data == 40);
     cout << "Iterative version of Linked Linear Search completed succesfully" << endl;
 
+}
+
+void LinkedLinearSearchTest::BinarySearchTest()
+{
+    auto blSearcher = new LinkedBinarySearch();
+    auto first = m_headPtr;
+    auto last = m_headPtr;
+
+    while (last->next != nullptr)
+    {
+        last = last->next;
+    }
+
+    auto loc = new ListNode<int>();
+    
+    auto found = blSearcher->Search(first, last, 40, *loc);
+    _ASSERT(found == true);
+    _ASSERT(loc->data == 40);
+    cout << "Linked Binary Search Completed Succesfully" << endl;
 }

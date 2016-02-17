@@ -11,6 +11,7 @@ public:
     void CleanUp();
     void SearchTest();
     void IterativeSearchTest();
+    void BinarySearchTest();
 private:
     ListNode<int> * m_headPtr;
     LinkedLinearSearch * m_lLinearSearcher;
