@@ -9,6 +9,11 @@ using namespace std;
 
 void SearchPerformanceTest::DoTests()
 {
+   // CompareBinaryWithLinearSearch();
+    CompareLinearWithSelfOrganizingList();
+}
+void SearchPerformanceTest::CompareBinaryWithLinearSearch()
+{
     auto linearSearcher = new LinearSearch();
     auto binarySearcher = new BinarySearch();
 
@@ -29,7 +34,7 @@ void SearchPerformanceTest::DoTests()
     QueryPerformanceCounter(&EndingTime);
     ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
 
-    cout << "Index is: "<<loc<<" Elapsed Microseconds Linear Search: " << ElapsedMicroseconds.QuadPart << endl;
+    cout << "Index is: " << loc << " Elapsed Microseconds Linear Search: " << ElapsedMicroseconds.QuadPart << endl;
 
     loc = 0;
     QueryPerformanceCounter(&StartingTime);
@@ -37,7 +42,54 @@ void SearchPerformanceTest::DoTests()
     QueryPerformanceCounter(&EndingTime);
     ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
 
-    cout << "Index is: "<<loc<<" Elapsed Microseconds Binary Search: " << ElapsedMicroseconds.QuadPart << endl;   
+    cout << "Index is: " << loc << " Elapsed Microseconds Binary Search: " << ElapsedMicroseconds.QuadPart << endl;
+
+}
+
+void SearchPerformanceTest::CompareLinearWithSelfOrganizingList()
+{
+    vector<int> v;
+    vector<int> v2;
+
+    for (int i = 0; i < 100; i++)
+    {
+        int n = rand() % 100;
+        v.push_back(n);
+        v2.push_back(n);
+    }
+
+    vector<int> v3;
+    for (int i = 0; i < 10000; i++)
+    {
+        int n = rand() % 100;
+        v3.push_back(n);
+    }
+
+    auto searcher = new LinearSearch();
+    int loc = 0;
+    LARGE_INTEGER StartingTime, EndingTime, ElapsedMicroseconds;
+    LARGE_INTEGER Frequency;
+    
+
+    QueryPerformanceFrequency(&Frequency);
+    QueryPerformanceCounter(&StartingTime);
+    for (auto i : v3)
+    {
+        searcher->Search(v, i, loc);
+    }
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+    cout << "Linear Search Took: " << ElapsedMicroseconds.QuadPart << " microseconds" << endl;
+
+    QueryPerformanceCounter(&StartingTime);
+    for (auto i : v3)
+    {
+        searcher->SelfOrganizingListSearch(v2, i, loc);
+    }
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+    cout << "Self Organized Search Took: " << ElapsedMicroseconds.QuadPart << " microseconds" << endl;
+
 }
 
 LARGE_INTEGER SearchPerformanceTest::GetTimeElapsed(LARGE_INTEGER startTime, LARGE_INTEGER endTime, LARGE_INTEGER freq)

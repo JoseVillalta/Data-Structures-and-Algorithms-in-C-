@@ -18,7 +18,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto llst = new LinkedLinearSearchTest();
     lst->DoTests();
     bst->DoTests();
-    //spt->DoTests();
+    spt->DoTests();
     llst->DoTests();
     return 0;
 }

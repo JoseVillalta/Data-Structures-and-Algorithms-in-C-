@@ -8,9 +8,11 @@ bool LinkedBinarySearch::Search(ListNode<T> * first, ListNode<T> * last, T item,
 
     auto mid = first;
     auto runner = first;
+    auto prev = first;
 
     while (runner != last && runner != nullptr)
     {
+        prev = mid;
         mid = mid->next;
         runner = runner->next;
         if (runner != last)
@@ -26,7 +28,7 @@ bool LinkedBinarySearch::Search(ListNode<T> * first, ListNode<T> * last, T item,
     }
     else if (mid->data > item)
     {
-        return Search(first, mid, item, loc);
+        return Search(first, prev, item, loc);
     }
     else
     {

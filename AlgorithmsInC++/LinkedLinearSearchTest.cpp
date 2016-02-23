@@ -75,5 +75,8 @@ void LinkedLinearSearchTest::BinarySearchTest()
     auto found = blSearcher->Search(first, last, 40, *loc);
     _ASSERT(found == true);
     _ASSERT(loc->data == 40);
+
+    found = blSearcher->Search(first, last, 41, *loc);
+    _ASSERT(found == false);
     cout << "Linked Binary Search Completed Succesfully" << endl;
 }
