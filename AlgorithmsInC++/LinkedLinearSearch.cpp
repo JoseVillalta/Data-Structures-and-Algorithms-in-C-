@@ -14,7 +14,7 @@ bool LinkedLinearSearch::Search(ListNode<T> *head, ListNode<T> &loc, T item)
     }
     else
     {
-        Search(temp->next, loc, item);
+        return Search(temp->next, loc, item);
     }
 
 }
@@ -40,42 +40,39 @@ bool LinkedLinearSearch::SearchIt(ListNode<T> * head, ListNode<T> &loc, T item)
     }
     return found;
 }
-template<typename T>
-ListNode<T>* LinkedLinearSearch::SelfOrganizedListSearch(ListNode<T>* head, T item)
-{
-    ListNode<T> * loc = nullptr;
-    auto cur = head;
-    auto prev = head;
-    bool found = SelfOrganizedSearch(head, item, loc, cur, prev);
-    if (found)
-    {
-        _ASSERT(loc->data == item);
-    }
-
-    return loc;
-}
 
 template<typename T>
-bool LinkedLinearSearch::SelfOrganizedSearch(ListNode<T>* head, T item, ListNode<T>& loc, ListNode<T>* cur, ListNode<T>* prev)
+bool LinkedLinearSearch::SelfOrganizedSearch(ListNode<T>* head, ListNode<T>& loc, T item)
 {
     if (head == nullptr) return false;
+    bool found = false;
+    auto nodePtr = head;
+    auto prev = head;
 
-    if (cur->data == item)
+    while (nodePtr != nullptr)
     {
-        loc = *cur;
-        //Move node to the top of the list right after the head node
-        ShiftList(head, cur, prev);
-        return true;
+        if (nodePtr->data == item)
+        {
+            found = true;
+            loc = *nodePtr;
+            ShiftList(head, nodePtr, prev);
+            break;
+        }
+        else
+        {
+            prev = nodePtr;
+            nodePtr = nodePtr->next;
+        }
     }
-    else
-    {
-        return SelfOrganizedSearch(head, item, loc, cur->next, cur);
-    }
+
+
+    return found;
 }
 
 template<typename T>
 void LinkedLinearSearch::ShiftList(ListNode<T>* head, ListNode<T>* cur, ListNode<T>* prev)
 {
+    if (cur == prev) return;
     _ASSERT(head != nullptr);
     _ASSERT(cur != nullptr);
     _ASSERT(prev != nullptr);
@@ -88,3 +85,4 @@ void LinkedLinearSearch::ShiftList(ListNode<T>* head, ListNode<T>* cur, ListNode
 
 template bool LinkedLinearSearch::Search(ListNode<int>* head, ListNode<int>& node, int item);
 template bool LinkedLinearSearch::SearchIt(ListNode<int>* head, ListNode<int>& node, int item);
+template bool LinkedLinearSearch::SelfOrganizedSearch(ListNode<int>* head, ListNode<int>& loc, int item);

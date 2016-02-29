@@ -10,6 +10,7 @@ void LinkedLinearSearchTest::DoTests()
     SearchTest();
     IterativeSearchTest();
     BinarySearchTest();
+    SelfOrganizedListSearchTest();
     CleanUp();
 
 }
@@ -79,4 +80,37 @@ void LinkedLinearSearchTest::BinarySearchTest()
     found = blSearcher->Search(first, last, 41, *loc);
     _ASSERT(found == false);
     cout << "Linked Binary Search Completed Succesfully" << endl;
+}
+
+void LinkedLinearSearchTest::SelfOrganizedListSearchTest()
+{
+    auto node = new ListNode<int>();
+    auto headNode = node;
+    for (int i = 1; i < 100; i++)
+    {
+        auto link = new ListNode<int>(i * 2);
+        node->next = link;
+        node = link;
+    }
+
+    ListNode<int> loc;
+    bool found = m_lLinearSearcher->SelfOrganizedSearch(headNode, loc, 40);
+    _ASSERT(found == true);
+    _ASSERT(loc.data == 40);
+
+    ListNode<int> loc2;
+    bool found2 = m_lLinearSearcher->SelfOrganizedSearch(headNode, loc2, 41);
+    _ASSERT(found2 == false);
+    _ASSERT(loc2.data != 41);
+
+    cout << "Self Organized Linked Search Completed with success" << endl;
+
+    //clean up
+    auto temp = headNode;
+    while (temp != nullptr)
+    {
+        headNode = headNode->next;
+        delete temp;
+        temp = headNode;
+    }
 }

@@ -3,6 +3,7 @@
 #include "SearchPerformanceTest.h"
 #include "LinearSearch.h"
 #include "BinarySearch.h"
+#include "LinkedLinearSearch.h"
 #include "Windows.h"
 
 using namespace std;
@@ -11,6 +12,7 @@ void SearchPerformanceTest::DoTests()
 {
    // CompareBinaryWithLinearSearch();
     CompareLinearWithSelfOrganizingList();
+    CompareLinkedSearchWithSelfOrganizingListSearch();
 }
 void SearchPerformanceTest::CompareBinaryWithLinearSearch()
 {
@@ -89,6 +91,63 @@ void SearchPerformanceTest::CompareLinearWithSelfOrganizingList()
     QueryPerformanceCounter(&EndingTime);
     ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
     cout << "Self Organized Search Took: " << ElapsedMicroseconds.QuadPart << " microseconds" << endl;
+
+}
+
+void SearchPerformanceTest::CompareLinkedSearchWithSelfOrganizingListSearch()
+{
+    //init two identical linked list
+    auto node1 = new ListNode<int>();
+    auto node2 = new ListNode<int>();
+
+    auto listHead1 = node1;
+    auto listHead2 = node2;
+
+    for (int i = 0; i < 100; i++)
+    {
+        int n = rand() % 100;
+        auto n1 = new ListNode<int>(n);
+        auto n2 = new ListNode<int>(n);
+
+        node1->next = n1;
+        node2->next = n2;
+        node1 = n1;
+        node2 = n2;       
+    }
+
+    //search vector
+    vector<int> v3;
+    for (int i = 0; i < 10000; i++)
+    {
+        int n = rand() % 100;
+        v3.push_back(n);
+    }
+    auto linkedSearch = new LinkedLinearSearch();
+
+    LARGE_INTEGER StartingTime, EndingTime, ElapsedMicroseconds;
+    LARGE_INTEGER Frequency;
+    ListNode<int> loc;
+
+    QueryPerformanceFrequency(&Frequency);
+    QueryPerformanceCounter(&StartingTime);
+    for (auto i : v3)
+    {
+        linkedSearch->Search(listHead1, loc, i);
+    }
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+    cout << "Linked List Linear Search Took: " << ElapsedMicroseconds.QuadPart << " microseconds" << endl;
+
+    QueryPerformanceCounter(&StartingTime);
+    for (auto i : v3)
+    {
+        linkedSearch->SelfOrganizedSearch(listHead2, loc, i);
+    }
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+    cout << "Self Organized Search Took: " << ElapsedMicroseconds.QuadPart << " microseconds" << endl;
+
+
 
 }
 
