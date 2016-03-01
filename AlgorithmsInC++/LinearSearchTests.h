@@ -8,6 +8,7 @@ public:
 private:
     void SearchIntVectorTest(void);
     void SelfOrganizedListTest(void);
+    void MoveAheadOneSearchTest(void);
     void Init(void);
 
     LinearSearch * LinearSearcher;

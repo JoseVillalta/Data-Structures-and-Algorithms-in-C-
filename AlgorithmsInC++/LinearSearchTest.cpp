@@ -9,6 +9,7 @@ void LinearSearchTest::DoTests()
     Init();
     SearchIntVectorTest();
     SelfOrganizedListTest();
+    MoveAheadOneSearchTest();
 }
 
 void LinearSearchTest::Init()
@@ -40,4 +41,19 @@ void LinearSearchTest::SelfOrganizedListTest()
     _ASSERT(v[0] == 8);
     cout << "Self Organized List Test succeeded" << endl;
 
+}
+
+void LinearSearchTest::MoveAheadOneSearchTest()
+{
+    int loc = 0;
+    vector<int> v = { 2, 4, 6, 8, 10, 12 };
+    bool found = LinearSearcher->SearchMoveAheadOne(v, 8, loc);
+    _ASSERT(found == true);
+    _ASSERT(loc == 2);
+    _ASSERT(v[loc] == 8);
+    loc = 0;
+    found = LinearSearcher->SearchMoveAheadOne(v, 9, loc);
+    _ASSERT(found == false);
+    _ASSERT(loc == 0);
+    cout << "Move Ahead one linear Search suceeded" << endl;
 }

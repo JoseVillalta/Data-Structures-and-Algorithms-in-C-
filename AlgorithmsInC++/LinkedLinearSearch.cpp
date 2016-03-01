@@ -16,7 +16,6 @@ bool LinkedLinearSearch::Search(ListNode<T> *head, ListNode<T> &loc, T item)
     {
         return Search(temp->next, loc, item);
     }
-
 }
 template <typename T>
 bool LinkedLinearSearch::SearchIt(ListNode<T> * head, ListNode<T> &loc, T item)
@@ -64,8 +63,34 @@ bool LinkedLinearSearch::SelfOrganizedSearch(ListNode<T>* head, ListNode<T>& loc
             nodePtr = nodePtr->next;
         }
     }
+    return found;
+}
 
+template<typename T>
+bool LinkedLinearSearch::MoveAheadOneLinkedSearch(ListNode<T>* head, ListNode<T>& loc, T item)
+{
+    if (head == nullptr) return false;
+    bool found = false;
+    auto prePrev = head;
+    auto prev = head;
+    auto cur = head;
 
+    while (cur != nullptr)
+    {
+        if (cur->data == item)
+        {
+            loc = *cur;
+            found = true;
+            ListSwap(prePrev, prev, cur);
+            break;
+        }
+        else
+        {
+            prePrev = prev;
+            prev = cur;
+            cur = cur->next;
+        }
+    }
     return found;
 }
 
@@ -83,6 +108,22 @@ void LinkedLinearSearch::ShiftList(ListNode<T>* head, ListNode<T>* cur, ListNode
     head->next = cur;
 }
 
+template<typename T>
+void LinkedLinearSearch::ListSwap(ListNode<T>* prePrev, ListNode<T>* prev, ListNode<T> * cur)
+{ 
+    if (cur == nullptr) return;
+    if (prev == nullptr) return;
+    if (prePrev == nullptr) return;
+    if ((cur == prev) || (prev == prePrev)) return;
+
+    //Cur and Prev Swap Places in the list
+    prePrev->next = cur;
+    prev->next = cur->next;
+    cur->next = prev;
+}
+
+
 template bool LinkedLinearSearch::Search(ListNode<int>* head, ListNode<int>& node, int item);
 template bool LinkedLinearSearch::SearchIt(ListNode<int>* head, ListNode<int>& node, int item);
 template bool LinkedLinearSearch::SelfOrganizedSearch(ListNode<int>* head, ListNode<int>& loc, int item);
+template bool LinkedLinearSearch::MoveAheadOneLinkedSearch(ListNode<int>* head, ListNode<int>& loc, int item);
