@@ -13,6 +13,7 @@ public:
     void IterativeSearchTest();
     void BinarySearchTest();
     void SelfOrganizedListSearchTest();
+    void MoveOneAheadListSearchTest();
 private:
     ListNode<int> * m_headPtr;
     LinkedLinearSearch * m_lLinearSearcher;
