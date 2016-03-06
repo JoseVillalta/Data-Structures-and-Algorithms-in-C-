@@ -4,13 +4,14 @@
 #include "LinearSearch.h"
 #include "BinarySearch.h"
 #include "LinkedLinearSearch.h"
+#include "InterpolationSearch.h"
 #include "Windows.h"
 
 using namespace std;
 
 void SearchPerformanceTest::DoTests()
 {
-   // CompareBinaryWithLinearSearch();
+    CompareBinaryWithLinearSearch();
     CompareLinearWithSelfOrganizingList();
     CompareLinkedSearchWithSelfOrganizingListSearch();
 }
@@ -18,6 +19,7 @@ void SearchPerformanceTest::CompareBinaryWithLinearSearch()
 {
     auto linearSearcher = new LinearSearch();
     auto binarySearcher = new BinarySearch();
+    auto interpolationSearcher = new InterpolationSearch();
 
     //create vector with 1M values
     vector<int> vector;
@@ -46,6 +48,13 @@ void SearchPerformanceTest::CompareBinaryWithLinearSearch()
 
     cout << "Index is: " << loc << " Elapsed Microseconds Binary Search: " << ElapsedMicroseconds.QuadPart << endl;
 
+    loc = 0;
+    QueryPerformanceCounter(&StartingTime);
+    found = interpolationSearcher->Search(vector, loc, 488800);
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+
+    cout << "Index is: " << loc << " Elapsed Microseconds Interpolation Search: " << ElapsedMicroseconds.QuadPart << endl;
 }
 
 void SearchPerformanceTest::CompareLinearWithSelfOrganizingList()

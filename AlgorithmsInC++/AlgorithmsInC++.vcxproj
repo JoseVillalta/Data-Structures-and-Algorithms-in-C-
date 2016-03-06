@@ -82,6 +82,8 @@
   <ItemGroup>
     <ClInclude Include="BinarySearch.h" />
     <ClInclude Include="BinarySearchTest.h" />
+    <ClInclude Include="InterpolationSearch.h" />
+    <ClInclude Include="InterpolationSearchTest.h" />
     <ClInclude Include="LinearSearch.h" />
     <ClInclude Include="LinearSearchTests.h" />
     <ClInclude Include="LinkedBinarySearch.h" />
@@ -95,6 +97,8 @@
     <ClCompile Include="AlgorithmsInC++.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="BinarySearchTest.cpp" />
+    <ClCompile Include="InterpolationSearch.cpp" />
+    <ClCompile Include="InterpolationSearchTest.cpp" />
     <ClCompile Include="LinearSearchTest.cpp" />
     <ClCompile Include="LinearSearch.cpp" />
     <ClCompile Include="LinkedBinarySearch.cpp" />

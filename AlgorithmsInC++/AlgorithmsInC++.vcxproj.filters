@@ -57,6 +57,12 @@
     <ClInclude Include="LinkedBinarySearch.h">
       <Filter>Search</Filter>
     </ClInclude>
+    <ClInclude Include="InterpolationSearch.h">
+      <Filter>Search</Filter>
+    </ClInclude>
+    <ClInclude Include="InterpolationSearchTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -88,6 +94,12 @@
     </ClCompile>
     <ClCompile Include="LinkedBinarySearch.cpp">
       <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="InterpolationSearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="InterpolationSearchTest.cpp">
+      <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
