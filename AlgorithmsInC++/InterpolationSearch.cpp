@@ -11,13 +11,13 @@ bool InterpolationSearch::Search(vector<T>&v, int&loc, T item)
     unsigned int last_index = v_size - 1;
     T first_val;
     T last_val;
-    int k;
+    float k;
     while (last_index > first_index)
     {
         first_val = v[first_index];
         last_val = v[last_index];
         k = last_index - first_index;
-        loc_index = first_index + k*((item - first_val) / (last_val - first_val));
+        loc_index = first_index + k*(((float)item - (float)first_val) / ((float)last_val - (float)first_val));
 
         if (v[loc_index] == item)
         {

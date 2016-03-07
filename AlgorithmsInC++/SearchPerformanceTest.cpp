@@ -42,6 +42,14 @@ void SearchPerformanceTest::CompareBinaryWithLinearSearch()
 
     loc = 0;
     QueryPerformanceCounter(&StartingTime);
+    found = linearSearcher->Search(vector, 488801, loc);
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+
+    cout << "Index is: " << loc << " Elapsed Microseconds Linear Search: " << ElapsedMicroseconds.QuadPart << endl;
+
+    loc = 0;
+    QueryPerformanceCounter(&StartingTime);
     found = binarySearcher->Search(vector, loc, 488800, 0, 1000000);
     QueryPerformanceCounter(&EndingTime);
     ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
@@ -50,7 +58,24 @@ void SearchPerformanceTest::CompareBinaryWithLinearSearch()
 
     loc = 0;
     QueryPerformanceCounter(&StartingTime);
+    found = binarySearcher->Search(vector, loc, 488801, 0, 1000000);
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+
+    cout << "Index is: " << loc << " Elapsed Microseconds Binary Search: " << ElapsedMicroseconds.QuadPart << endl;
+
+
+    loc = 0;
+    QueryPerformanceCounter(&StartingTime);
     found = interpolationSearcher->Search(vector, loc, 488800);
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+
+    cout << "Index is: " << loc << " Elapsed Microseconds Interpolation Search: " << ElapsedMicroseconds.QuadPart << endl;
+
+    loc = 0;
+    QueryPerformanceCounter(&StartingTime);
+    found = interpolationSearcher->Search(vector, loc, 488801);
     QueryPerformanceCounter(&EndingTime);
     ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
 
