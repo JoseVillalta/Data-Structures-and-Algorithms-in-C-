@@ -72,7 +72,6 @@ void SearchPerformanceTest::CompareBinaryWithLinearSearch()
     ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
 
     cout << "Index is: " << loc << " Elapsed Microseconds Interpolation Search: " << ElapsedMicroseconds.QuadPart << endl;
-
     loc = 0;
     QueryPerformanceCounter(&StartingTime);
     found = interpolationSearcher->Search(vector, loc, 488801);
