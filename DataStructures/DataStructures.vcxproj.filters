@@ -45,6 +45,12 @@
     <ClInclude Include="LinkedListNode.h">
       <Filter>LinkedLists</Filter>
     </ClInclude>
+    <ClInclude Include="BSTFactory.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="CharBSTTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -57,6 +63,12 @@
       <Filter>Trees</Filter>
     </ClCompile>
     <ClCompile Include="BinarySearchTreeTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="BSTFactory.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="CharBSTTests.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

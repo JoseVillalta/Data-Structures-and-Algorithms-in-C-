@@ -553,6 +553,26 @@ bool BST<T>::DeleteRecAux(T val, TreeNode<T> * node, TreeNode<T> * par)
 
 }
 
+template<typename T>
+vector<T> * BST<T>::ToVectorInOrder()
+{
+    auto v = new vector<T>();
+    auto nodePtr = m_root;
+    ToVectorAux(nodePtr, *v);
+    return v;
+    
+}
+
+template<typename T>
+void BST<T>::ToVectorAux(TreeNode<T>* root, vector<T>& v)
+{
+    if (root == nullptr) return;
+
+    ToVectorAux(root->left, v);
+    v.push_back(root->data);
+    ToVectorAux(root->right, v);
+}
+
 template BST<int>::BST();
 template BST<double>::BST();
 template BST<char>::BST();
@@ -562,6 +582,7 @@ template void BST<int>::Insert(int Item);
 template void BST<double>::Insert(double Item);
 template void BST<char>::Insert(char Item);
 template int BST<int>::Level(int Item);
+template int BST<char>::Level(char Item);
 template int BST<int>::RecLevel(int Item);
 template void BST<int>::Delete(int Item);
 template bool BST<int>::DeleteRec(int Item);
@@ -572,6 +593,7 @@ template void BST<char>::TraversePreOrder(void);
 template void BST<int>::TraversePostOrder(void);
 template void BST<char>::TraversePostOrder(void);
 template void BST<int>::InOrder(void);
+template void BST<char>::InOrder(void);
 template void BST<int>::LevelByLevel(void);
 template void BST<int>::Trace(void);
 template void BST<char>::Trace(void);
@@ -580,3 +602,5 @@ template void BST<char>::Display(void);
 template int BST<int>::Height(void);
 template int BST<int>::LeafCount(void);
 template int BST<int>::NodeCount(void);
+template vector<char>* BST<char>::ToVectorInOrder(void);
+template void BST<char>::ToVectorAux(TreeNode<char>* root, vector<char>& v);

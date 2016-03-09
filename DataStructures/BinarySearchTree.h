@@ -1,6 +1,8 @@
 #ifndef _BINARY_SEARCH_TREE_H__
 #define _BINARY_SEARCH_TREE_H__
 #include "TreeNode.h"
+#include <vector>
+using namespace std;
 template<typename T>
 class BST
 {
@@ -22,6 +24,7 @@ public:
     int Height();
     int LeafCount();
     int NodeCount();
+    vector<T> * ToVectorInOrder();
 
 
 private:
@@ -39,6 +42,7 @@ private:
     int NodeCountAux(TreeNode<T>* root);
     void DeleteAux(T item, TreeNode<T>* root);
     bool DeleteRecAux(T key, TreeNode<T>* root, TreeNode<T>* parent);
+    void ToVectorAux(TreeNode<T>* root, vector<T>& v);
 };
 
 
