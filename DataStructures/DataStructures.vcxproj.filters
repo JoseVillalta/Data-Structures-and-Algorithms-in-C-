@@ -51,6 +51,9 @@
     <ClInclude Include="CharBSTTests.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="BSTANode.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
