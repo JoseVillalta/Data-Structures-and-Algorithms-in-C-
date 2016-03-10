@@ -8,6 +8,7 @@ public:
 private:
     void Init();
     void TestLevels();
+    void TestHeight();
     BSTFactory * m_ptrBSTFactory;
 };
 
