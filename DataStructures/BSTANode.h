@@ -7,7 +7,7 @@ public:
     unsigned int m_right;
     T m_data;
     bool m_isFree;
-    BSTANode(int left = 0; int right = 0; data = 0; isFree = true)
+    BSTANode(int left = 0, int right = 0, T data = 0, bool isFree = true)
     {
         m_left = left;
         m_right = right;

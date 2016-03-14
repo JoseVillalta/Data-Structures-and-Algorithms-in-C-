@@ -81,7 +81,9 @@
   <ItemGroup>
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="BinarySearchTreeTests.h" />
+    <ClInclude Include="BSTA.h" />
     <ClInclude Include="BSTANode.h" />
+    <ClInclude Include="BSTATests.h" />
     <ClInclude Include="BSTFactory.h" />
     <ClInclude Include="CharBSTTests.h" />
     <ClInclude Include="LinkedListNode.h" />
@@ -92,6 +94,8 @@
   <ItemGroup>
     <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="BinarySearchTreeTests.cpp" />
+    <ClCompile Include="BSTA.cpp" />
+    <ClCompile Include="BSTATests.cpp" />
     <ClCompile Include="BSTFactory.cpp" />
     <ClCompile Include="CharBSTTests.cpp" />
     <ClCompile Include="DataStructures.cpp" />

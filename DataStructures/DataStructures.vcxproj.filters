@@ -54,6 +54,12 @@
     <ClInclude Include="BSTANode.h">
       <Filter>Trees</Filter>
     </ClInclude>
+    <ClInclude Include="BSTA.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTATests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -72,6 +78,12 @@
       <Filter>Trees</Filter>
     </ClCompile>
     <ClCompile Include="CharBSTTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="BSTA.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="BSTATests.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>
