@@ -4,7 +4,10 @@ template<typename T>
 BSTA<T>::BSTA(int size)
 {
     m_nodeArray = new BSTANode<T>[size];
+    m_memPool = new MemoryPool(size);
     m_capacity = size;
+    m_root = -1;
+    
 }
 
 template<typename T>
@@ -16,46 +19,17 @@ BSTA<T>::~BSTA()
 template<typename T>
 void BSTA<T>::Insert(T val)
 {
-    if (m_nodeArray[0].m_isFree == true)
+    if (m_root == -1)
     {
-        m_nodeArray[0].m_isFree = false;
-        m_nodeArray[0].m_data = val;
-    }
-    else
-    {
-        if (m_nodeArray[0].m_data > val)
-        {
-            //Insert left
-            InsertAux(1, val);
-        }
-        else
-        {
-            //Insert right
-            InsertAux(2, val);
-        }
+       // m_nodeArray[m_freeNode->data].m_data = val;
+       // m_root 
     }
 }
 
 template<typename T>
 void BSTA<T>::InsertAux(int index, T val)
 {
-    if (index > m_capacity) return;
-
-    if (m_nodeArray[index].m_isFree == true)
-    {
-        m_nodeArray[index].m_isFree = false;
-        m_nodeArray[index].m_data = val;
-    }
-    else if (m_nodeArray[index].m_data > val)
-    {
-        //Insert Left
-        InsertAux(index * 2 + 1, val);
-    }
-    else
-    {
-        //Insert Right
-        InsertAux(index * 2 + 2, val);
-    }
+    
 }
 template<typename T>
 bool BSTA<T>::Search(T val)
@@ -79,7 +53,7 @@ bool BSTA<T>::SearchAux(int index, T val)
 {
     if (index > m_capacity) return false;
 
-    if (m_nodeArray[index].m_isFree == true) return false;
+    if (index < 0) return false;
 
     if (m_nodeArray[index].m_data == val) return true;
 
@@ -93,6 +67,33 @@ bool BSTA<T>::SearchAux(int index, T val)
     }
 }
 
+template<typename T>
+BSTA<T>::MemoryPool::MemoryPool(int size)
+{
+    m_freeNode = new ListNode<int>(0);
+    for (int i = 1; i < size; i++)
+    {
+        m_freeNode->next = new ListNode<int>(i);
+        m_freeNode = m_freeNode->next;
+    }
+}
+
+template<typename T>
+int BSTA<T>::MemoryPool::GetFreeNodeIndex()
+{
+    if (m_freeNode == nullptr)
+    {
+        //we could allocate more memory, 
+        cout << "*****FATAL ERROR*********" << endl;
+        cout << "Memory Pool out of memory" << endl;
+        exit();
+    }
+
+    auto index = m_freeNode->data;
+    m_freeNode = m_freeNode->next;
+    
+    return index;
+}
 
 template BSTA<int>::BSTA(int size);
 template void BSTA<int>::Insert(int val);
