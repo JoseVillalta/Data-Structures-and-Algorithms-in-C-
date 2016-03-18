@@ -17,7 +17,7 @@ int _tmain(int argc, _TCHAR* argv[])
     
     treeTests->DoTests();
     charTreeTests->DoTests();
-    //arrayTreeTests->DoTests();
+    arrayTreeTests->DoTests();
 
     return 0;
 }

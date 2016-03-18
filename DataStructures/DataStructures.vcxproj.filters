@@ -60,6 +60,9 @@
     <ClInclude Include="BSTATests.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedListArrayBasedNode.h">
+      <Filter>LinkedLists</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

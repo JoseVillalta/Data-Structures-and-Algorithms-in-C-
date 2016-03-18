@@ -86,6 +86,7 @@
     <ClInclude Include="BSTATests.h" />
     <ClInclude Include="BSTFactory.h" />
     <ClInclude Include="CharBSTTests.h" />
+    <ClInclude Include="LinkedListArrayBasedNode.h" />
     <ClInclude Include="LinkedListNode.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
