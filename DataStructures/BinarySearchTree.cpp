@@ -156,6 +156,7 @@ template<typename T>
 void BST<T>::TraverseInOrder()
 {
     InOrderTrav(m_root);
+    cout << endl;
 }
 template<typename T>
 void BST<T>::InOrderTrav(TreeNode<T> * node)
@@ -164,7 +165,7 @@ void BST<T>::InOrderTrav(TreeNode<T> * node)
     
     InOrderTrav(node->left);
 
-    cout << node->data << " " << endl;
+    cout << node->data << " "; 
 
     InOrderTrav(node->right);
 }
@@ -603,6 +604,8 @@ template void BST<char>::Display(void);
 template int BST<int>::Height(void);
 template int BST<char>::Height(void);
 template int BST<int>::LeafCount(void);
+template int BST<char>::LeafCount(void);
 template int BST<int>::NodeCount(void);
+template int BST<char>::NodeCount(void);
 template vector<char>* BST<char>::ToVectorInOrder(void);
 template void BST<char>::ToVectorAux(TreeNode<char>* root, vector<char>& v);
