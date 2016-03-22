@@ -11,6 +11,7 @@ private:
     void TestHeight();
     void TestNodeCountAndDisplayPreOrder();
     void TestInOrder();
+    void TestLevelByLevel();
     BSTFactory * m_ptrBSTFactory;
 };
 

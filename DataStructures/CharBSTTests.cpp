@@ -16,6 +16,7 @@ void CharBSTTests::DoTests()
     TestHeight();
     TestNodeCountAndDisplayPreOrder();
     TestInOrder();
+    TestLevelByLevel();
 }
 
 void CharBSTTests::TestLevels()
@@ -71,4 +72,18 @@ void CharBSTTests::TestInOrder()
     tree2->InOrder();
     cout << endl;
     tree2->TraverseInOrder();
+}
+
+void CharBSTTests::TestLevelByLevel()
+{
+    cout << "Test Level by Level" << endl;
+    auto tree = m_ptrBSTFactory->GenerateBST(10);
+    tree->Display();
+    tree->LevelByLevel();
+    
+
+    auto tree1 = m_ptrBSTFactory->GenerateBST(20);
+    tree1->Display();
+    tree1->LevelByLevel();
+    cout << "*****" << endl;
 }

@@ -291,7 +291,6 @@ void BST<T>::InOrder()
             node = node->left;          
         }
       
-       // cout << node->data << " ";
 
         if (!stack.empty() && node == nullptr)
         {
@@ -593,6 +592,7 @@ template void BST<char>::TraversePostOrder(void);
 template void BST<int>::InOrder(void);
 template void BST<char>::InOrder(void);
 template void BST<int>::LevelByLevel(void);
+template void BST<char>::LevelByLevel(void);
 template void BST<int>::Trace(void);
 template void BST<char>::Trace(void);
 template void BST<int>::Display(void);
