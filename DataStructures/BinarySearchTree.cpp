@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "BinarySearchTree.h"
 #include <iostream>
 #include <algorithm>
