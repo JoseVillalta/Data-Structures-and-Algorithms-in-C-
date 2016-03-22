@@ -285,26 +285,22 @@ void BST<T>::InOrder()
     bool done = false;
     while (!done)
     {
-        while (node->left != nullptr)
+        while (node != nullptr)
         {
             stack.push(node);
             node = node->left;          
         }
       
-        cout << node->data << " ";
+       // cout << node->data << " ";
 
-        if (!stack.empty())
+        if (!stack.empty() && node == nullptr)
         {
-            while (node->right == nullptr)
-            {
-                node = stack.top();
-                stack.pop();
-                cout << node->data << " ";
-            }
-            if (node->right != nullptr)
-            {
-                node = node->right;
-            }
+            
+            node = stack.top();
+            stack.pop();
+            cout << node->data << " ";
+            node = node->right;
+            
         }
         else
         {
