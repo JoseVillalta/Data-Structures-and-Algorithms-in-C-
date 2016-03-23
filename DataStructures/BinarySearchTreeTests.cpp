@@ -58,6 +58,8 @@ void BSTTests::SearchTests()
     auto node2 = tree->Search(6);
     _ASSERT(node2 != nullptr);
     _ASSERT(node2->data == 6);
+    auto node3 = tree->Search(17);
+    _ASSERT(node3 == nullptr);
     cout << "Test pass" << endl;
     cout << endl;
 }

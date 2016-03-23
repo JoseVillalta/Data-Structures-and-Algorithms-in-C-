@@ -574,6 +574,7 @@ template BST<int>::BST();
 template BST<double>::BST();
 template BST<char>::BST();
 template TreeNode<int>* BST<int>::Search(int Item);
+template TreeNode<char>*BST<char>::Search(char Item);
 template TreeNode<double>* BST<double>::Search(double Item);
 template void BST<int>::Insert(int Item);
 template void BST<double>::Insert(double Item);
