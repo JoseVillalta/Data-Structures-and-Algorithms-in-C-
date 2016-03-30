@@ -86,11 +86,14 @@
     <ClInclude Include="BSTATests.h" />
     <ClInclude Include="BSTFactory.h" />
     <ClInclude Include="CharBSTTests.h" />
+    <ClInclude Include="RadixTree.h" />
     <ClInclude Include="LinkedListArrayBasedNode.h" />
     <ClInclude Include="LinkedListNode.h" />
+    <ClInclude Include="RadixTreeTests.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TreeNode.h" />
+    <ClInclude Include="TrieNode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinarySearchTree.cpp" />
@@ -100,6 +103,8 @@
     <ClCompile Include="BSTFactory.cpp" />
     <ClCompile Include="CharBSTTests.cpp" />
     <ClCompile Include="DataStructures.cpp" />
+    <ClCompile Include="RadixTree.cpp" />
+    <ClCompile Include="RadixTreeTests.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -63,6 +63,15 @@
     <ClInclude Include="LinkedListArrayBasedNode.h">
       <Filter>LinkedLists</Filter>
     </ClInclude>
+    <ClInclude Include="TrieNode.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="RadixTree.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="RadixTreeTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -87,6 +96,12 @@
       <Filter>Trees</Filter>
     </ClCompile>
     <ClCompile Include="BSTATests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="RadixTree.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="RadixTreeTests.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>
