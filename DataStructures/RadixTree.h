@@ -14,8 +14,11 @@ public:
     void TraverseTrie();
     void DisplayAllMatches(string word);
     void DeleteWord(string word);
+    
 private:
     void InsertWordAux(string word, TrieNode * node);
     bool FindWordAux(string word, TrieNode * node);
+    void DisplayAllMatchesAux(string word, TrieNode * node);
+    TrieNode * FindLastMatchingNode(string word, TrieNode * node);
     TrieNode * m_root;
 };

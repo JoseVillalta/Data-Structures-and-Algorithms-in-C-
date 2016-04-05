@@ -1,5 +1,7 @@
 #include "RadixTree.h"
+#include <iostream>
 
+using namespace std;
 Trie::Trie()
 {
     m_root = new TrieNode();
@@ -56,5 +58,44 @@ bool Trie::FindWordAux(string word, TrieNode * node)
             string nextWord = word.substr(1, word.size() - 1);
             return FindWordAux(nextWord, nextNode);
         }        
+    }
+}
+
+void Trie::DisplayAllMatches(string word)
+{
+    if (word.empty()) return;
+
+    auto node = FindLastMatchingNode(word, m_root);
+    DisplayAllMatchesAux(word, node);
+}
+
+void Trie::DisplayAllMatchesAux(string word, TrieNode * node)
+{
+    if (node->isWordFlag)
+    {
+        cout << word << endl;
+    }
+
+    for (int i = 0; i < 256; i++)
+    {
+        if (node->m_nodeArray[i] != nullptr)
+        {
+            char c = (char)i;
+            word.push_back(c);
+            DisplayAllMatchesAux(word, node->m_nodeArray[i]);
+            word.pop_back();
+        }
+    }
+}
+
+TrieNode * Trie::FindLastMatchingNode(string word, TrieNode * node)
+{
+    if (word.empty()) return node;
+    char c = word.at(0);
+    if (node->m_nodeArray[(int)c] == nullptr) return node;
+    else
+    {
+        auto next_word = word.substr(1, word.size() - 1);
+        return FindLastMatchingNode(next_word, node->m_nodeArray[(int)c]);
     }
 }
