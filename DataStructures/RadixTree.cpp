@@ -7,6 +7,10 @@ Trie::Trie()
     m_root = new TrieNode();
     m_root->Init();
 }
+Trie::~Trie()
+{
+    delete m_root;
+}
 
 void Trie::InsertWord(string word)
 {
