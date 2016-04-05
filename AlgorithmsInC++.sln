@@ -12,6 +12,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandLineCharBST", "Comma
 		{BE266EA0-87E1-4BC4-ACBD-AED55826014D} = {BE266EA0-87E1-4BC4-ACBD-AED55826014D}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestApplications", "TestApplications", "{78AF1DF8-05F6-48EB-9540-D99B76B58350}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpellChecker", "SpellChecker\SpellChecker.vcxproj", "{1672DE9D-56FB-4C39-A58E-3F5402D63B80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -30,8 +34,16 @@ Global
 		{B46F564E-7A14-4503-B07D-2513952165D4}.Debug|Win32.Build.0 = Debug|Win32
 		{B46F564E-7A14-4503-B07D-2513952165D4}.Release|Win32.ActiveCfg = Release|Win32
 		{B46F564E-7A14-4503-B07D-2513952165D4}.Release|Win32.Build.0 = Release|Win32
+		{1672DE9D-56FB-4C39-A58E-3F5402D63B80}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1672DE9D-56FB-4C39-A58E-3F5402D63B80}.Debug|Win32.Build.0 = Debug|Win32
+		{1672DE9D-56FB-4C39-A58E-3F5402D63B80}.Release|Win32.ActiveCfg = Release|Win32
+		{1672DE9D-56FB-4C39-A58E-3F5402D63B80}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B46F564E-7A14-4503-B07D-2513952165D4} = {78AF1DF8-05F6-48EB-9540-D99B76B58350}
+		{1672DE9D-56FB-4C39-A58E-3F5402D63B80} = {78AF1DF8-05F6-48EB-9540-D99B76B58350}
 	EndGlobalSection
 EndGlobal
