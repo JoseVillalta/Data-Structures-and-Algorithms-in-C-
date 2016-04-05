@@ -29,5 +29,9 @@ void Dictionary::Init(string file)
     {
         cout << "Error could not open file" << endl;
     }
-  
+}
+
+bool Dictionary::Search(string word)
+{
+    return m_store->FindWord(word);
 }
