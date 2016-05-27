@@ -23,9 +23,6 @@ int _tmain(int argc, _TCHAR* argv[])
     {
         cout << i << endl;
     }
-
-
-
     return 0;
 }
 
