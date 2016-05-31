@@ -82,6 +82,10 @@
   <ItemGroup>
     <ClInclude Include="BinarySearch.h" />
     <ClInclude Include="BinarySearchTest.h" />
+    <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="BucketSort.h" />
+    <ClInclude Include="HeapSort.h" />
+    <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="InterpolationSearch.h" />
     <ClInclude Include="InterpolationSearchTest.h" />
     <ClInclude Include="LinearSearch.h" />
@@ -89,9 +93,17 @@
     <ClInclude Include="LinkedBinarySearch.h" />
     <ClInclude Include="LinkedLinearSearch.h" />
     <ClInclude Include="LinkedLinearSearchTest.h" />
+    <ClInclude Include="MergeSort.h" />
+    <ClInclude Include="QuickSort.h" />
+    <ClInclude Include="RadixSort.h" />
     <ClInclude Include="SearchPerformanceTest.h" />
+    <ClInclude Include="SelectionSort.h" />
+    <ClInclude Include="SelectionSortTest.h" />
+    <ClInclude Include="ShellSort.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="swap.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TimSort.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AlgorithmsInC++.cpp" />
@@ -105,6 +117,8 @@
     <ClCompile Include="LinkedLinearSearch.cpp" />
     <ClCompile Include="LinkedLinearSearchTest.cpp" />
     <ClCompile Include="SearchPerformanceTest.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
+    <ClCompile Include="SelectionSortTest.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

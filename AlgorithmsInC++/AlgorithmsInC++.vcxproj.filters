@@ -63,6 +63,42 @@
     <ClInclude Include="InterpolationSearchTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="SelectionSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertionSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="BubbleSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="ShellSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="BucketSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="RadixSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="TimSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectionSortTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="swap.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -99,6 +135,12 @@
       <Filter>Search</Filter>
     </ClCompile>
     <ClCompile Include="InterpolationSearchTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionSortTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

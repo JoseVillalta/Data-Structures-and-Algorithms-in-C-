@@ -8,6 +8,7 @@
 #include "SearchPerformanceTest.h"
 #include "LinkedLinearSearchTest.h"
 #include "InterpolationSearchTest.h"
+#include "SelectionSortTest.h"
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -18,11 +19,13 @@ int _tmain(int argc, _TCHAR* argv[])
     auto spt = new SearchPerformanceTest();
     auto llst = new LinkedLinearSearchTest();
     auto ist = new InterpolationSearchTest();
+    auto sst = new SelectionSortTest();
     lst->DoTests();
     bst->DoTests();
     spt->DoTests();
     llst->DoTests();
     ist->DoTests();
+    sst->DoTests();
     return 0;
 }
 
