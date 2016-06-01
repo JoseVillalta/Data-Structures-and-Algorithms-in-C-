@@ -19,7 +19,29 @@ void SelectionSorter::Sort(vector<T> & v, int start, int end)
 template <typename T>
 void SelectionSorter::DoubleEndedSort(vector<T> & v, int start, int end)
 {
+    int left = start;
+    int right = end;
 
+    while (left <= right)
+    {
+        int i = left+1;
+        int j = right-1;
+        while (i <= end && j >= start)
+        {
+            if (v[i] < v[left])
+            {
+                swap(v, i, left);
+            }
+            if (v[j] > v[right])
+            {
+                swap(v, j, right);
+            }
+            i++;
+            j--;
+        }
+        left++;
+        right--;
+    }
 }
 
 template void SelectionSorter::Sort(vector<int> & v, int start, int end);
