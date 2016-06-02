@@ -99,6 +99,12 @@
     <ClInclude Include="swap.h">
       <Filter>Sort</Filter>
     </ClInclude>
+    <ClInclude Include="MinMaxSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="MinMaxSortTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -141,6 +147,12 @@
       <Filter>Sort</Filter>
     </ClCompile>
     <ClCompile Include="SelectionSortTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="MinMaxSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="MinMaxSortTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

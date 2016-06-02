@@ -35,12 +35,6 @@ void SelectionSortTest::TestDoubleSort()
 
     selectionSorter->DoubleEndedSort(v, 0, 6);
 
-    for (auto i : v)
-    {
-        cout << i << ", ";
-    }
-    cout << endl;
-
     for (int i = 0; i < v.size(); i++)
     {
         _ASSERT(v[i] == expected[i]);
