@@ -105,6 +105,9 @@
     <ClInclude Include="MinMaxSortTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="BubbleSortTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -153,6 +156,12 @@
       <Filter>Sort</Filter>
     </ClCompile>
     <ClCompile Include="MinMaxSortTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="BubbleSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="BubbleSortTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

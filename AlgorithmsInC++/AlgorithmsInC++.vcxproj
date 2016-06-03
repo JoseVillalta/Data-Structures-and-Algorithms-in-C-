@@ -83,6 +83,7 @@
     <ClInclude Include="BinarySearch.h" />
     <ClInclude Include="BinarySearchTest.h" />
     <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="BubbleSortTest.h" />
     <ClInclude Include="BucketSort.h" />
     <ClInclude Include="HeapSort.h" />
     <ClInclude Include="InsertionSort.h" />
@@ -111,6 +112,8 @@
     <ClCompile Include="AlgorithmsInC++.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="BinarySearchTest.cpp" />
+    <ClCompile Include="BubbleSort.cpp" />
+    <ClCompile Include="BubbleSortTest.cpp" />
     <ClCompile Include="InterpolationSearch.cpp" />
     <ClCompile Include="InterpolationSearchTest.cpp" />
     <ClCompile Include="LinearSearchTest.cpp" />

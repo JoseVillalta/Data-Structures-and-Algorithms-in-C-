@@ -10,6 +10,8 @@
 #include "InterpolationSearchTest.h"
 #include "SelectionSortTest.h"
 #include "MinMaxSortTest.h"
+#include "BubbleSortTest.h"
+
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -22,6 +24,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto ist = new InterpolationSearchTest();
     auto sst = new SelectionSortTest();
     auto mst = new MinMaxSortTest();
+    auto bbt = new BubbleSortTest();
     lst->DoTests();
     bst->DoTests();
     spt->DoTests();
@@ -29,6 +32,7 @@ int _tmain(int argc, _TCHAR* argv[])
     ist->DoTests();
     sst->DoTests();
     mst->DoTests(); 
+    bbt->DoTests();
     return 0;
 }
 
