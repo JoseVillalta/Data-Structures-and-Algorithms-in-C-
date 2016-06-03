@@ -108,6 +108,9 @@
     <ClInclude Include="BubbleSortTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="ShellSortTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -166,6 +169,12 @@
     </ClCompile>
     <ClCompile Include="InsertionSort.cpp">
       <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="ShellSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="ShellSortTest.cpp">
+      <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

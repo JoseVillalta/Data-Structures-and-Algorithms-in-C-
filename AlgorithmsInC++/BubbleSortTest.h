@@ -8,4 +8,7 @@ class BubbleSortTest
 {
 public:
     void DoTests();
+private:
+    void TestSort();
+    void TestRecursiveSort();
 };
