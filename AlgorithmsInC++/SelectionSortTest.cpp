@@ -7,6 +7,7 @@ void SelectionSortTest::DoTests()
 {
     TestSort();
     TestDoubleSort();
+    TestRecursiveSelectionSort();
 }
 
 void SelectionSortTest::TestSort()
@@ -41,5 +42,29 @@ void SelectionSortTest::TestDoubleSort()
     }
 
     cout << "Double Ended Selection Sort Passed" << endl;
+
+}
+
+void SelectionSortTest::TestRecursiveSelectionSort()
+{
+    cout << "Recursive Selection Sort Start" << endl;
+
+    vector<int> v = { 67, 33, 21, 84, 49, 50, 75 };
+    vector<int> expected = { 21, 33, 49, 50, 67, 75, 84 };
+    auto selectionSorter = new SelectionSorter();
+    
+    selectionSorter->RecursiveSort(v, 0, 6);
+
+    for (auto i : v)
+    {
+        cout << i << ", ";
+    }
+    cout << endl;
+    for (int i = 0; i < v.size(); i++)
+    {
+        _ASSERT(v[i] == expected[i]);
+    }
+
+    cout << "Recursive Selection Sort Passed" << endl;
 
 }

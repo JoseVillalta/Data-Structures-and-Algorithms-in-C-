@@ -114,6 +114,7 @@
     <ClCompile Include="BinarySearchTest.cpp" />
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="BubbleSortTest.cpp" />
+    <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="InterpolationSearch.cpp" />
     <ClCompile Include="InterpolationSearchTest.cpp" />
     <ClCompile Include="LinearSearchTest.cpp" />

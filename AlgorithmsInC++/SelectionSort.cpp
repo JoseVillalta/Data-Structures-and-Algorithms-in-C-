@@ -44,5 +44,22 @@ void SelectionSorter::DoubleEndedSort(vector<T> & v, int start, int end)
     }
 }
 
+template <typename T>
+void SelectionSorter::RecursiveSort(vector<T> & v, int start, int end)
+{
+    if (end > start)
+    {
+        for (int i = start; i <= end; i++)
+        {
+            if (v[i] < v[start])
+            {
+                swap(v, i, start);
+            }
+        }
+        RecursiveSort(v, start + 1, end);
+    }
+}
+
 template void SelectionSorter::Sort(vector<int> & v, int start, int end);
 template void SelectionSorter::DoubleEndedSort(vector<int> & v, int start, int end);
+template void SelectionSorter::RecursiveSort(vector<int> & v, int start, int end);

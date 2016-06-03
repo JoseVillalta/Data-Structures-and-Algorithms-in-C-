@@ -8,4 +8,5 @@ public:
 private:
     void TestSort();
     void TestDoubleSort();
+    void TestRecursiveSelectionSort();
 };

@@ -164,5 +164,8 @@
     <ClCompile Include="BubbleSortTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="InsertionSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
