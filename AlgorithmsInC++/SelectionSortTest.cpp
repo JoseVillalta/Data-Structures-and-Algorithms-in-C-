@@ -28,7 +28,7 @@ void SelectionSortTest::TestSort()
 
 void SelectionSortTest::TestDoubleSort()
 {
-    cout << "Double Ended Selection Sort" << endl;
+    cout << "Double Ended Selection Sort Start" << endl;
     vector<int> v = { 67, 33, 21, 84, 49, 50, 75 };
     vector<int> expected = { 21, 33, 49, 50, 67, 75, 84 };
     auto selectionSorter = new SelectionSorter();
@@ -40,6 +40,6 @@ void SelectionSortTest::TestDoubleSort()
         _ASSERT(v[i] == expected[i]);
     }
 
-    cout << "Double Ended Selection Sort" << endl;
+    cout << "Double Ended Selection Sort Passed" << endl;
 
 }

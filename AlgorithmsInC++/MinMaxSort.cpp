@@ -20,13 +20,14 @@ void MinMaxSort::Sort(vector<T> & v, int start, int end)
 
     int outerLeft = start;
     int outerRight = end;
+    int midPoint = (end - start) / 2;
     while (outerLeft < outerRight)
     {
         //find min in first half
         left = outerLeft;
         right = outerRight;
         int minIndex = left;
-        int midPoint = (right - left) / 2;
+       
         while (left < midPoint)
         {
             if (v[left] < v[minIndex])

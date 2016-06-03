@@ -28,7 +28,7 @@ int _tmain(int argc, _TCHAR* argv[])
     llst->DoTests();
     ist->DoTests();
     sst->DoTests();
-    //mst->DoTests(); Min Max is not done. 
+    mst->DoTests(); 
     return 0;
 }
 
