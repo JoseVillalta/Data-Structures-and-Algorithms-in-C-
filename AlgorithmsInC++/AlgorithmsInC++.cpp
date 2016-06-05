@@ -11,6 +11,7 @@
 #include "SelectionSortTest.h"
 #include "MinMaxSortTest.h"
 #include "BubbleSortTest.h"
+#include "ShellSortTest.h"
 
 using namespace std;
 
@@ -25,14 +26,16 @@ int _tmain(int argc, _TCHAR* argv[])
     auto sst = new SelectionSortTest();
     auto mst = new MinMaxSortTest();
     auto bbt = new BubbleSortTest();
+    auto sht = new ShellSortTest();
     lst->DoTests();
     bst->DoTests();
-    spt->DoTests();
+   // spt->DoTests();
     llst->DoTests();
     ist->DoTests();
     sst->DoTests();
     mst->DoTests(); 
     bbt->DoTests();
+    sht->DoTests();
     return 0;
 }
 
