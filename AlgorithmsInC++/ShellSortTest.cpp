@@ -2,6 +2,7 @@
 
 void ShellSortTest::DoTests()
 {
+    cout << "Shell Sort Test Start" << endl;
     vector<int> v = { 100, 90, 60, 70, 40, 20, 50, 30, 80, 10 };
     vector<int> expected = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
     auto sorter = new ShellSorter();
@@ -16,4 +17,5 @@ void ShellSortTest::DoTests()
     {
         _ASSERT(v[j] == expected[j]);
     }
+    cout << "Shell Sort Test Passed" << endl;
 }

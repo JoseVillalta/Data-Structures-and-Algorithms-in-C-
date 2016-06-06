@@ -111,6 +111,12 @@
     <ClInclude Include="ShellSortTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="TreeSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeSortTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -175,6 +181,15 @@
     </ClCompile>
     <ClCompile Include="ShellSortTest.cpp">
       <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeSortTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DataStructures\BinarySearchTree.cpp">
+      <Filter>Sort</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

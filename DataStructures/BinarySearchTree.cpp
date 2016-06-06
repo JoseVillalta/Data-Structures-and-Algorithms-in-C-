@@ -606,4 +606,6 @@ template int BST<char>::LeafCount(void);
 template int BST<int>::NodeCount(void);
 template int BST<char>::NodeCount(void);
 template vector<char>* BST<char>::ToVectorInOrder(void);
+template vector<int>* BST<int>::ToVectorInOrder(void);
 template void BST<char>::ToVectorAux(TreeNode<char>* root, vector<char>& v);
+template void BST<int>::ToVectorAux(TreeNode<int>* root, vector<int>& v);
