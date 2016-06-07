@@ -22,6 +22,9 @@
     <Filter Include="LinkedLists">
       <UniqueIdentifier>{f229a319-7695-48a6-9a63-39065a585444}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\TreeTests">
+      <UniqueIdentifier>{5c4a4c46-22b3-4c89-ab39-18683853f926}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -33,44 +36,44 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BinarySearchTree.h">
-      <Filter>Trees</Filter>
-    </ClInclude>
-    <ClInclude Include="BinarySearchTreeTests.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="TreeNode.h">
-      <Filter>Trees</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedListNode.h">
+    <ClInclude Include="LinkedLists\LinkedListArrayBasedNode.h">
       <Filter>LinkedLists</Filter>
     </ClInclude>
-    <ClInclude Include="BSTFactory.h">
-      <Filter>Trees</Filter>
-    </ClInclude>
-    <ClInclude Include="CharBSTTests.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="BSTANode.h">
-      <Filter>Trees</Filter>
-    </ClInclude>
-    <ClInclude Include="BSTA.h">
-      <Filter>Trees</Filter>
-    </ClInclude>
-    <ClInclude Include="BSTATests.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedListArrayBasedNode.h">
+    <ClInclude Include="LinkedLists\LinkedListNode.h">
       <Filter>LinkedLists</Filter>
     </ClInclude>
-    <ClInclude Include="TrieNode.h">
+    <ClInclude Include="Trees\BinarySearchTree.h">
       <Filter>Trees</Filter>
     </ClInclude>
-    <ClInclude Include="RadixTree.h">
+    <ClInclude Include="Trees\BSTA.h">
       <Filter>Trees</Filter>
     </ClInclude>
-    <ClInclude Include="RadixTreeTests.h">
-      <Filter>Tests</Filter>
+    <ClInclude Include="Trees\BSTANode.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees\BSTFactory.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees\RadixTree.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees\TreeNode.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees\TrieNode.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TreeTests\BinarySearchTreeTests.h">
+      <Filter>Tests\TreeTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TreeTests\BSTATests.h">
+      <Filter>Tests\TreeTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TreeTests\CharBSTTests.h">
+      <Filter>Tests\TreeTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TreeTests\RadixTreeTests.h">
+      <Filter>Tests\TreeTests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -80,29 +83,29 @@
     <ClCompile Include="DataStructures.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BinarySearchTree.cpp">
+    <ClCompile Include="Trees\BinarySearchTree.cpp">
       <Filter>Trees</Filter>
     </ClCompile>
-    <ClCompile Include="BinarySearchTreeTests.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="BSTFactory.cpp">
+    <ClCompile Include="Trees\BSTA.cpp">
       <Filter>Trees</Filter>
     </ClCompile>
-    <ClCompile Include="CharBSTTests.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="BSTA.cpp">
+    <ClCompile Include="Trees\BSTFactory.cpp">
       <Filter>Trees</Filter>
     </ClCompile>
-    <ClCompile Include="BSTATests.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="RadixTree.cpp">
+    <ClCompile Include="Trees\RadixTree.cpp">
       <Filter>Trees</Filter>
     </ClCompile>
-    <ClCompile Include="RadixTreeTests.cpp">
-      <Filter>Tests</Filter>
+    <ClCompile Include="Tests\TreeTests\BinarySearchTreeTests.cpp">
+      <Filter>Tests\TreeTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\TreeTests\BSTATests.cpp">
+      <Filter>Tests\TreeTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\TreeTests\CharBSTTests.cpp">
+      <Filter>Tests\TreeTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\TreeTests\RadixTreeTests.cpp">
+      <Filter>Tests\TreeTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

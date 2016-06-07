@@ -52,6 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\Tests\TreeTests;$(ProjectDir)\LinkedLists;$(ProjectDir)\Trees;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -79,33 +80,33 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinarySearchTree.h" />
-    <ClInclude Include="BinarySearchTreeTests.h" />
-    <ClInclude Include="BSTA.h" />
-    <ClInclude Include="BSTANode.h" />
-    <ClInclude Include="BSTATests.h" />
-    <ClInclude Include="BSTFactory.h" />
-    <ClInclude Include="CharBSTTests.h" />
-    <ClInclude Include="RadixTree.h" />
-    <ClInclude Include="LinkedListArrayBasedNode.h" />
-    <ClInclude Include="LinkedListNode.h" />
-    <ClInclude Include="RadixTreeTests.h" />
+    <ClInclude Include="LinkedLists\LinkedListArrayBasedNode.h" />
+    <ClInclude Include="LinkedLists\LinkedListNode.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="TreeNode.h" />
-    <ClInclude Include="TrieNode.h" />
+    <ClInclude Include="Tests\TreeTests\BinarySearchTreeTests.h" />
+    <ClInclude Include="Tests\TreeTests\BSTATests.h" />
+    <ClInclude Include="Tests\TreeTests\CharBSTTests.h" />
+    <ClInclude Include="Tests\TreeTests\RadixTreeTests.h" />
+    <ClInclude Include="Trees\BinarySearchTree.h" />
+    <ClInclude Include="Trees\BSTA.h" />
+    <ClInclude Include="Trees\BSTANode.h" />
+    <ClInclude Include="Trees\BSTFactory.h" />
+    <ClInclude Include="Trees\RadixTree.h" />
+    <ClInclude Include="Trees\TreeNode.h" />
+    <ClInclude Include="Trees\TrieNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinarySearchTree.cpp" />
-    <ClCompile Include="BinarySearchTreeTests.cpp" />
-    <ClCompile Include="BSTA.cpp" />
-    <ClCompile Include="BSTATests.cpp" />
-    <ClCompile Include="BSTFactory.cpp" />
-    <ClCompile Include="CharBSTTests.cpp" />
     <ClCompile Include="DataStructures.cpp" />
-    <ClCompile Include="RadixTree.cpp" />
-    <ClCompile Include="RadixTreeTests.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Tests\TreeTests\BinarySearchTreeTests.cpp" />
+    <ClCompile Include="Tests\TreeTests\BSTATests.cpp" />
+    <ClCompile Include="Tests\TreeTests\CharBSTTests.cpp" />
+    <ClCompile Include="Tests\TreeTests\RadixTreeTests.cpp" />
+    <ClCompile Include="Trees\BinarySearchTree.cpp" />
+    <ClCompile Include="Trees\BSTA.cpp" />
+    <ClCompile Include="Trees\BSTFactory.cpp" />
+    <ClCompile Include="Trees\RadixTree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

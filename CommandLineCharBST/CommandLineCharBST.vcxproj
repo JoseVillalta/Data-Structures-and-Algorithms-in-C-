@@ -52,7 +52,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\jvillalt\Documents\Visual Studio 2013\Projects\AlgorithmsInC++\DataStructures;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\DataStructures\Trees;C:\Users\jvillalt\Documents\Visual Studio 2013\Projects\AlgorithmsInC++\DataStructures;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -85,7 +85,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\DataStructures\BinarySearchTree.cpp" />
+    <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
     <ClCompile Include="BSTCommandHandler.cpp" />
     <ClCompile Include="CommandLineCharBST.cpp" />
     <ClCompile Include="stdafx.cpp">

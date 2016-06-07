@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures\Trees;$(ProjectDir)..\DataStructures\LinkedLists</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -112,7 +112,7 @@
     <ClInclude Include="Tests\SortTests\TreeSortTest.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\DataStructures\BinarySearchTree.cpp" />
+    <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
     <ClCompile Include="AlgorithmsInC++.cpp" />
     <ClCompile Include="Search\BinarySearch.cpp" />
     <ClCompile Include="Search\InterpolationSearch.cpp" />

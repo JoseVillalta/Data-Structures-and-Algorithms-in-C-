@@ -149,9 +149,6 @@
     <ClCompile Include="Sort\TreeSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="..\DataStructures\BinarySearchTree.cpp">
-      <Filter>Sort</Filter>
-    </ClCompile>
     <ClCompile Include="Tests\SearchTests\BinarySearchTest.cpp">
       <Filter>Tests\SearchTests</Filter>
     </ClCompile>
@@ -196,6 +193,9 @@
     </ClCompile>
     <ClCompile Include="Search\LinkedLinearSearch.cpp">
       <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp">
+      <Filter>Sort</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

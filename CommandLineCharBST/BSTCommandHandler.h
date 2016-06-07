@@ -1,5 +1,6 @@
 #pragma once
-#include "..\DataStructures\BinarySearchTree.h"
+#include "stdafx.h"
+#include "BinarySearchTree.h"
 #include <iostream>
 
 using namespace std;

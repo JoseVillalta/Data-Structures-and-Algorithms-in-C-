@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)\DataStructures;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DataStructures\Trees;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -89,7 +89,7 @@
     <ClInclude Include="WordChecker.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\DataStructures\RadixTree.cpp" />
+    <ClCompile Include="..\DataStructures\Trees\RadixTree.cpp" />
     <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="SpellChecker.cpp" />
     <ClCompile Include="stdafx.cpp" />

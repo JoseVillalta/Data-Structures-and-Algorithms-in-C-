@@ -53,7 +53,7 @@
     <ClCompile Include="WordChecker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\DataStructures\RadixTree.cpp">
+    <ClCompile Include="..\DataStructures\Trees\RadixTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

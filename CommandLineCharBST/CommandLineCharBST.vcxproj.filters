@@ -38,7 +38,7 @@
     <ClCompile Include="BSTCommandHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\DataStructures\BinarySearchTree.cpp">
+    <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
