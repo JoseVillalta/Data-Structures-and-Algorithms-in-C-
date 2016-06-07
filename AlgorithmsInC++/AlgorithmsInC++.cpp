@@ -31,7 +31,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto tst = new TreeSortTest();
     lst->DoTests();
     bst->DoTests();
-   // spt->DoTests();
+ //   spt->DoTests();
     llst->DoTests();
     ist->DoTests();
     sst->DoTests();

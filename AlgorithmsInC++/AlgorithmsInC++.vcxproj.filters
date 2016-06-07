@@ -22,6 +22,12 @@
     <Filter Include="Sort">
       <UniqueIdentifier>{374b5854-7a33-4aea-8fe0-ba31cee1c644}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\SortTests">
+      <UniqueIdentifier>{23ad9251-b53f-4925-85bd-2b36f87cd389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\SearchTests">
+      <UniqueIdentifier>{a60e4055-296d-4073-a616-a057db87792f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -33,89 +39,89 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LinearSearchTests.h">
-      <Filter>Tests</Filter>
+    <ClInclude Include="Sort\QuickSort.h">
+      <Filter>Sort</Filter>
     </ClInclude>
-    <ClInclude Include="LinearSearch.h">
+    <ClInclude Include="Sort\BubbleSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\BucketSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\HeapSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\InsertionSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\MergeSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\MinMaxSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\RadixSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\SelectionSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\ShellSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\TimSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\TreeSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\swap.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SearchTests\BinarySearchTest.h">
+      <Filter>Tests\SearchTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SearchTests\InterpolationSearchTest.h">
+      <Filter>Tests\SearchTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SearchTests\LinkedLinearSearchTest.h">
+      <Filter>Tests\SearchTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SearchTests\SearchPerformanceTest.h">
+      <Filter>Tests\SearchTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SortTests\BubbleSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SortTests\MinMaxSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SortTests\SelectionSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SortTests\ShellSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SortTests\TreeSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\BinarySearch.h">
       <Filter>Search</Filter>
     </ClInclude>
-    <ClInclude Include="BinarySearch.h">
+    <ClInclude Include="Search\InterpolationSearch.h">
       <Filter>Search</Filter>
     </ClInclude>
-    <ClInclude Include="BinarySearchTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="SearchPerformanceTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedLinearSearch.h">
+    <ClInclude Include="Search\LinearSearch.h">
       <Filter>Search</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedLinearSearchTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedBinarySearch.h">
+    <ClInclude Include="Search\LinkedBinarySearch.h">
       <Filter>Search</Filter>
     </ClInclude>
-    <ClInclude Include="InterpolationSearch.h">
+    <ClInclude Include="Search\LinkedLinearSearch.h">
       <Filter>Search</Filter>
     </ClInclude>
-    <ClInclude Include="InterpolationSearchTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="SelectionSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="InsertionSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="BubbleSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="QuickSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="HeapSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="MergeSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="ShellSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="BucketSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="RadixSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="TimSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="SelectionSortTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="swap.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="MinMaxSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="MinMaxSortTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="BubbleSortTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="ShellSortTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="TreeSort.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
-    <ClInclude Include="TreeSortTest.h">
-      <Filter>Tests</Filter>
+    <ClInclude Include="Tests\SearchTests\LinearSearchTests.h">
+      <Filter>Tests\SearchTests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -125,71 +131,71 @@
     <ClCompile Include="AlgorithmsInC++.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LinearSearchTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="LinearSearch.cpp">
-      <Filter>Search</Filter>
-    </ClCompile>
-    <ClCompile Include="BinarySearch.cpp">
-      <Filter>Search</Filter>
-    </ClCompile>
-    <ClCompile Include="BinarySearchTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="SearchPerformanceTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedLinearSearch.cpp">
-      <Filter>Search</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedLinearSearchTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedBinarySearch.cpp">
-      <Filter>Search</Filter>
-    </ClCompile>
-    <ClCompile Include="InterpolationSearch.cpp">
-      <Filter>Search</Filter>
-    </ClCompile>
-    <ClCompile Include="InterpolationSearchTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="SelectionSort.cpp">
+    <ClCompile Include="Sort\BubbleSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="SelectionSortTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="MinMaxSort.cpp">
+    <ClCompile Include="Sort\InsertionSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="MinMaxSortTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="BubbleSort.cpp">
+    <ClCompile Include="Sort\MinMaxSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="BubbleSortTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="InsertionSort.cpp">
+    <ClCompile Include="Sort\SelectionSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="ShellSort.cpp">
+    <ClCompile Include="Sort\ShellSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="ShellSortTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="TreeSort.cpp">
+    <ClCompile Include="Sort\TreeSort.cpp">
       <Filter>Sort</Filter>
-    </ClCompile>
-    <ClCompile Include="TreeSortTest.cpp">
-      <Filter>Tests</Filter>
     </ClCompile>
     <ClCompile Include="..\DataStructures\BinarySearchTree.cpp">
       <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SearchTests\BinarySearchTest.cpp">
+      <Filter>Tests\SearchTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SearchTests\InterpolationSearchTest.cpp">
+      <Filter>Tests\SearchTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SearchTests\LinearSearchTest.cpp">
+      <Filter>Tests\SearchTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SearchTests\LinkedLinearSearchTest.cpp">
+      <Filter>Tests\SearchTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SearchTests\SearchPerformanceTest.cpp">
+      <Filter>Tests\SearchTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\BubbleSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\MinMaxSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\SelectionSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\ShellSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\TreeSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\BinarySearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\InterpolationSearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\LinearSearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\LinkedBinarySearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\LinkedLinearSearch.cpp">
+      <Filter>Search</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
