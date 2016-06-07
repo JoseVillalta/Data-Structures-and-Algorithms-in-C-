@@ -1,4 +1,5 @@
 #include "TreeSort.h"
+#include <iostream>
 
 template <typename T>
 void TreeSort::Sort(vector<T> & v, int start, int end)
@@ -12,10 +13,12 @@ void TreeSort::Sort(vector<T> & v, int start, int end)
     v.clear();
     vector<T> * temp = bst->ToVectorInOrder();
 
-   // for (T i : temp)
-   // {
-   //     v.push_back(i);
-   // }
+    for (int i = 0; i < temp->size(); i++)
+    {
+        v.push_back(temp->at(i));
+    }
+
+    delete temp;
 }
 
 template void TreeSort::Sort(vector<int> & v, int start, int end);
