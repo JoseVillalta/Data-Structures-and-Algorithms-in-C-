@@ -9,4 +9,5 @@ private:
     void TestSort();
     void TestDoubleSort();
     void TestRecursiveSelectionSort();
+    void TestSortStudentRecords();
 };

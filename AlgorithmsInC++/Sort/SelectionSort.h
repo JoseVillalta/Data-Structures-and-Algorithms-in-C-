@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include "SortableRecord.h"
 
 using namespace std;
 

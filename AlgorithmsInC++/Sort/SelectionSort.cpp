@@ -61,5 +61,6 @@ void SelectionSorter::RecursiveSort(vector<T> & v, int start, int end)
 }
 
 template void SelectionSorter::Sort(vector<int> & v, int start, int end);
+template void SelectionSorter::Sort(vector<SortableRecord> & v, int start, int end);
 template void SelectionSorter::DoubleEndedSort(vector<int> & v, int start, int end);
 template void SelectionSorter::RecursiveSort(vector<int> & v, int start, int end);
