@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures\Trees;$(ProjectDir)..\DataStructures\LinkedLists</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Sort\Support;$(ProjectDir);$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures\Trees;$(ProjectDir)..\DataStructures\LinkedLists</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -95,7 +95,7 @@
     <ClInclude Include="Sort\RadixSort.h" />
     <ClInclude Include="Sort\SelectionSort.h" />
     <ClInclude Include="Sort\ShellSort.h" />
-    <ClInclude Include="Sort\swap.h" />
+    <ClInclude Include="Sort\Support\swap.h" />
     <ClInclude Include="Sort\TimSort.h" />
     <ClInclude Include="Sort\TreeSort.h" />
     <ClInclude Include="stdafx.h" />

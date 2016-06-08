@@ -28,6 +28,9 @@
     <Filter Include="Tests\SearchTests">
       <UniqueIdentifier>{a60e4055-296d-4073-a616-a057db87792f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sort\Support">
+      <UniqueIdentifier>{c5ffa059-ea8e-4b38-90ff-ef676e0cfe55}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -75,9 +78,6 @@
     <ClInclude Include="Sort\TreeSort.h">
       <Filter>Sort</Filter>
     </ClInclude>
-    <ClInclude Include="Sort\swap.h">
-      <Filter>Sort</Filter>
-    </ClInclude>
     <ClInclude Include="Tests\SearchTests\BinarySearchTest.h">
       <Filter>Tests\SearchTests</Filter>
     </ClInclude>
@@ -122,6 +122,9 @@
     </ClInclude>
     <ClInclude Include="Tests\SearchTests\LinearSearchTests.h">
       <Filter>Tests\SearchTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\Support\swap.h">
+      <Filter>Sort\Support</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -195,7 +198,7 @@
       <Filter>Search</Filter>
     </ClCompile>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp">
-      <Filter>Sort</Filter>
+      <Filter>Sort\Support</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
