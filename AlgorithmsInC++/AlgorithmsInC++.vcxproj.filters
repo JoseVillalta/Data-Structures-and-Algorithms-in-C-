@@ -126,6 +126,9 @@
     <ClInclude Include="Sort\Support\swap.h">
       <Filter>Sort\Support</Filter>
     </ClInclude>
+    <ClInclude Include="Sort\Support\SortableRecord.h">
+      <Filter>Sort\Support</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

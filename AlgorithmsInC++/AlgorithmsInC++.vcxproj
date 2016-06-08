@@ -95,6 +95,7 @@
     <ClInclude Include="Sort\RadixSort.h" />
     <ClInclude Include="Sort\SelectionSort.h" />
     <ClInclude Include="Sort\ShellSort.h" />
+    <ClInclude Include="Sort\Support\SortableRecord.h" />
     <ClInclude Include="Sort\Support\swap.h" />
     <ClInclude Include="Sort\TimSort.h" />
     <ClInclude Include="Sort\TreeSort.h" />
