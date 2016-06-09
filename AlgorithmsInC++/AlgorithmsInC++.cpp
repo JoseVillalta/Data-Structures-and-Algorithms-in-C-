@@ -13,6 +13,8 @@
 #include "BubbleSortTest.h"
 #include "ShellSortTest.h"
 #include "TreeSortTest.h"
+#include "InsertionSortTest.h"
+#include "SortPerformanceTest.h"
 
 using namespace std;
 
@@ -29,6 +31,8 @@ int _tmain(int argc, _TCHAR* argv[])
     auto bbt = new BubbleSortTest();
     auto sht = new ShellSortTest();
     auto tst = new TreeSortTest();
+    auto insertionSortTest = new InsertionSortTest();
+    auto sortPerformance = new SortPerformanceTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -39,6 +43,9 @@ int _tmain(int argc, _TCHAR* argv[])
     bbt->DoTests();
     sht->DoTests();
     tst->DoTests();
+
+    insertionSortTest->DoTests();
+    sortPerformance->DoTests();
     return 0;
 }
 

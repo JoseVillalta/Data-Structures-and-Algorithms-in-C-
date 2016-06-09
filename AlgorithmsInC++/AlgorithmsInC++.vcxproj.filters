@@ -31,6 +31,9 @@
     <Filter Include="Sort\Support">
       <UniqueIdentifier>{c5ffa059-ea8e-4b38-90ff-ef676e0cfe55}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\Support">
+      <UniqueIdentifier>{4da795ed-69ba-46a0-b816-488a824ca4eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -129,6 +132,15 @@
     <ClInclude Include="Sort\Support\SortableRecord.h">
       <Filter>Sort\Support</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\SortTests\InsertionSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\SortTests\SortPerformanceTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\Support\TimeElapsed.h">
+      <Filter>Tests\Support</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -202,6 +214,12 @@
     </ClCompile>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp">
       <Filter>Sort\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\InsertionSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\SortPerformanceTest.cpp">
+      <Filter>Tests\SortTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

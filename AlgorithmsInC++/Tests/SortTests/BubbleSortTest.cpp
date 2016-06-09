@@ -18,7 +18,7 @@ void BubbleSortTest::TestSort()
         cout << i << ", ";
     }
     cout << endl;
-    for (int i = 0; i < v.size(); i++)
+    for (auto i = 0; i < (int)v.size(); i++)
     {
         _ASSERT(v[i] == expected[i]);
     }
@@ -37,7 +37,7 @@ void BubbleSortTest::TestRecursiveSort()
         cout << i << ", ";
     }
     cout << endl;
-    for (int i = 0; i < v.size(); i++)
+    for (int i = 0; i <(int)v.size(); i++)
     {
         _ASSERT(v[i] == expected[i]);
     }

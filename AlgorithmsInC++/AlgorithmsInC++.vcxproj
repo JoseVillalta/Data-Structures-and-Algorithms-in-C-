@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Sort\Support;$(ProjectDir);$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures\Trees;$(ProjectDir)..\DataStructures\LinkedLists</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Tests\Support;$(ProjectDir)\Sort\Support;$(ProjectDir);$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures\Trees;$(ProjectDir)..\DataStructures\LinkedLists</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -107,10 +107,13 @@
     <ClInclude Include="Tests\SearchTests\LinkedLinearSearchTest.h" />
     <ClInclude Include="Tests\SearchTests\SearchPerformanceTest.h" />
     <ClInclude Include="Tests\SortTests\BubbleSortTest.h" />
+    <ClInclude Include="Tests\SortTests\InsertionSortTest.h" />
     <ClInclude Include="Tests\SortTests\MinMaxSortTest.h" />
     <ClInclude Include="Tests\SortTests\SelectionSortTest.h" />
     <ClInclude Include="Tests\SortTests\ShellSortTest.h" />
+    <ClInclude Include="Tests\SortTests\SortPerformanceTest.h" />
     <ClInclude Include="Tests\SortTests\TreeSortTest.h" />
+    <ClInclude Include="Tests\Support\TimeElapsed.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
@@ -133,9 +136,11 @@
     <ClCompile Include="Tests\SearchTests\LinkedLinearSearchTest.cpp" />
     <ClCompile Include="Tests\SearchTests\SearchPerformanceTest.cpp" />
     <ClCompile Include="Tests\SortTests\BubbleSortTest.cpp" />
+    <ClCompile Include="Tests\SortTests\InsertionSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\MinMaxSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\SelectionSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\ShellSortTest.cpp" />
+    <ClCompile Include="Tests\SortTests\SortPerformanceTest.cpp" />
     <ClCompile Include="Tests\SortTests\TreeSortTest.cpp" />
   </ItemGroup>
   <ItemGroup>
