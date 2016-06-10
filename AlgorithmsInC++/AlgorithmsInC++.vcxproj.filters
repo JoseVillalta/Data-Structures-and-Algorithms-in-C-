@@ -141,6 +141,9 @@
     <ClInclude Include="Tests\Support\TimeElapsed.h">
       <Filter>Tests\Support</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\SortTests\HeapSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -219,6 +222,12 @@
       <Filter>Tests\SortTests</Filter>
     </ClCompile>
     <ClCompile Include="Tests\SortTests\SortPerformanceTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort\HeapSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\HeapSortTest.cpp">
       <Filter>Tests\SortTests</Filter>
     </ClCompile>
   </ItemGroup>

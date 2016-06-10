@@ -15,6 +15,7 @@
 #include "TreeSortTest.h"
 #include "InsertionSortTest.h"
 #include "SortPerformanceTest.h"
+#include "HeapSortTest.h"
 
 using namespace std;
 
@@ -33,6 +34,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto tst = new TreeSortTest();
     auto insertionSortTest = new InsertionSortTest();
     auto sortPerformance = new SortPerformanceTest();
+    auto heapSortTest = new HeapSortTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -46,6 +48,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
     insertionSortTest->DoTests();
     sortPerformance->DoTests();
+    heapSortTest->DoTests();
+
     return 0;
 }
 
