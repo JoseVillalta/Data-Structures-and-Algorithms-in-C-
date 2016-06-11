@@ -5,6 +5,7 @@
 #include "ShellSort.h"
 #include "TreeSort.h"
 #include "MinMaxSort.h"
+#include "HeapSort.h"
 #include "Windows.h"
 #include "TimeElapsed.h"
 
@@ -17,6 +18,7 @@ void SortPerformanceTest::DoTests()
     auto shellSort = new ShellSorter();
     auto treeSort = new TreeSort();
     auto minMaxSort = new MinMaxSort();
+    auto heapSort = new HeapSort();
 
     vector<int> * v = new vector<int>();
 
@@ -103,6 +105,18 @@ void SortPerformanceTest::DoTests()
     cout << " Elapsed Microseconds Min Max Sort: " << ElapsedMicroseconds.QuadPart << endl;
 
     v->clear();
+
+    //Heap Sort
+    GetRandomVector(*v, 1000);
+
+    QueryPerformanceFrequency(&Frequency);
+    QueryPerformanceCounter(&StartingTime);
+    heapSort->Sort(*v, 0, 999);
+    QueryPerformanceCounter(&EndingTime);
+    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+
+    cout << " Elapsed Microseconds Heap Sort: " << ElapsedMicroseconds.QuadPart << endl;
+
 
     cout << "*********************************" << endl;
     cout << "END OF SORTING PERFORMANCE TEST" << endl;

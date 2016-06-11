@@ -7,9 +7,10 @@ void HeapSort::Sort(vector<T> &v, int start, int end)
 {
     int left = start;
     int right = end;
+    Heapify(v, left, right);
     while (right >= left)
     {
-       Heapify(v,left,right);
+       PercolateDown(v, left, right);
        swap(v, left, right);
        right--;
     }
