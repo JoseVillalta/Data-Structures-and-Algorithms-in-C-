@@ -1,10 +1,13 @@
 #include "HeapSortTest.h"
+#include "RandomVector.h"
+#include <algorithm>
 
 void HeapSortTest::DoTests()
 {
     TestPercolateDown();
     TestHeapify();
     TestSort();
+    TestManyElements();
 }
 
 void HeapSortTest::TestPercolateDown()
@@ -64,4 +67,27 @@ void HeapSortTest::TestSort()
 
     cout << "Heap Sort Test Passed" << endl;
 
+}
+
+void HeapSortTest::TestManyElements()
+{
+    vector<int> v;
+    GetRandomVector(v, 1000);
+    vector<int> expected;
+
+    for (auto i : v)
+    {
+        expected.push_back(i);
+    }
+    sort(expected.begin(), expected.end());
+
+    auto sorter = new HeapSort();
+    sorter->Sort(v, 0, 999);
+
+    for (int i = 0; i < v.size(); i++)
+    {
+        _ASSERT(v[i] == expected[i]);
+    }
+
+    cout << "Heap Sort Many Elements Test Passed" << endl;
 }

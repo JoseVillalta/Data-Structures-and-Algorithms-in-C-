@@ -114,6 +114,7 @@
     <ClInclude Include="Tests\SortTests\ShellSortTest.h" />
     <ClInclude Include="Tests\SortTests\SortPerformanceTest.h" />
     <ClInclude Include="Tests\SortTests\TreeSortTest.h" />
+    <ClInclude Include="Tests\Support\RandomVector.h" />
     <ClInclude Include="Tests\Support\TimeElapsed.h" />
   </ItemGroup>
   <ItemGroup>

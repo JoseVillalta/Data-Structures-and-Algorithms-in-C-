@@ -144,6 +144,9 @@
     <ClInclude Include="Tests\SortTests\HeapSortTest.h">
       <Filter>Tests\SortTests</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\Support\RandomVector.h">
+      <Filter>Tests\Support</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

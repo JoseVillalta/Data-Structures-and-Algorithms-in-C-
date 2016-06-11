@@ -9,5 +9,4 @@ class SortPerformanceTest
 public:
     void DoTests();
 private:
-    void GetRandomVector(vector<int> & v, unsigned int size);
 };

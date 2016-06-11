@@ -12,4 +12,5 @@ private:
     void TestPercolateDown();
     void TestHeapify();
     void TestSort();
+    void TestManyElements();
 };

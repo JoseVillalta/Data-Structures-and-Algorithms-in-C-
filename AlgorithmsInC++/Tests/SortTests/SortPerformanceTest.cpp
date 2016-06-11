@@ -8,6 +8,7 @@
 #include "HeapSort.h"
 #include "Windows.h"
 #include "TimeElapsed.h"
+#include "RandomVector.h"
 
 
 void SortPerformanceTest::DoTests()
@@ -107,15 +108,22 @@ void SortPerformanceTest::DoTests()
     v->clear();
 
     //Heap Sort
-    GetRandomVector(*v, 1000);
+    int numElements = 10;
+    while (numElements < 1000000)
+    {
+        GetRandomVector(*v, numElements);
 
-    QueryPerformanceFrequency(&Frequency);
-    QueryPerformanceCounter(&StartingTime);
-    heapSort->Sort(*v, 0, 999);
-    QueryPerformanceCounter(&EndingTime);
-    ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+        QueryPerformanceFrequency(&Frequency);
+        QueryPerformanceCounter(&StartingTime);
+        heapSort->Sort(*v, 0, numElements - 1);
+        QueryPerformanceCounter(&EndingTime);
+        ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+        cout << " Elapsed Microseconds for "<<numElements<<" elements Heap Sort: " << ElapsedMicroseconds.QuadPart << endl;
 
-    cout << " Elapsed Microseconds Heap Sort: " << ElapsedMicroseconds.QuadPart << endl;
+        v->clear();
+        numElements = numElements * 10;
+    }
+    
 
 
     cout << "*********************************" << endl;
@@ -123,11 +131,3 @@ void SortPerformanceTest::DoTests()
     cout << "********************************" << endl;
 }
 
-void SortPerformanceTest::GetRandomVector(vector<int> & v, unsigned int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        int n = rand() % size;
-        v.push_back(n);
-    }
-}
