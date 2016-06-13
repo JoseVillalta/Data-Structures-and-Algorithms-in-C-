@@ -25,6 +25,9 @@
     <Filter Include="Tests\TreeTests">
       <UniqueIdentifier>{5c4a4c46-22b3-4c89-ab39-18683853f926}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Heaps">
+      <UniqueIdentifier>{c0f9fe9d-e5e9-43d3-80b8-af33c8a87daa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -75,6 +78,9 @@
     <ClInclude Include="Tests\TreeTests\RadixTreeTests.h">
       <Filter>Tests\TreeTests</Filter>
     </ClInclude>
+    <ClInclude Include="Heaps\PriorityQueue.h">
+      <Filter>Heaps</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -106,6 +112,9 @@
     </ClCompile>
     <ClCompile Include="Tests\TreeTests\RadixTreeTests.cpp">
       <Filter>Tests\TreeTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Heaps\PriorityQueue.cpp">
+      <Filter>Heaps</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

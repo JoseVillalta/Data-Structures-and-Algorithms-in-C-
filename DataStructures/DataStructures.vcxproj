@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\Tests\TreeTests;$(ProjectDir)\LinkedLists;$(ProjectDir)\Trees;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Heaps;$(ProjectDir);$(ProjectDir)\Tests\TreeTests;$(ProjectDir)\LinkedLists;$(ProjectDir)\Trees;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +80,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Heaps\PriorityQueue.h" />
     <ClInclude Include="LinkedLists\LinkedListArrayBasedNode.h" />
     <ClInclude Include="LinkedLists\LinkedListNode.h" />
     <ClInclude Include="stdafx.h" />
@@ -98,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures.cpp" />
+    <ClCompile Include="Heaps\PriorityQueue.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Tests\TreeTests\BinarySearchTreeTests.cpp" />
     <ClCompile Include="Tests\TreeTests\BSTATests.cpp" />

@@ -129,6 +129,7 @@
     <ClCompile Include="Sort\HeapSort.cpp" />
     <ClCompile Include="Sort\InsertionSort.cpp" />
     <ClCompile Include="Sort\MinMaxSort.cpp" />
+    <ClCompile Include="Sort\QuickSort.cpp" />
     <ClCompile Include="Sort\SelectionSort.cpp" />
     <ClCompile Include="Sort\ShellSort.cpp" />
     <ClCompile Include="Sort\TreeSort.cpp" />
