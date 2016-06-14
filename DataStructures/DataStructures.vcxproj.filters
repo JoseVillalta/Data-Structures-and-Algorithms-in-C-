@@ -28,6 +28,9 @@
     <Filter Include="Heaps">
       <UniqueIdentifier>{c0f9fe9d-e5e9-43d3-80b8-af33c8a87daa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\HeapTests">
+      <UniqueIdentifier>{5030302d-ef6d-48cf-9b27-b9be455e8a25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -81,6 +84,12 @@
     <ClInclude Include="Heaps\PriorityQueue.h">
       <Filter>Heaps</Filter>
     </ClInclude>
+    <ClInclude Include="Heaps\PQNode.h">
+      <Filter>Heaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\HeapTests\MaxPQTests.h">
+      <Filter>Tests\HeapTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -115,6 +124,9 @@
     </ClCompile>
     <ClCompile Include="Heaps\PriorityQueue.cpp">
       <Filter>Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\HeapTests\MaxPQTests.cpp">
+      <Filter>Tests\HeapTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

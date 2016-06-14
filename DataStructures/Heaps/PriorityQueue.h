@@ -1,4 +1,5 @@
 #pragma once
+#include "PQNode.h"
 #include <vector>
 
 using namespace std;
@@ -8,8 +9,8 @@ class MaxPriorityQueue
 {
 public:
     MaxPriorityQueue();
-    MaxPriorityQueue(vector<T> & v);
-    void Insert(T item);
+    MaxPriorityQueue(vector<PQNode<T>> & v);
+    void Insert(T item, int priority);
     void Delete(T item);
     void Find(T item);
     void ChangePriority(T item);
@@ -17,5 +18,5 @@ public:
     T ExtractMax();
     void Join(MaxPriorityQueue* pq);
 private:
-    vector<T> * m_vPtr;
+    vector<PQNode<T>> * m_vPtr;
 };

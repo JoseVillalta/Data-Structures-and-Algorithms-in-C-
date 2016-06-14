@@ -6,6 +6,7 @@
 #include "CharBSTTests.h"
 #include "BSTATests.h"
 #include "RadixTreeTests.h"
+#include "MaxPQTests.h"
 #include <iostream>
 
 using namespace std;
@@ -16,11 +17,13 @@ int _tmain(int argc, _TCHAR* argv[])
     CharBSTTests * charTreeTests = new CharBSTTests();
     BSTATests * arrayTreeTests = new BSTATests();
     RadixTreeTests * radixTreeTests = new RadixTreeTests();
+    auto maxPQTests = new PQTest();
     
     treeTests->DoTests();
     charTreeTests->DoTests();
     arrayTreeTests->DoTests();
     radixTreeTests->DoTests();
+    maxPQTests->DoTests();
 
     return 0;
 }
