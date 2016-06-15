@@ -1,4 +1,5 @@
 #include "PriorityQueue.h"
+#include "swap.h"
 
 template <typename T>
 MaxPriorityQueue<T>::MaxPriorityQueue()
@@ -15,9 +16,20 @@ void MaxPriorityQueue<T>::Insert(T item, int priority)
     m_vPtr->push_back(node);
 
     int size = m_vPtr->size();
-    int parent = size / 2;
+    int loc = size - 1;
+    int parent = (size/2) -1 ;
 
-   // int parentPriority = m_vPtr->at(parent).m_priority;
+    while (parent >= 0)
+    {
+        int parentPriority = m_vPtr->at(parent).m_priority;
+
+        if (priority > parentPriority)
+        {
+            swap(*m_vPtr, parent, loc);
+        }
+        parent = (parent / 2) - 1;
+    }
+    
 
     
 

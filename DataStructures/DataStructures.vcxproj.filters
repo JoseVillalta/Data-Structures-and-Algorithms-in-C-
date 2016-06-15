@@ -31,6 +31,9 @@
     <Filter Include="Tests\HeapTests">
       <UniqueIdentifier>{5030302d-ef6d-48cf-9b27-b9be455e8a25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{440a5e0c-9158-484d-8467-5f92e3b47f99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -89,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="Tests\HeapTests\MaxPQTests.h">
       <Filter>Tests\HeapTests</Filter>
+    </ClInclude>
+    <ClInclude Include="common\swap.h">
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

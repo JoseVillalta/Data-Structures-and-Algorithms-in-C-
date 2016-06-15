@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Tests\HeapTests;$(ProjectDir)\Heaps;$(ProjectDir);$(ProjectDir)\Tests\TreeTests;$(ProjectDir)\LinkedLists;$(ProjectDir)\Trees;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\common;$(ProjectDir)\Tests\HeapTests;$(ProjectDir)\Heaps;$(ProjectDir);$(ProjectDir)\Tests\TreeTests;$(ProjectDir)\LinkedLists;$(ProjectDir)\Trees;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +80,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="common\swap.h" />
     <ClInclude Include="Heaps\PQNode.h" />
     <ClInclude Include="Heaps\PriorityQueue.h" />
     <ClInclude Include="LinkedLists\LinkedListArrayBasedNode.h" />
