@@ -14,6 +14,11 @@ void PQTest::DoTests()
     auto max = pq->Maximun();
     _ASSERT(max == "Charlie");
 
+    max = pq->ExtractMax();
+    _ASSERT(max == "Charlie");
+
+    max = pq->Maximun();
+    _ASSERT(max == "Bob");
 
     cout << "Max PQ Test Passed" << endl;
 }
