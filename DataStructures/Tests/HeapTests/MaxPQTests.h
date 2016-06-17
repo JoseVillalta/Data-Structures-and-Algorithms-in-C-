@@ -8,4 +8,8 @@ class PQTest
 {
 public:
     void DoTests();
+private:
+    void TestDelete();
+    void TestHeapOps();
+   
 };

@@ -52,7 +52,12 @@ void MaxPriorityQueue<T>::Delete(T item, int priority)
             if (index > last)
             {
                 index = last;
+                break;
             }
+        }
+        else
+        {
+            break;
         }
     }
     if (priority > m_vPtr->at(index).m_priority) return;
