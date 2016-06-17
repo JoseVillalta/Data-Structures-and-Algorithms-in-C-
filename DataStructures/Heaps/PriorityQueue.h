@@ -19,4 +19,5 @@ public:
     void Join(MaxPriorityQueue* pq);
 private:
     vector<PQNode<T>> * m_vPtr;
+    void Remove(int index);
 };
