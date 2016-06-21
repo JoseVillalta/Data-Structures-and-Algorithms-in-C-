@@ -41,36 +41,10 @@ T MaxPriorityQueue<T>::Maximun()
 template <typename T>
 void MaxPriorityQueue<T>::Delete(T item, int priority)
 {
-    //find the range
-    int index = 2;
-    int last = m_vPtr->size() - 1;
-    while (index <= last)
+    int index = Find(item, priority);
+    if (index > 0)
     {
-        if (priority > m_vPtr->at(index).m_priority)
-        {
-            index = index * 2;
-            if (index > last)
-            {
-                index = last;
-                break;
-            }
-        }
-        else
-        {
-            break;
-        }
-    }
-    if (priority > m_vPtr->at(index).m_priority) return;
-
-    int right = index;
-    int left = right / 2 - 1;
-    for (int i = left; i <= right; i++)
-    {
-        if (m_vPtr->at(i).m_item == item && m_vPtr->at(i).m_priority == priority)
-        {
-            Remove(i);
-            break;
-        }
+        Remove(index);
     }
 
 }
@@ -111,6 +85,43 @@ T MaxPriorityQueue<T>::ExtractMax()
     auto node = m_vPtr->at(0);
     Remove(0);
     return node.m_item;
+}
+
+template <typename T>
+int MaxPriorityQueue<T>::Find(T item, int priority)
+{
+    //find the range
+    int index = 2;
+    int last = m_vPtr->size() - 1;
+    while (index <= last)
+    {
+        if (priority > m_vPtr->at(index).m_priority)
+        {
+            index = index * 2;
+            if (index > last)
+            {
+                index = last;
+                break;
+            }
+        }
+        else
+        {
+            break;
+        }
+    }
+    if (priority > m_vPtr->at(index).m_priority) return -1;
+
+    int right = index;
+    int left = right / 2 - 1;
+    for (int i = left; i <= right; i++)
+    {
+        if (m_vPtr->at(i).m_item == item && m_vPtr->at(i).m_priority == priority)
+        {
+            return i;
+            break;
+        }
+    }
+    return -1;
 }
 
 template MaxPriorityQueue<int>::MaxPriorityQueue();
