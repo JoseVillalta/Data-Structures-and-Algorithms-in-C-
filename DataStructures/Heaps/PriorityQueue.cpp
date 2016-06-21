@@ -46,7 +46,6 @@ void MaxPriorityQueue<T>::Delete(T item, int priority)
     {
         Remove(index);
     }
-
 }
 
 template <typename T>
@@ -90,12 +89,18 @@ T MaxPriorityQueue<T>::ExtractMax()
 template <typename T>
 int MaxPriorityQueue<T>::Find(T item, int priority)
 {
+    //First check the root
+    if (m_vPtr->at(0).m_item == item && m_vPtr->at(0).m_priority == priority)
+    {
+        return 0;
+    }
+
     //find the range
     int index = 2;
     int last = m_vPtr->size() - 1;
     while (index <= last)
     {
-        if (priority > m_vPtr->at(index).m_priority)
+        if (priority < m_vPtr->at(index).m_priority)
         {
             index = index * 2;
             if (index > last)
@@ -118,7 +123,6 @@ int MaxPriorityQueue<T>::Find(T item, int priority)
         if (m_vPtr->at(i).m_item == item && m_vPtr->at(i).m_priority == priority)
         {
             return i;
-            break;
         }
     }
     return -1;

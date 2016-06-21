@@ -11,5 +11,9 @@ public:
 private:
     void TestDelete();
     void TestHeapOps();
+    void TestSearch();
+    void Init();
+    void Cleanup();
+    MaxPriorityQueue<string> * pq;
    
 };
