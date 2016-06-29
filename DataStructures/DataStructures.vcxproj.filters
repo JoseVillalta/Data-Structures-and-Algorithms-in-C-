@@ -96,6 +96,12 @@
     <ClInclude Include="common\swap.h">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="Heaps\YoungTable.h">
+      <Filter>Heaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\HeapTests\YoungTableTests.h">
+      <Filter>Tests\HeapTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -132,6 +138,12 @@
       <Filter>Heaps</Filter>
     </ClCompile>
     <ClCompile Include="Tests\HeapTests\MaxPQTests.cpp">
+      <Filter>Tests\HeapTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Heaps\YoungTable.cpp">
+      <Filter>Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\HeapTests\YoungTableTests.cpp">
       <Filter>Tests\HeapTests</Filter>
     </ClCompile>
   </ItemGroup>
