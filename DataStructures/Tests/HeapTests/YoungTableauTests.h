@@ -1,9 +1,9 @@
 #pragma once
-#include "YoungTable.h"
+#include "YoungTableau.h"
 
 using namespace std;
 
-class YoungTableTests
+class YoungTableauTests
 {
 public:
     void DoTests();

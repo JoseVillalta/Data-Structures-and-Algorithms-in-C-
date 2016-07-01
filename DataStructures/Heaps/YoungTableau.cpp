@@ -1,6 +1,6 @@
-#include "YoungTable.h"
+#include "YoungTableau.h"
 
-YoungTable::YoungTable(int rows, int columns)
+YoungTableau::YoungTableau(int rows, int columns)
 {
     m_rows = rows;
     m_colums = columns;
@@ -20,13 +20,13 @@ YoungTable::YoungTable(int rows, int columns)
 }
 
 
-int YoungTable::ExtractMin()
+int YoungTableau::ExtractMin()
 {
     int minVal = m_table[0][0];
     return minVal;
 }
 
-void YoungTable::Insert(int item)
+void YoungTableau::Insert(int item)
 {
     //check if table is full
     if (m_table[m_rows - 1][m_colums - 1] < INFINITY)
@@ -39,7 +39,7 @@ void YoungTable::Insert(int item)
 }
 
 
-void YoungTable::MoveUp(int row, int col, int item)
+void YoungTableau::MoveUp(int row, int col, int item)
 {
     if (row == 0)
     {
@@ -101,14 +101,14 @@ void YoungTable::MoveUp(int row, int col, int item)
 }
 
 
-void YoungTable::Swap(int ar, int ac, int br, int bc)
+void YoungTableau::Swap(int ar, int ac, int br, int bc)
 {
     int temp = m_table[ar][ac];
     m_table[ar][ac] = m_table[br][bc];
     m_table[br][bc] = temp;
 }
 
-void YoungTable::PrintTable()
+void YoungTableau::PrintTable()
 {
     int val;
     for (int i = 0; i < m_rows; i++)
@@ -131,7 +131,7 @@ void YoungTable::PrintTable()
     cout << endl;
 }
 
-void YoungTable::Validate()
+void YoungTableau::Validate()
 {
     for (int i = 0; i < m_rows - 1; i++)
     {

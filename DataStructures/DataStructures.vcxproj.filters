@@ -96,10 +96,10 @@
     <ClInclude Include="common\swap.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="Heaps\YoungTable.h">
+    <ClInclude Include="Heaps\YoungTableau.h">
       <Filter>Heaps</Filter>
     </ClInclude>
-    <ClInclude Include="Tests\HeapTests\YoungTableTests.h">
+    <ClInclude Include="Tests\HeapTests\YoungTableauTests.h">
       <Filter>Tests\HeapTests</Filter>
     </ClInclude>
   </ItemGroup>
@@ -140,10 +140,10 @@
     <ClCompile Include="Tests\HeapTests\MaxPQTests.cpp">
       <Filter>Tests\HeapTests</Filter>
     </ClCompile>
-    <ClCompile Include="Heaps\YoungTable.cpp">
+    <ClCompile Include="Heaps\YoungTableau.cpp">
       <Filter>Heaps</Filter>
     </ClCompile>
-    <ClCompile Include="Tests\HeapTests\YoungTableTests.cpp">
+    <ClCompile Include="Tests\HeapTests\YoungTableauTests.cpp">
       <Filter>Tests\HeapTests</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,14 +1,14 @@
-#include "YoungTableTests.h"
+#include "YoungTableauTests.h"
 
-void YoungTableTests::DoTests()
+void YoungTableauTests::DoTests()
 {
     TestCreation();
     TestInsert();
 }
 
-void YoungTableTests::TestCreation()
+void YoungTableauTests::TestCreation()
 {
-    auto yt = new YoungTable(3, 3);
+    auto yt = new YoungTableau(3, 3);
 
     yt->Insert(10);
     yt->Insert(5);
@@ -23,9 +23,9 @@ void YoungTableTests::TestCreation()
     cout << "Creation Test Passed" << endl;
 }
 
-void YoungTableTests::TestInsert()
+void YoungTableauTests::TestInsert()
 {
-    auto yt = new YoungTable(10, 10);
+    auto yt = new YoungTableau(10, 10);
     cout << "Starting Young Tableu Insert Test" << endl;
 
     for (int i = 0; i < 100; i++)

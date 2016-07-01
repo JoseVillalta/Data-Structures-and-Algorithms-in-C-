@@ -5,10 +5,10 @@
 
 using namespace std;
 
-class YoungTable
+class YoungTableau
 {
 public:
-    YoungTable(int rows, int colums);
+    YoungTableau(int rows, int colums);
     int ExtractMin();
     void Insert(int item);
    
