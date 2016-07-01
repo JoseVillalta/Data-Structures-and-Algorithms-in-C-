@@ -3,7 +3,7 @@
 YoungTableau::YoungTableau(int rows, int columns)
 {
     m_rows = rows;
-    m_colums = columns;
+    m_cols = columns;
     m_table = new int *[rows];
     for (int index = 0; index < rows; index++)
     {
@@ -23,19 +23,20 @@ YoungTableau::YoungTableau(int rows, int columns)
 int YoungTableau::ExtractMin()
 {
     int minVal = m_table[0][0];
+    MoveDown(0, 0, INFINITY);
     return minVal;
 }
 
 void YoungTableau::Insert(int item)
 {
     //check if table is full
-    if (m_table[m_rows - 1][m_colums - 1] < INFINITY)
+    if (m_table[m_rows - 1][m_cols - 1] < INFINITY)
     {
         cout << "Cannot insert, table is full" << endl;
         return;
     }
-    m_table[m_rows - 1][m_colums - 1] = item;
-    MoveUp(m_rows - 1, m_colums - 1, item);
+    m_table[m_rows - 1][m_cols - 1] = item;
+    MoveUp(m_rows - 1, m_cols - 1, item);
 }
 
 
@@ -100,6 +101,35 @@ void YoungTableau::MoveUp(int row, int col, int item)
     }
 }
 
+void YoungTableau::MoveDown(int row, int col, int item)
+{
+    if (row == m_rows - 1)
+    {
+        if (col == m_cols - 1) return;
+
+        if (m_table[row][col + 1] > item)
+        {
+            Swap(row, col, row, col + 1);
+            MoveDown(row, col + 1, item);
+        }
+    }
+    else if (col == m_cols - 1)
+    {
+        if (m_table[row + 1][col] > item)
+        {
+            Swap(row, col, row + 1, col);
+            MoveDown(row + 1, col, item);
+        }
+    }
+    else
+    {
+        if (m_table[row + 1][col] > item)
+        {
+            Swap(row, col, row + 1, col);
+            MoveDown(row + 1, col, item);
+        }
+    }
+}
 
 void YoungTableau::Swap(int ar, int ac, int br, int bc)
 {
@@ -113,7 +143,7 @@ void YoungTableau::PrintTable()
     int val;
     for (int i = 0; i < m_rows; i++)
     {
-        for (int j = 0; j < m_colums; j++)
+        for (int j = 0; j < m_cols; j++)
         {
             val = m_table[i][j];
             if (val == INFINITY)
@@ -135,7 +165,7 @@ void YoungTableau::Validate()
 {
     for (int i = 0; i < m_rows - 1; i++)
     {
-        for (int j = 0; j < m_colums - 1; j++)
+        for (int j = 0; j < m_cols - 1; j++)
         {
             _ASSERT(m_table[i][j] <= m_table[i][j + 1]);
             _ASSERT(m_table[i][j] <= m_table[i + 1][j]);
