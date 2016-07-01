@@ -22,7 +22,8 @@ YoungTable::YoungTable(int rows, int columns)
 
 int YoungTable::ExtractMin()
 {
-    return m_table[0][0];
+    int minVal = m_table[0][0];
+    return minVal;
 }
 
 void YoungTable::Insert(int item)
@@ -33,49 +34,111 @@ void YoungTable::Insert(int item)
         cout << "Cannot insert, table is full" << endl;
         return;
     }
-
-    HeapifyUp(item);
-}
-
-void YoungTable::HeapifyUp(int item)
-{
     m_table[m_rows - 1][m_colums - 1] = item;
-    int col = MoveUpRow(m_rows - 1, m_colums - 1, item);
-    MoveUpCol(m_rows - 1, col, item);
+    MoveUp(m_rows - 1, m_colums - 1, item);
 }
 
-void YoungTable::HeapifyDown(int item)
+
+void YoungTable::MoveUp(int row, int col, int item)
 {
-    m_table[0][0] = item;
-    int row = MoveDownCol(0, 0, item);
-    MoveDownRow(row, 0, item);
+    if (row == 0)
+    {
+        if (col == 0) return;
+
+        if (m_table[row][col - 1] > item)
+        {
+            Swap(row, col, row, col - 1);
+            MoveUp(row, col - 1, item);
+        }
+    }
+    else if (col == 0)
+    {
+        if (m_table[row - 1][col] > item)
+        {
+            Swap(row, col, row-1, col);
+            MoveUp(row - 1, col, item);
+        }
+    }
+    else
+    {
+        int nextRow = m_table[row - 1][col];
+        int nextCol = m_table[row][col - 1];
+
+        if (nextRow >= nextCol)
+        {
+            if (nextRow > item)
+            {
+                Swap(row, col, row - 1, col);
+                MoveUp(row - 1, col, item);
+            }
+            else
+            {
+                if (nextCol > item)
+                {
+                    Swap(row, col, row, col - 1);
+                    MoveUp(row, col - 1, item);
+                }
+            }
+        }
+        else
+        {
+            if (nextCol > item)
+            {
+                Swap(row, col, row, col - 1);
+                MoveUp(row, col - 1, item);
+            }
+            else
+            {
+                if (nextRow > item)
+                {
+                    Swap(row, col, row - 1, col);
+                    MoveUp(row - 1, col, item);
+                }
+
+            }
+        }
+    }
 }
 
-int YoungTable::MoveUpRow(int row, int col, int item)
-{
-    int cur_col = col;
-    if (cur_col == 0) return 0;
-
-    if (m_table[row][cur_col - 1] <= item) return cur_col;
-
-    Swap(row, cur_col, row, cur_col - 1);
-    return MoveUpRow(row, cur_col - 1, item);
-}
-
-int YoungTable::MoveUpCol(int row, int col, int item)
-{
-    int cur_row = row;
-    if (cur_row == 0) return 0;
-
-    if (m_table[row - 1][col] <= item) return cur_row;
-    
-    Swap(cur_row, col, cur_row - 1, col);
-    return MoveUpCol(cur_row - 1, col, item);
-}
 
 void YoungTable::Swap(int ar, int ac, int br, int bc)
 {
     int temp = m_table[ar][ac];
     m_table[ar][ac] = m_table[br][bc];
     m_table[br][bc] = temp;
+}
+
+void YoungTable::PrintTable()
+{
+    int val;
+    for (int i = 0; i < m_rows; i++)
+    {
+        for (int j = 0; j < m_colums; j++)
+        {
+            val = m_table[i][j];
+            if (val == INFINITY)
+            {
+                cout << "., ";
+            }
+            else
+            {
+                cout << val << ", ";
+            }
+            
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
+
+void YoungTable::Validate()
+{
+    for (int i = 0; i < m_rows - 1; i++)
+    {
+        for (int j = 0; j < m_colums - 1; j++)
+        {
+            _ASSERT(m_table[i][j] <= m_table[i][j + 1]);
+            _ASSERT(m_table[i][j] <= m_table[i + 1][j]);
+        }
+    }
 }

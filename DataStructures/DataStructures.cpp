@@ -7,6 +7,7 @@
 #include "BSTATests.h"
 #include "RadixTreeTests.h"
 #include "MaxPQTests.h"
+#include "YoungTableTests.h"
 #include <iostream>
 
 using namespace std;
@@ -18,12 +19,14 @@ int _tmain(int argc, _TCHAR* argv[])
     BSTATests * arrayTreeTests = new BSTATests();
     RadixTreeTests * radixTreeTests = new RadixTreeTests();
     auto maxPQTests = new PQTest();
+    auto youngTableuTests = new YoungTableTests();
     
     treeTests->DoTests();
     charTreeTests->DoTests();
     arrayTreeTests->DoTests();
     radixTreeTests->DoTests();
     maxPQTests->DoTests();
+    youngTableuTests->DoTests();
 
     return 0;
 }
