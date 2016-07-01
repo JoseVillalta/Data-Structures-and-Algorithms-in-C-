@@ -11,4 +11,5 @@ private:
     void TestCreation();
     void TestInsert();
     void TestExtractMin();
+    void TestSort();
 };

@@ -5,6 +5,7 @@ void YoungTableauTests::DoTests()
     TestCreation();
     TestInsert();
     TestExtractMin();
+    TestSort();
 }
 
 void YoungTableauTests::TestCreation()
@@ -38,14 +39,6 @@ void YoungTableauTests::TestInsert()
     yt->PrintTable();
     yt->Validate();
 
-    
-    for (int j = 0; j < 10; j++)
-    {
-        yt->ExtractMin();
-    }
-
-    yt->Validate();
-
     cout << "Young Tableu Insertion Test passed" << endl;
 
 }
@@ -70,4 +63,25 @@ void YoungTableauTests::TestExtractMin()
 
     cout << "Extract Min Passed" << endl;
 
+}
+
+void YoungTableauTests::TestSort()
+{
+    auto yt = new YoungTableau(10, 10);
+    cout << "Starting Young Tableu Sort Test" << endl;
+
+    for (int i = 0; i < 100; i++)
+    {
+        int x = rand() % 100;
+        yt->Insert(x);
+    }
+    int min;
+    yt->PrintTable();
+    yt->Validate();
+    for (int j = 0; j < 100; j++)
+    {
+        min = yt->ExtractMin();
+        cout << min << ", ";
+    }
+    cout << endl;
 }

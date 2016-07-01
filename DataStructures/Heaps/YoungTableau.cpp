@@ -23,6 +23,7 @@ YoungTableau::YoungTableau(int rows, int columns)
 int YoungTableau::ExtractMin()
 {
     int minVal = m_table[0][0];
+    m_table[0][0] = INFINITY;
     MoveDown(0, 0, INFINITY);
     return minVal;
 }
@@ -107,7 +108,7 @@ void YoungTableau::MoveDown(int row, int col, int item)
     {
         if (col == m_cols - 1) return;
 
-        if (m_table[row][col + 1] > item)
+        if (m_table[row][col + 1] < item)
         {
             Swap(row, col, row, col + 1);
             MoveDown(row, col + 1, item);
@@ -115,7 +116,7 @@ void YoungTableau::MoveDown(int row, int col, int item)
     }
     else if (col == m_cols - 1)
     {
-        if (m_table[row + 1][col] > item)
+        if (m_table[row + 1][col] < item)
         {
             Swap(row, col, row + 1, col);
             MoveDown(row + 1, col, item);
@@ -123,11 +124,36 @@ void YoungTableau::MoveDown(int row, int col, int item)
     }
     else
     {
-        if (m_table[row + 1][col] > item)
+        int curVal = m_table[row][col];
+        int nextCol = m_table[row][col + 1];
+        int nextRow = m_table[row + 1][col];
+
+        if (nextCol <= nextRow)
         {
-            Swap(row, col, row + 1, col);
-            MoveDown(row + 1, col, item);
+            if (curVal > nextCol)
+            {
+                Swap(row, col, row, col + 1);
+                MoveDown(row, col + 1, item);
+            }
+            else if (curVal > nextRow)
+            {
+                Swap(row, col, row + 1, col);
+                MoveDown(row + 1, col, item);
+            }
         }
+        else
+        {
+            if (curVal > nextRow)
+            {
+                Swap(row, col, row + 1, col);
+                MoveDown(row + 1, col, item);
+            }
+            else if (curVal > nextCol)
+            {
+                Swap(row, col, row, col + 1);
+                MoveDown(row, col + 1, item);
+            }
+        }   
     }
 }
 
@@ -167,8 +193,12 @@ void YoungTableau::Validate()
     {
         for (int j = 0; j < m_cols - 1; j++)
         {
-            _ASSERT(m_table[i][j] <= m_table[i][j + 1]);
-            _ASSERT(m_table[i][j] <= m_table[i + 1][j]);
+            int curVal = m_table[i][j];
+            int nextRow = m_table[i + 1][j];
+            int nextCol = m_table[i][j + 1];
+
+            _ASSERT(curVal <= nextRow);
+            _ASSERT(curVal <= nextCol);
         }
     }
 }
