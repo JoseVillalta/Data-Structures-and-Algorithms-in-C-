@@ -9,4 +9,5 @@ public:
     void DoTests();
 private:
     void TestSort();
+    void TestLargerInput();
 };
