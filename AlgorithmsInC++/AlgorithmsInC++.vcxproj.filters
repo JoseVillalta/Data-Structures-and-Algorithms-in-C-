@@ -147,6 +147,9 @@
     <ClInclude Include="Tests\Support\RandomVector.h">
       <Filter>Tests\Support</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\SortTests\QuickSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -231,6 +234,12 @@
       <Filter>Sort</Filter>
     </ClCompile>
     <ClCompile Include="Tests\SortTests\HeapSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort\QuickSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\QuickSortTest.cpp">
       <Filter>Tests\SortTests</Filter>
     </ClCompile>
   </ItemGroup>
