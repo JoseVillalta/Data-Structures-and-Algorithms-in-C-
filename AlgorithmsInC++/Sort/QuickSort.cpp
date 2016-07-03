@@ -31,11 +31,10 @@ int QuickSort::Partition(vector<T> &v, int start, int end)
             swap(v, left, right);
     }
 
-    int pos = right;
-    v[start] = v[pos];
-    v[pos] = pivot;
+    v[start] = v[right];
+    v[right] = pivot;
 
-    return pos;
+    return right;
 }
 
 template void QuickSort::Sort(vector<int> &v, int start, int end);

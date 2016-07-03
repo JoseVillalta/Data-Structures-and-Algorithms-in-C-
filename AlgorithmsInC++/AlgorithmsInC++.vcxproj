@@ -109,6 +109,7 @@
     <ClInclude Include="Tests\SortTests\BubbleSortTest.h" />
     <ClInclude Include="Tests\SortTests\HeapSortTest.h" />
     <ClInclude Include="Tests\SortTests\InsertionSortTest.h" />
+    <ClInclude Include="Tests\SortTests\MergeSortTest.h" />
     <ClInclude Include="Tests\SortTests\MinMaxSortTest.h" />
     <ClInclude Include="Tests\SortTests\QuickSortTest.h" />
     <ClInclude Include="Tests\SortTests\SelectionSortTest.h" />
@@ -129,6 +130,7 @@
     <ClCompile Include="Sort\BubbleSort.cpp" />
     <ClCompile Include="Sort\HeapSort.cpp" />
     <ClCompile Include="Sort\InsertionSort.cpp" />
+    <ClCompile Include="Sort\MergeSort.cpp" />
     <ClCompile Include="Sort\MinMaxSort.cpp" />
     <ClCompile Include="Sort\QuickSort.cpp" />
     <ClCompile Include="Sort\SelectionSort.cpp" />
@@ -143,6 +145,7 @@
     <ClCompile Include="Tests\SortTests\BubbleSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\HeapSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\InsertionSortTest.cpp" />
+    <ClCompile Include="Tests\SortTests\MergeSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\MinMaxSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\QuickSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\SelectionSortTest.cpp" />

@@ -150,6 +150,9 @@
     <ClInclude Include="Tests\SortTests\QuickSortTest.h">
       <Filter>Tests\SortTests</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\SortTests\MergeSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -240,6 +243,12 @@
       <Filter>Sort</Filter>
     </ClCompile>
     <ClCompile Include="Tests\SortTests\QuickSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort\MergeSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\MergeSortTest.cpp">
       <Filter>Tests\SortTests</Filter>
     </ClCompile>
   </ItemGroup>
