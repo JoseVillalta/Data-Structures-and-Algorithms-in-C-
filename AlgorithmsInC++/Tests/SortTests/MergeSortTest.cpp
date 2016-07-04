@@ -1,8 +1,11 @@
 #include "MergeSortTest.h"
+#include "RandomVector.h"
+#include <algorithm>
 
 void MergeSortTest::DoTests()
 {
-    //TestSort();
+    TestSort();
+    TestBiggerInputs();
 }
 
 void MergeSortTest::TestSort()
@@ -22,5 +25,30 @@ void MergeSortTest::TestSort()
         _ASSERT(v[i] == expected[i]);
     }
     cout << "Merge Sort Test Passed" << endl;
+}
 
+void MergeSortTest::TestBiggerInputs()
+{
+    cout << "Sorting 1000 integers" << endl;
+    vector<int> * v = new vector<int>();
+    vector<int> *expected = new vector<int>();
+
+    GetRandomVector(*v, 1000);
+
+    //copy vector
+    for (auto i : *v)
+    {
+        expected->push_back(i);
+    }
+
+    auto ms = new MergeSort();
+    ms->Sort(*v, 0, 999);
+    std::sort(expected->begin(), expected->end());
+
+    for (int i = 0; i < v->size(); i++)
+    {
+        _ASSERT(v->at(i) == expected->at(i));
+    }
+
+    cout << "Merge Sort test passed" << endl;
 }
