@@ -7,6 +7,7 @@
 #include "MinMaxSort.h"
 #include "HeapSort.h"
 #include "QuickSort.h"
+#include "MergeSort.h"
 #include "Windows.h"
 #include "TimeElapsed.h"
 #include "RandomVector.h"
@@ -22,6 +23,7 @@ void SortPerformanceTest::DoTests()
     auto minMaxSort = new MinMaxSort();
     auto heapSort = new HeapSort();
     auto quickSort = new QuickSort();
+    auto mergeSort = new MergeSort();
 
     vector<int> * v = new vector<int>();
 
@@ -126,6 +128,7 @@ void SortPerformanceTest::DoTests()
         numElements = numElements * 10;
     }
 
+    //QuickSort
     numElements = 10;
     while (numElements < 1000000)
     {
@@ -137,6 +140,23 @@ void SortPerformanceTest::DoTests()
         QueryPerformanceCounter(&EndingTime);
         ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
         cout << " Elapsed Microseconds for " << numElements << " elements Quick Sort: " << ElapsedMicroseconds.QuadPart << endl;
+
+        v->clear();
+        numElements = numElements * 10;
+    }
+
+    //Merge Sort
+    numElements = 10;
+    while (numElements < 1000000)
+    {
+        GetRandomVector(*v, numElements);
+
+        QueryPerformanceFrequency(&Frequency);
+        QueryPerformanceCounter(&StartingTime);
+        mergeSort->Sort(*v, 0, numElements - 1);
+        QueryPerformanceCounter(&EndingTime);
+        ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+        cout << " Elapsed Microseconds for " << numElements << " elements Merge Sort: " << ElapsedMicroseconds.QuadPart << endl;
 
         v->clear();
         numElements = numElements * 10;
