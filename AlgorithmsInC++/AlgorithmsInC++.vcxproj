@@ -87,6 +87,7 @@
     <ClInclude Include="Search\LinkedLinearSearch.h" />
     <ClInclude Include="Sort\BubbleSort.h" />
     <ClInclude Include="Sort\BucketSort.h" />
+    <ClInclude Include="Sort\CountingSort.h" />
     <ClInclude Include="Sort\HeapSort.h" />
     <ClInclude Include="Sort\InsertionSort.h" />
     <ClInclude Include="Sort\MergeSort.h" />
@@ -107,6 +108,7 @@
     <ClInclude Include="Tests\SearchTests\LinkedLinearSearchTest.h" />
     <ClInclude Include="Tests\SearchTests\SearchPerformanceTest.h" />
     <ClInclude Include="Tests\SortTests\BubbleSortTest.h" />
+    <ClInclude Include="Tests\SortTests\CountingSortTest.h" />
     <ClInclude Include="Tests\SortTests\HeapSortTest.h" />
     <ClInclude Include="Tests\SortTests\InsertionSortTest.h" />
     <ClInclude Include="Tests\SortTests\MergeSortTest.h" />
@@ -128,6 +130,7 @@
     <ClCompile Include="Search\LinkedBinarySearch.cpp" />
     <ClCompile Include="Search\LinkedLinearSearch.cpp" />
     <ClCompile Include="Sort\BubbleSort.cpp" />
+    <ClCompile Include="Sort\CountingSort.cpp" />
     <ClCompile Include="Sort\HeapSort.cpp" />
     <ClCompile Include="Sort\InsertionSort.cpp" />
     <ClCompile Include="Sort\MergeSort.cpp" />
@@ -143,6 +146,7 @@
     <ClCompile Include="Tests\SearchTests\LinkedLinearSearchTest.cpp" />
     <ClCompile Include="Tests\SearchTests\SearchPerformanceTest.cpp" />
     <ClCompile Include="Tests\SortTests\BubbleSortTest.cpp" />
+    <ClCompile Include="Tests\SortTests\CountingSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\HeapSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\InsertionSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\MergeSortTest.cpp" />

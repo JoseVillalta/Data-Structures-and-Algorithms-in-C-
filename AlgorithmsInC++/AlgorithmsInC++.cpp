@@ -18,6 +18,7 @@
 #include "HeapSortTest.h"
 #include "QuickSortTest.h"
 #include "MergeSortTest.h"
+#include "CountingSortTest.h"
 
 using namespace std;
 
@@ -39,6 +40,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto heapSortTest = new HeapSortTest();
     auto quickSortTest = new QuickSortTest();
     auto mergeSortTest = new MergeSortTest();
+    auto countingSortTest = new CountingSortTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -51,10 +53,11 @@ int _tmain(int argc, _TCHAR* argv[])
     tst->DoTests();
 
     insertionSortTest->DoTests();
-    sortPerformance->DoTests();
+   // sortPerformance->DoTests();
     heapSortTest->DoTests();
     quickSortTest->DoTests();
     mergeSortTest->DoTests();
+    countingSortTest->DoTests();
 
     return 0;
 }
