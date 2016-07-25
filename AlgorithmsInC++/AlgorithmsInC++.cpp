@@ -19,6 +19,7 @@
 #include "QuickSortTest.h"
 #include "MergeSortTest.h"
 #include "CountingSortTest.h"
+#include "RadixSortTest.h"
 
 using namespace std;
 
@@ -41,6 +42,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto quickSortTest = new QuickSortTest();
     auto mergeSortTest = new MergeSortTest();
     auto countingSortTest = new CountingSortTest();
+    auto radixSortTest = new RadixSortTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -58,6 +60,7 @@ int _tmain(int argc, _TCHAR* argv[])
     quickSortTest->DoTests();
     mergeSortTest->DoTests();
     countingSortTest->DoTests();
+    radixSortTest->DoTests();
 
     return 0;
 }
