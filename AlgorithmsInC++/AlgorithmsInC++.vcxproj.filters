@@ -34,6 +34,12 @@
     <Filter Include="Tests\Support">
       <UniqueIdentifier>{4da795ed-69ba-46a0-b816-488a824ca4eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GraphTraversal">
+      <UniqueIdentifier>{58dc869b-0572-4a24-8695-684f757547ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\GraphTraversalTests">
+      <UniqueIdentifier>{78fbcba2-a4f8-43fe-a354-b5e89404d834}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -159,6 +165,15 @@
     <ClInclude Include="Tests\SortTests\CountingSortTest.h">
       <Filter>Tests\SortTests</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\SortTests\RadixSortTest.h">
+      <Filter>Tests\SortTests</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphTraversal\BreadthFirstSearch.h">
+      <Filter>GraphTraversal</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\GraphTraversalTests\BFSTest.h">
+      <Filter>Tests\GraphTraversalTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -262,6 +277,18 @@
     </ClCompile>
     <ClCompile Include="Tests\SortTests\CountingSortTest.cpp">
       <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort\RadixSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\SortTests\RadixSortTest.cpp">
+      <Filter>Tests\SortTests</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp">
+      <Filter>GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\GraphTraversalTests\BFSTest.cpp">
+      <Filter>Tests\GraphTraversalTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -20,6 +20,7 @@
 #include "MergeSortTest.h"
 #include "CountingSortTest.h"
 #include "RadixSortTest.h"
+#include "BFSTest.h"
 
 using namespace std;
 
@@ -43,6 +44,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto mergeSortTest = new MergeSortTest();
     auto countingSortTest = new CountingSortTest();
     auto radixSortTest = new RadixSortTest();
+    auto breadFirstSearchTest = new BFSTests();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -61,6 +63,7 @@ int _tmain(int argc, _TCHAR* argv[])
     mergeSortTest->DoTests();
     countingSortTest->DoTests();
     radixSortTest->DoTests();
+    breadFirstSearchTest->DoTests();
 
     return 0;
 }

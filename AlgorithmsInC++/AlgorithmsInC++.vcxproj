@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Tests\Support;$(ProjectDir)\Sort\Support;$(ProjectDir);$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures\Trees;$(ProjectDir)..\DataStructures\LinkedLists</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\DataStructures\Graphs;$(ProjectDir)\GraphTraversal;$(ProjectDir)\Tests\GraphTraversalTests;$(ProjectDir)\Tests\Support;$(ProjectDir)\Sort\Support;$(ProjectDir);$(ProjectDir)\Search;$(ProjectDir)\Tests\SearchTests;$(ProjectDir)\Tests\SortTests;$(ProjectDir)\Sort;$(ProjectDir)..\DataStructures\Trees;$(ProjectDir)..\DataStructures\LinkedLists</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +80,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GraphTraversal\BreadthFirstSearch.h" />
     <ClInclude Include="Search\BinarySearch.h" />
     <ClInclude Include="Search\InterpolationSearch.h" />
     <ClInclude Include="Search\LinearSearch.h" />
@@ -102,6 +103,7 @@
     <ClInclude Include="Sort\TreeSort.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Tests\GraphTraversalTests\BFSTest.h" />
     <ClInclude Include="Tests\SearchTests\BinarySearchTest.h" />
     <ClInclude Include="Tests\SearchTests\InterpolationSearchTest.h" />
     <ClInclude Include="Tests\SearchTests\LinearSearchTests.h" />
@@ -114,6 +116,7 @@
     <ClInclude Include="Tests\SortTests\MergeSortTest.h" />
     <ClInclude Include="Tests\SortTests\MinMaxSortTest.h" />
     <ClInclude Include="Tests\SortTests\QuickSortTest.h" />
+    <ClInclude Include="Tests\SortTests\RadixSortTest.h" />
     <ClInclude Include="Tests\SortTests\SelectionSortTest.h" />
     <ClInclude Include="Tests\SortTests\ShellSortTest.h" />
     <ClInclude Include="Tests\SortTests\SortPerformanceTest.h" />
@@ -124,6 +127,7 @@
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
     <ClCompile Include="AlgorithmsInC++.cpp" />
+    <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp" />
     <ClCompile Include="Search\BinarySearch.cpp" />
     <ClCompile Include="Search\InterpolationSearch.cpp" />
     <ClCompile Include="Search\LinearSearch.cpp" />
@@ -136,10 +140,12 @@
     <ClCompile Include="Sort\MergeSort.cpp" />
     <ClCompile Include="Sort\MinMaxSort.cpp" />
     <ClCompile Include="Sort\QuickSort.cpp" />
+    <ClCompile Include="Sort\RadixSort.cpp" />
     <ClCompile Include="Sort\SelectionSort.cpp" />
     <ClCompile Include="Sort\ShellSort.cpp" />
     <ClCompile Include="Sort\TreeSort.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Tests\GraphTraversalTests\BFSTest.cpp" />
     <ClCompile Include="Tests\SearchTests\BinarySearchTest.cpp" />
     <ClCompile Include="Tests\SearchTests\InterpolationSearchTest.cpp" />
     <ClCompile Include="Tests\SearchTests\LinearSearchTest.cpp" />
@@ -152,6 +158,7 @@
     <ClCompile Include="Tests\SortTests\MergeSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\MinMaxSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\QuickSortTest.cpp" />
+    <ClCompile Include="Tests\SortTests\RadixSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\SelectionSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\ShellSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\SortPerformanceTest.cpp" />

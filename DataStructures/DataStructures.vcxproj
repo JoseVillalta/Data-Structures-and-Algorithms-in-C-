@@ -81,6 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\swap.h" />
+    <ClInclude Include="Graphs\EdgeNode.h" />
+    <ClInclude Include="Graphs\Graph.h" />
     <ClInclude Include="Heaps\PQNode.h" />
     <ClInclude Include="Heaps\PriorityQueue.h" />
     <ClInclude Include="Heaps\YoungTableau.h" />

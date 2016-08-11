@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Trees">
       <UniqueIdentifier>{1fb3ed5e-6b03-43a1-898a-59ca1089fb95}</UniqueIdentifier>
     </Filter>
@@ -33,6 +29,15 @@
     </Filter>
     <Filter Include="common">
       <UniqueIdentifier>{440a5e0c-9158-484d-8467-5f92e3b47f99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stack and Queues">
+      <UniqueIdentifier>{175658df-255b-4d64-9a96-9a6f2501bcdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hash Tables">
+      <UniqueIdentifier>{ecb0852e-d618-46ba-a524-a99e21a4b06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphs">
+      <UniqueIdentifier>{29eeac76-f3d6-47de-93b9-9d39011af16c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +106,12 @@
     </ClInclude>
     <ClInclude Include="Tests\HeapTests\YoungTableauTests.h">
       <Filter>Tests\HeapTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs\EdgeNode.h">
+      <Filter>Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs\Graph.h">
+      <Filter>Graphs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
