@@ -16,4 +16,5 @@ void BFSTests::InitAndPrintTest()
     bfs->InsertEdge(4, 5, true);
     bfs->m_g->nvertices = 5;
     bfs->PrintGraph();
+    bfs->BreadthFirstSearch(1);
 }

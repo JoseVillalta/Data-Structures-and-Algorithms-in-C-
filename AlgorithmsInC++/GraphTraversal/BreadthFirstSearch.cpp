@@ -1,4 +1,5 @@
 #include "BreadthFirstSearch.h"
+#include <queue>
 
 void BFS::InitGraph(bool directed)
 {
@@ -47,3 +48,46 @@ void BFS::PrintGraph()
         cout << endl;
     }
 }
+
+void BFS::ProcessVertex(int vertex)
+{
+    cout << ", " << vertex;
+}
+
+void BFS::ProcessEdge(int x, int y)
+{
+
+}
+
+void BFS::BreadthFirstSearch(int start)
+{
+    auto q = new queue<int>();
+    q->push(start);
+    discovered[start] = true;
+    int y;
+
+    while (!q->empty())
+    {
+        int p = q->front();
+        q->pop();
+        auto edge = m_g->edges[p];
+        while (edge != nullptr)
+        {
+            y = edge->y;
+            ProcessVertex(y);
+            if (processed[y] == false || m_g->directed)
+            {
+                ProcessEdge(p, y);
+            }
+            if (discovered[y] == false)
+            {
+                q->push(y);
+                discovered[y] = true;
+                parent[y] = p;
+            }
+            edge = edge->next;
+        }
+
+    }
+}
+
