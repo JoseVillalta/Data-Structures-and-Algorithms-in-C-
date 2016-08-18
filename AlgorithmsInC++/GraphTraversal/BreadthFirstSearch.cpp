@@ -31,6 +31,16 @@ void BFS::InsertEdge(int x, int y, bool directed)
     }
 }
 
+void BFS::InitSearch()
+{
+    for (int i = 1; i <= m_g->nvertices; i++)
+    {
+        discovered[i] = false;
+        processed[i] = false;
+        parent[i] = -1;
+    }
+}
+
 void BFS::PrintGraph()
 {
     edgenode * p;
@@ -88,6 +98,19 @@ void BFS::BreadthFirstSearch(int start)
             edge = edge->next;
         }
 
+    }
+}
+
+void BFS::FindPath(int start, int end)
+{
+    if ((start == end) || (end == -1))
+    {
+        cout << endl << start;
+    }
+    else
+    {
+        FindPath(start, parent[end]);
+        cout << " " << end;
     }
 }
 
