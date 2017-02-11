@@ -81,6 +81,7 @@ void BFS::BreadthFirstSearch(int start)
         int p = q->front();
         q->pop();
         auto edge = m_g->edges[p];
+        processed[p] = true;
         while (edge != nullptr)
         {
             y = edge->y;

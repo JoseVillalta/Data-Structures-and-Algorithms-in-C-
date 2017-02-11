@@ -113,6 +113,15 @@
     <ClInclude Include="Graphs\Graph.h">
       <Filter>Graphs</Filter>
     </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Stack and Queues</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Stack and Queues</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinkedListNode.h">
+      <Filter>LinkedLists</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -156,6 +165,12 @@
     </ClCompile>
     <ClCompile Include="Tests\HeapTests\YoungTableauTests.cpp">
       <Filter>Tests\HeapTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Stack.cpp">
+      <Filter>Stack and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Stack and Queues</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
