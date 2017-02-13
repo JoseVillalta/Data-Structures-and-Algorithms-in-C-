@@ -33,14 +33,17 @@
     <Filter Include="Stack and Queues">
       <UniqueIdentifier>{175658df-255b-4d64-9a96-9a6f2501bcdf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Hash Tables">
-      <UniqueIdentifier>{ecb0852e-d618-46ba-a524-a99e21a4b06f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Graphs">
       <UniqueIdentifier>{29eeac76-f3d6-47de-93b9-9d39011af16c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Tests\StackTests">
       <UniqueIdentifier>{f9323821-b77a-4aa5-9722-3c187cec6a4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hash Tables">
+      <UniqueIdentifier>{ecb0852e-d618-46ba-a524-a99e21a4b06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\QueueTests">
+      <UniqueIdentifier>{c15b9efd-bb0a-48b4-a0fb-bcbaab82929f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +140,9 @@
     <ClInclude Include="StackTests.h">
       <Filter>Tests\StackTests</Filter>
     </ClInclude>
+    <ClInclude Include="QueueTests.h">
+      <Filter>Tests\QueueTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -198,6 +204,9 @@
     </ClCompile>
     <ClCompile Include="StackTests.cpp">
       <Filter>Tests\StackTests</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueTests.cpp">
+      <Filter>Tests\QueueTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
