@@ -9,6 +9,5 @@ public:
     void Push(T val);
     T Pop();
 private:
-    DListNode * m_root;
-    DListNode * m_top;
+    DListNode<T> * m_top;
 };

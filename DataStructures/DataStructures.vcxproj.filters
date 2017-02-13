@@ -39,6 +39,9 @@
     <Filter Include="Graphs">
       <UniqueIdentifier>{29eeac76-f3d6-47de-93b9-9d39011af16c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\StackTests">
+      <UniqueIdentifier>{f9323821-b77a-4aa5-9722-3c187cec6a4f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -122,6 +125,18 @@
     <ClInclude Include="DoubleLinkedListNode.h">
       <Filter>LinkedLists</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>LinkedLists</Filter>
+    </ClInclude>
+    <ClInclude Include="DLinkedList.h">
+      <Filter>LinkedLists</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash.h">
+      <Filter>Hash Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="StackTests.h">
+      <Filter>Tests\StackTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -171,6 +186,18 @@
     </ClCompile>
     <ClCompile Include="Queue.cpp">
       <Filter>Stack and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="DLinkedList.cpp">
+      <Filter>LinkedLists</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>LinkedLists</Filter>
+    </ClCompile>
+    <ClCompile Include="Hash.cpp">
+      <Filter>Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="StackTests.cpp">
+      <Filter>Tests\StackTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

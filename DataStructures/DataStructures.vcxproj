@@ -81,16 +81,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\swap.h" />
+    <ClInclude Include="DLinkedList.h" />
     <ClInclude Include="DoubleLinkedListNode.h" />
     <ClInclude Include="Graphs\EdgeNode.h" />
     <ClInclude Include="Graphs\Graph.h" />
+    <ClInclude Include="Hash.h" />
     <ClInclude Include="Heaps\PQNode.h" />
     <ClInclude Include="Heaps\PriorityQueue.h" />
     <ClInclude Include="Heaps\YoungTableau.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedLists\LinkedListArrayBasedNode.h" />
     <ClInclude Include="LinkedLists\LinkedListNode.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="StackTests.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tests\HeapTests\MaxPQTests.h" />
@@ -109,10 +113,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures.cpp" />
+    <ClCompile Include="DLinkedList.cpp" />
+    <ClCompile Include="Hash.cpp" />
     <ClCompile Include="Heaps\PriorityQueue.cpp" />
     <ClCompile Include="Heaps\YoungTableau.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="StackTests.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Tests\HeapTests\MaxPQTests.cpp" />
     <ClCompile Include="Tests\HeapTests\YoungTableauTests.cpp" />
