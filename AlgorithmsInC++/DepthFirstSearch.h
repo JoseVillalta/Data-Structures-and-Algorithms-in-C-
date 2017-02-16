@@ -4,7 +4,7 @@
 #include "EdgeNode.h"
 
 using namespace std;
-class BFS
+class DFS
 {
 public:
     Graph * m_g;
@@ -18,7 +18,7 @@ public:
     void InitGraph(bool directed);
     void InitSearch();
     void InsertEdge(int x, int y, bool directed);
-    void BreadthFirstSearch(int start);
+    void DepthFirstSearch(int v);
     void PrintGraph();
     void ProcessVertex(int x);
     void ProcessEdge(int x, int y);

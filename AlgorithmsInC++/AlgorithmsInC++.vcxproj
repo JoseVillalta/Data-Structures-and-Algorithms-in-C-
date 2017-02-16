@@ -80,6 +80,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DepthFirstSearch.h" />
+    <ClInclude Include="DFSTest.h" />
     <ClInclude Include="GraphTraversal\BreadthFirstSearch.h" />
     <ClInclude Include="Search\BinarySearch.h" />
     <ClInclude Include="Search\InterpolationSearch.h" />
@@ -127,6 +129,8 @@
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
     <ClCompile Include="AlgorithmsInC++.cpp" />
+    <ClCompile Include="DepthFirstSearch.cpp" />
+    <ClCompile Include="DFSTest.cpp" />
     <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp" />
     <ClCompile Include="Search\BinarySearch.cpp" />
     <ClCompile Include="Search\InterpolationSearch.cpp" />

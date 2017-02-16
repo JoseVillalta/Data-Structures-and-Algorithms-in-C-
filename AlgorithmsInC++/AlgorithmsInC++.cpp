@@ -21,6 +21,7 @@
 #include "CountingSortTest.h"
 #include "RadixSortTest.h"
 #include "BFSTest.h"
+#include "DFSTest.h"
 
 using namespace std;
 
@@ -45,6 +46,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto countingSortTest = new CountingSortTest();
     auto radixSortTest = new RadixSortTest();
     auto breadFirstSearchTest = new BFSTests();
+    auto depthFirstSearchTest = new DFSTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -64,6 +66,7 @@ int _tmain(int argc, _TCHAR* argv[])
     countingSortTest->DoTests();
     radixSortTest->DoTests();
     breadFirstSearchTest->DoTests();
+    depthFirstSearchTest->DoTests();
 
     return 0;
 }
