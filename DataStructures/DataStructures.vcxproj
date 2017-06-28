@@ -92,6 +92,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedLists\LinkedListArrayBasedNode.h" />
     <ClInclude Include="LinkedLists\LinkedListNode.h" />
+    <ClInclude Include="LinkedListTests.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="QueueTests.h" />
     <ClInclude Include="Stack.h" />
@@ -119,6 +120,7 @@
     <ClCompile Include="Heaps\PriorityQueue.cpp" />
     <ClCompile Include="Heaps\YoungTableau.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkedListTests.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="QueueTests.cpp" />
     <ClCompile Include="Stack.cpp" />

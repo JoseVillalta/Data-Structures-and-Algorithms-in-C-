@@ -9,6 +9,7 @@
 #include "MaxPQTests.h"
 #include "YoungTableauTests.h"
 #include "StackTests.h"
+#include "LinkedListTests.h"
 #include <iostream>
 
 using namespace std;
@@ -22,6 +23,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto maxPQTests = new PQTest();
     auto YoungTableauuTests = new YoungTableauTests();
     auto stackTests = new StackTests();
+    auto LinkedListTest = new LinkedListTests();
     
     treeTests->DoTests();
     charTreeTests->DoTests();
@@ -30,6 +32,7 @@ int _tmain(int argc, _TCHAR* argv[])
     maxPQTests->DoTests();
     YoungTableauuTests->DoTests();
     stackTests->DoTests();
+    LinkedListTest->DoTests();
 
     return 0;
 }
