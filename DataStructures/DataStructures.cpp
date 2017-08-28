@@ -10,6 +10,7 @@
 #include "YoungTableauTests.h"
 #include "StackTests.h"
 #include "LinkedListTests.h"
+#include "RedBlackTreeTests.h"
 #include <iostream>
 
 using namespace std;
@@ -24,6 +25,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto YoungTableauuTests = new YoungTableauTests();
     auto stackTests = new StackTests();
     auto LinkedListTest = new LinkedListTests();
+    auto RBTreeTest = new RedBlackTreeTests();
     
     treeTests->DoTests();
     charTreeTests->DoTests();
@@ -33,6 +35,7 @@ int _tmain(int argc, _TCHAR* argv[])
     YoungTableauuTests->DoTests();
     stackTests->DoTests();
     LinkedListTest->DoTests();
+    RBTreeTest->DoTests();
 
     return 0;
 }
