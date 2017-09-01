@@ -21,6 +21,7 @@ public:
     void DepthFirstSearch(int v);
     void PrintGraph();
     void ProcessVertex(int x);
-    void ProcessEdge(int x, int y);
-    void FindPath(int start, int end);
+    virtual void ProcessVertexLate(int v);
+    virtual void ProcessEdge(int x, int y);
+   // void FindPath(int start, int end);
 };

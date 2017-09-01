@@ -125,6 +125,7 @@
     <ClInclude Include="Tests\SortTests\TreeSortTest.h" />
     <ClInclude Include="Tests\Support\RandomVector.h" />
     <ClInclude Include="Tests\Support\TimeElapsed.h" />
+    <ClInclude Include="TopologicalSort.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
@@ -167,6 +168,7 @@
     <ClCompile Include="Tests\SortTests\ShellSortTest.cpp" />
     <ClCompile Include="Tests\SortTests\SortPerformanceTest.cpp" />
     <ClCompile Include="Tests\SortTests\TreeSortTest.cpp" />
+    <ClCompile Include="TopologicalSort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataStructures\DataStructures.vcxproj">

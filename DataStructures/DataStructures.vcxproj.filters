@@ -45,6 +45,9 @@
     <Filter Include="Tests\QueueTests">
       <UniqueIdentifier>{c15b9efd-bb0a-48b4-a0fb-bcbaab82929f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\ListTests">
+      <UniqueIdentifier>{787b711c-a5d1-457d-9779-3eea3b7f7360}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -143,6 +146,18 @@
     <ClInclude Include="QueueTests.h">
       <Filter>Tests\QueueTests</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedListTests.h">
+      <Filter>Tests\ListTests</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackTree.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackTreeTests.h">
+      <Filter>Tests\TreeTests</Filter>
+    </ClInclude>
+    <ClInclude Include="RBTreeNode.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -207,6 +222,15 @@
     </ClCompile>
     <ClCompile Include="QueueTests.cpp">
       <Filter>Tests\QueueTests</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListTests.cpp">
+      <Filter>Tests\ListTests</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBlackTree.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBlackTreeTests.cpp">
+      <Filter>Tests\TreeTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

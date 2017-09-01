@@ -95,6 +95,9 @@
     <ClInclude Include="LinkedListTests.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="QueueTests.h" />
+    <ClInclude Include="RBTreeNode.h" />
+    <ClInclude Include="RedBlackTree.h" />
+    <ClInclude Include="RedBlackTreeTests.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StackTests.h" />
     <ClInclude Include="stdafx.h" />
@@ -123,6 +126,8 @@
     <ClCompile Include="LinkedListTests.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="QueueTests.cpp" />
+    <ClCompile Include="RedBlackTree.cpp" />
+    <ClCompile Include="RedBlackTreeTests.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="StackTests.cpp" />
     <ClCompile Include="stdafx.cpp" />

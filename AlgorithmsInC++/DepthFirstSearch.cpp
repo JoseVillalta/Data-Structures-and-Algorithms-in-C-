@@ -70,6 +70,11 @@ void DFS::ProcessEdge(int x, int y)
 
 }
 
+void DFS::ProcessVertexLate(int v)
+{
+    
+}
+
 void DFS::DepthFirstSearch(int v)
 {
     ProcessVertex(v);
@@ -93,6 +98,7 @@ void DFS::DepthFirstSearch(int v)
         }
         node = node->next;
     }
+    ProcessVertexLate(v);
     m_time++;
     exit_time[v] = m_time;
     processed[v] = true;

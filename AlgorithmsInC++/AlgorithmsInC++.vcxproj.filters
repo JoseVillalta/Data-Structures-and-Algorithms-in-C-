@@ -180,6 +180,9 @@
     <ClInclude Include="DFSTest.h">
       <Filter>Tests\GraphTraversalTests</Filter>
     </ClInclude>
+    <ClInclude Include="TopologicalSort.h">
+      <Filter>GraphTraversal</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -301,6 +304,9 @@
     </ClCompile>
     <ClCompile Include="DFSTest.cpp">
       <Filter>Tests\GraphTraversalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="TopologicalSort.cpp">
+      <Filter>GraphTraversal</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
