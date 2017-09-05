@@ -22,6 +22,7 @@
 #include "RadixSortTest.h"
 #include "BFSTest.h"
 #include "DFSTest.h"
+#include "TopologicalSortTest.h"
 
 using namespace std;
 
@@ -47,6 +48,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto radixSortTest = new RadixSortTest();
     auto breadFirstSearchTest = new BFSTests();
     auto depthFirstSearchTest = new DFSTest();
+    auto topoSortTest = new TopoSortTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -67,7 +69,7 @@ int _tmain(int argc, _TCHAR* argv[])
     radixSortTest->DoTests();
     breadFirstSearchTest->DoTests();
     depthFirstSearchTest->DoTests();
-
+    topoSortTest->DoTests();
     return 0;
 }
 
