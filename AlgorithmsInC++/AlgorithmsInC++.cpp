@@ -23,7 +23,7 @@
 #include "BFSTest.h"
 #include "DFSTest.h"
 #include "TopologicalSortTest.h"
-
+#include "MSTTest.h"
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -49,6 +49,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto breadFirstSearchTest = new BFSTests();
     auto depthFirstSearchTest = new DFSTest();
     auto topoSortTest = new TopoSortTest();
+    auto primTest = new PrimTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -70,6 +71,7 @@ int _tmain(int argc, _TCHAR* argv[])
     breadFirstSearchTest->DoTests();
     depthFirstSearchTest->DoTests();
     topoSortTest->DoTests();
+    primTest->DoTests();
     return 0;
 }
 

@@ -12,5 +12,6 @@ public:
     void prim(int start);
     void InitGraph(bool directed);
     void InsertEdge(int x, int y, int weight, bool directed);
+    PrimsAlgorithm(void);
 
 };

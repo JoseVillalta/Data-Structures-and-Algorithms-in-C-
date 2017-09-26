@@ -2,6 +2,10 @@
 #include "PrimsAlgorithm.h"
 #define MAX_INT 100000
 
+PrimsAlgorithm::PrimsAlgorithm()
+{
+    InitGraph(false);
+}
 void PrimsAlgorithm::prim(int start)
 {
     int i;    
@@ -44,6 +48,7 @@ void PrimsAlgorithm::prim(int start)
             if ((intree[i] == false) && (dist > distance[i]))
             {
                 dist = distance[i];
+                v = i;
             }
         }
 
