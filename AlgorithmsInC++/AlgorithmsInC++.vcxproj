@@ -83,6 +83,7 @@
     <ClInclude Include="DepthFirstSearch.h" />
     <ClInclude Include="DFSTest.h" />
     <ClInclude Include="GraphTraversal\BreadthFirstSearch.h" />
+    <ClInclude Include="PrimsAlgorithm.h" />
     <ClInclude Include="Search\BinarySearch.h" />
     <ClInclude Include="Search\InterpolationSearch.h" />
     <ClInclude Include="Search\LinearSearch.h" />
@@ -126,6 +127,7 @@
     <ClInclude Include="Tests\Support\RandomVector.h" />
     <ClInclude Include="Tests\Support\TimeElapsed.h" />
     <ClInclude Include="TopologicalSort.h" />
+    <ClInclude Include="TopologicalSortTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
@@ -133,6 +135,7 @@
     <ClCompile Include="DepthFirstSearch.cpp" />
     <ClCompile Include="DFSTest.cpp" />
     <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp" />
+    <ClCompile Include="PrimsAlgorithm.cpp" />
     <ClCompile Include="Search\BinarySearch.cpp" />
     <ClCompile Include="Search\InterpolationSearch.cpp" />
     <ClCompile Include="Search\LinearSearch.cpp" />
@@ -169,6 +172,7 @@
     <ClCompile Include="Tests\SortTests\SortPerformanceTest.cpp" />
     <ClCompile Include="Tests\SortTests\TreeSortTest.cpp" />
     <ClCompile Include="TopologicalSort.cpp" />
+    <ClCompile Include="TopologicalSortTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataStructures\DataStructures.vcxproj">

@@ -40,6 +40,9 @@
     <Filter Include="Tests\GraphTraversalTests">
       <UniqueIdentifier>{78fbcba2-a4f8-43fe-a354-b5e89404d834}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MinimumSpanningTrees">
+      <UniqueIdentifier>{8730de2e-1bca-490e-84fe-adec1f2a0622}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -183,6 +186,12 @@
     <ClInclude Include="TopologicalSort.h">
       <Filter>GraphTraversal</Filter>
     </ClInclude>
+    <ClInclude Include="TopologicalSortTest.h">
+      <Filter>Tests\GraphTraversalTests</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimsAlgorithm.h">
+      <Filter>MinimumSpanningTrees</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -307,6 +316,12 @@
     </ClCompile>
     <ClCompile Include="TopologicalSort.cpp">
       <Filter>GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="TopologicalSortTest.cpp">
+      <Filter>Tests\GraphTraversalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimsAlgorithm.cpp">
+      <Filter>MinimumSpanningTrees</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
