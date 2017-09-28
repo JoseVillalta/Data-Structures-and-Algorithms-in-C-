@@ -43,6 +43,9 @@
     <Filter Include="MinimumSpanningTrees">
       <UniqueIdentifier>{8730de2e-1bca-490e-84fe-adec1f2a0622}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\MinimumSpanningTreeTests">
+      <UniqueIdentifier>{bf13bd6e-7e38-4ac4-be16-ddf517b091b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -192,6 +195,9 @@
     <ClInclude Include="PrimsAlgorithm.h">
       <Filter>MinimumSpanningTrees</Filter>
     </ClInclude>
+    <ClInclude Include="MSTTest.h">
+      <Filter>Tests\MinimumSpanningTreeTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -322,6 +328,9 @@
     </ClCompile>
     <ClCompile Include="PrimsAlgorithm.cpp">
       <Filter>MinimumSpanningTrees</Filter>
+    </ClCompile>
+    <ClCompile Include="MSTTest.cpp">
+      <Filter>Tests\MinimumSpanningTreeTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

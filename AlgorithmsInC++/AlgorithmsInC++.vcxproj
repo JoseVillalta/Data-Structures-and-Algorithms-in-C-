@@ -83,6 +83,7 @@
     <ClInclude Include="DepthFirstSearch.h" />
     <ClInclude Include="DFSTest.h" />
     <ClInclude Include="GraphTraversal\BreadthFirstSearch.h" />
+    <ClInclude Include="MSTTest.h" />
     <ClInclude Include="PrimsAlgorithm.h" />
     <ClInclude Include="Search\BinarySearch.h" />
     <ClInclude Include="Search\InterpolationSearch.h" />
@@ -135,6 +136,7 @@
     <ClCompile Include="DepthFirstSearch.cpp" />
     <ClCompile Include="DFSTest.cpp" />
     <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp" />
+    <ClCompile Include="MSTTest.cpp" />
     <ClCompile Include="PrimsAlgorithm.cpp" />
     <ClCompile Include="Search\BinarySearch.cpp" />
     <ClCompile Include="Search\InterpolationSearch.cpp" />
