@@ -198,6 +198,9 @@
     <ClInclude Include="MSTTest.h">
       <Filter>Tests\MinimumSpanningTreeTests</Filter>
     </ClInclude>
+    <ClInclude Include="KruskalsAlgorithm.h">
+      <Filter>MinimumSpanningTrees</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -331,6 +334,9 @@
     </ClCompile>
     <ClCompile Include="MSTTest.cpp">
       <Filter>Tests\MinimumSpanningTreeTests</Filter>
+    </ClCompile>
+    <ClCompile Include="KruskalsAlgorithm.cpp">
+      <Filter>MinimumSpanningTrees</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

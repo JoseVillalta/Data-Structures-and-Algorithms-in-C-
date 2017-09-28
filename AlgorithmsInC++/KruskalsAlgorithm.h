@@ -9,21 +9,3 @@ typedef struct
     int n;
 }set_union;
 
-void set_union_init(set_union * s, int n)
-{
-    int i;
-    for (i = 1; i <= n; i++)
-    {
-        s->p[i] = i;
-        s->size[i] = 1;
-    }
-    s->n = n;
-}
-
-int find(set_union * s, int x)
-{
-    if (s->p[x] == x) return x;
-    
-    return(find(s, s->p[x]));
-    
-}
