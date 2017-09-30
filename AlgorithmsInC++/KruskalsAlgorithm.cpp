@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "KruskalsAlgorithm.h"
 
-void set_union_init(set_union * s, int n)
+void KruskalsAlgorithm::set_union_init(set_union * s, int n)
 {
     int i;
     for (i = 1; i <= n; i++)
@@ -12,7 +12,7 @@ void set_union_init(set_union * s, int n)
     s->n = n;
 }
 
-int find(set_union * s, int x)
+int KruskalsAlgorithm::find(set_union * s, int x)
 {
     if (s->p[x] == x) return x;
 
@@ -20,7 +20,7 @@ int find(set_union * s, int x)
 
 }
 
-void union_sets(set_union * s, int s1, int s2)
+void KruskalsAlgorithm::union_sets(set_union * s, int s1, int s2)
 {
     int r1, r2;
 
@@ -39,4 +39,50 @@ void union_sets(set_union * s, int s1, int s2)
         s->size[r2] = s->size[r1] + s->size[r2];
         s->p[r1] = r2;
     }
+}
+
+bool KruskalsAlgorithm::weight_compare()
+{
+    return true;
+}
+
+bool KruskalsAlgorithm::same_component(set_union s, int x, int y)
+{
+    return (find(&s, x) == find(&s, y));
+}
+edge_pair * KruskalsAlgorithm::to_edge_array()
+{
+    int i;
+    edge_pair * arr = new edge_pair[MAXV + 1];
+    int arrCounter = 0;
+    for (i = 1; i < m_g->nedges; i++)
+    {
+        auto p = m_g->edges[i];
+        while (p != nullptr)
+        {
+            edge_pair ep;
+            ep.x = i;
+            ep.y = p->y;
+            ep.weight = p->weight;
+            arr[arrCounter] = ep;
+            arrCounter++;
+            p = p->next;            
+        }
+    }
+    return arr;
+}
+
+
+void KruskalsAlgorithm::findMST()
+{
+    int i;
+    set_union s;
+    set_union_init(&s, m_g->nvertices);
+    auto e = to_edge_array();
+    //sort edge array
+    for (i = 0; i < m_g->nedges;i++)
+    {
+       // union_sets(&s, i, )
+    }
+
 }
