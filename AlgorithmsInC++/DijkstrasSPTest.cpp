@@ -28,6 +28,7 @@ void DijkstrasSPTests::testDSPT()
 
     sp->shortest_path(1);
     sp->print_path(1, 7);
+    sp->print_path(2, 6);
 
     cout << "End of Dijkstra's Test" << endl;
 }
