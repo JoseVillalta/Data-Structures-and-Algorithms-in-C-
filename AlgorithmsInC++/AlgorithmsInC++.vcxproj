@@ -80,6 +80,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="backtracking.h" />
     <ClInclude Include="DepthFirstSearch.h" />
     <ClInclude Include="DFSTest.h" />
     <ClInclude Include="DijkstrasAlgorithm.h" />
@@ -137,6 +138,7 @@
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
     <ClCompile Include="AlgorithmsInC++.cpp" />
+    <ClCompile Include="backtracking.cpp" />
     <ClCompile Include="DepthFirstSearch.cpp" />
     <ClCompile Include="DFSTest.cpp" />
     <ClCompile Include="DijkstrasAlgorithm.cpp" />

@@ -52,6 +52,9 @@
     <Filter Include="Tests\ShortestPathTests">
       <UniqueIdentifier>{81a11d5c-e2b3-4c6b-b6f0-fa461e451516}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Backtracking">
+      <UniqueIdentifier>{b08b0dc4-778e-46da-aa53-dea24a712a76}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -216,6 +219,9 @@
     <ClInclude Include="DijkstrasSPTest.h">
       <Filter>Tests\ShortestPathTests</Filter>
     </ClInclude>
+    <ClInclude Include="backtracking.h">
+      <Filter>Backtracking</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -361,6 +367,9 @@
     </ClCompile>
     <ClCompile Include="DijkstrasSPTest.cpp">
       <Filter>Tests\ShortestPathTests</Filter>
+    </ClCompile>
+    <ClCompile Include="backtracking.cpp">
+      <Filter>Backtracking</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
