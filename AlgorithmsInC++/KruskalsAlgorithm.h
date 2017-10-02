@@ -1,14 +1,17 @@
 #pragma once
 #include "stdafx.h"
 #include "Graph.h"
+#include <vector>
 #define SET_SIZE 1000
+
+using namespace std;
 
 typedef struct
 {
     int p[SET_SIZE + 1];
     int size[SET_SIZE + 1];
     int n;
-}set_union;
+}m_set_union;
 
 typedef struct
 {
@@ -21,18 +24,17 @@ class KruskalsAlgorithm
 {
 public:
     Graph * m_g;
+    m_set_union s;
 
     KruskalsAlgorithm();
     void findMST();
+    void insert_edge(int x, int y, int weight, bool directed);
 private:
-    bool same_component(set_union s, int x, int y);
-    bool weight_compare();
-    void union_sets(set_union * s, int s1, int s2);
-    int find(set_union * s, int x);
-    void set_union_init(set_union * s, int n);
-    edge_pair * to_edge_array();
-
-
-
-
+    bool same_component(m_set_union s, int x, int y);
+    void union_sets(m_set_union * s, int s1, int s2);
+    int find(m_set_union * s, int x);
+    void set_union_init(m_set_union * s, int n);
+    vector<edge_pair> * to_edge_array();
+    
+    
 };

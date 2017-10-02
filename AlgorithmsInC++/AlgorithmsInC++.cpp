@@ -24,6 +24,8 @@
 #include "DFSTest.h"
 #include "TopologicalSortTest.h"
 #include "MSTTest.h"
+#include "KrugalsMSTTest.h"
+#include "DijkstrasSPTest.h"
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -50,6 +52,8 @@ int _tmain(int argc, _TCHAR* argv[])
     auto depthFirstSearchTest = new DFSTest();
     auto topoSortTest = new TopoSortTest();
     auto primTest = new PrimTest();
+    auto krugalTest = new KrugalsMSTTest();
+    auto shortestPathTest = new DijkstrasSPTests();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -72,6 +76,8 @@ int _tmain(int argc, _TCHAR* argv[])
     depthFirstSearchTest->DoTests();
     topoSortTest->DoTests();
     primTest->DoTests();
+    krugalTest->DoTests();
+    shortestPathTest->DoTests();
     return 0;
 }
 

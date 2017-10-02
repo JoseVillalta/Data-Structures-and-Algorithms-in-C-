@@ -82,7 +82,10 @@
   <ItemGroup>
     <ClInclude Include="DepthFirstSearch.h" />
     <ClInclude Include="DFSTest.h" />
+    <ClInclude Include="DijkstrasAlgorithm.h" />
+    <ClInclude Include="DijkstrasSPTest.h" />
     <ClInclude Include="GraphTraversal\BreadthFirstSearch.h" />
+    <ClInclude Include="KrugalsMSTTest.h" />
     <ClInclude Include="KruskalsAlgorithm.h" />
     <ClInclude Include="MSTTest.h" />
     <ClInclude Include="PrimsAlgorithm.h" />
@@ -136,7 +139,10 @@
     <ClCompile Include="AlgorithmsInC++.cpp" />
     <ClCompile Include="DepthFirstSearch.cpp" />
     <ClCompile Include="DFSTest.cpp" />
+    <ClCompile Include="DijkstrasAlgorithm.cpp" />
+    <ClCompile Include="DijkstrasSPTest.cpp" />
     <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp" />
+    <ClCompile Include="KrugalsMSTTest.cpp" />
     <ClCompile Include="KruskalsAlgorithm.cpp" />
     <ClCompile Include="MSTTest.cpp" />
     <ClCompile Include="PrimsAlgorithm.cpp" />

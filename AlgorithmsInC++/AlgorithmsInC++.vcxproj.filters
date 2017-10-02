@@ -46,6 +46,12 @@
     <Filter Include="Tests\MinimumSpanningTreeTests">
       <UniqueIdentifier>{bf13bd6e-7e38-4ac4-be16-ddf517b091b7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ShortestPath">
+      <UniqueIdentifier>{36fcfc6e-27cb-4691-b665-5b1a471846d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\ShortestPathTests">
+      <UniqueIdentifier>{81a11d5c-e2b3-4c6b-b6f0-fa461e451516}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -201,6 +207,15 @@
     <ClInclude Include="KruskalsAlgorithm.h">
       <Filter>MinimumSpanningTrees</Filter>
     </ClInclude>
+    <ClInclude Include="KrugalsMSTTest.h">
+      <Filter>Tests\MinimumSpanningTreeTests</Filter>
+    </ClInclude>
+    <ClInclude Include="DijkstrasAlgorithm.h">
+      <Filter>ShortestPath</Filter>
+    </ClInclude>
+    <ClInclude Include="DijkstrasSPTest.h">
+      <Filter>Tests\ShortestPathTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -337,6 +352,15 @@
     </ClCompile>
     <ClCompile Include="KruskalsAlgorithm.cpp">
       <Filter>MinimumSpanningTrees</Filter>
+    </ClCompile>
+    <ClCompile Include="KrugalsMSTTest.cpp">
+      <Filter>Tests\MinimumSpanningTreeTests</Filter>
+    </ClCompile>
+    <ClCompile Include="DijkstrasAlgorithm.cpp">
+      <Filter>ShortestPath</Filter>
+    </ClCompile>
+    <ClCompile Include="DijkstrasSPTest.cpp">
+      <Filter>Tests\ShortestPathTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
