@@ -26,6 +26,7 @@
 #include "MSTTest.h"
 #include "KrugalsMSTTest.h"
 #include "DijkstrasSPTest.h"
+#include "AllSubsetsTests.h"
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -54,6 +55,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto primTest = new PrimTest();
     auto krugalTest = new KrugalsMSTTest();
     auto shortestPathTest = new DijkstrasSPTests();
+    auto allSubsets = new AllSubSetsTests();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -78,6 +80,7 @@ int _tmain(int argc, _TCHAR* argv[])
     primTest->DoTests();
     krugalTest->DoTests();
     shortestPathTest->DoTests();
+    allSubsets->DoTests();
     return 0;
 }
 
