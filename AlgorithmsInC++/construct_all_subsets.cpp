@@ -22,7 +22,7 @@ void SubsetBuilder::process_solution(int  *a, int k, string input)
 {
     int i;
     cout << "{ ";
-    for (i = 1; i <= k;i++)
+    for (i = 0; i <= k;i++)
     {
         if (a[i] == 1)
         {

@@ -20,6 +20,6 @@ void AllSubSetsTests::constructAllSubsetsTests()
     sb->backtrack(arr, 0, s1);
     cout << "**** Backtracking 2 *****" << endl;
     string s2 = "DCBA";
-    //sb->backtrack(arr, 0, s2);
+    sb->backtrack(arr, 0, s2);
 }
 
