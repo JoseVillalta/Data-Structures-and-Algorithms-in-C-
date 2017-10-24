@@ -27,6 +27,7 @@
 #include "KrugalsMSTTest.h"
 #include "DijkstrasSPTest.h"
 #include "AllSubsetsTests.h"
+#include "Two-Coloring-GraphTest.h"
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -56,6 +57,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto krugalTest = new KrugalsMSTTest();
     auto shortestPathTest = new DijkstrasSPTests();
     auto allSubsets = new AllSubSetsTests();
+    auto twoColoring = new TwoColoringGraphTest();
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -81,6 +83,7 @@ int _tmain(int argc, _TCHAR* argv[])
     krugalTest->DoTests();
     shortestPathTest->DoTests();
     allSubsets->DoTests();
+    twoColoring->DoTests();
     return 0;
 }
 

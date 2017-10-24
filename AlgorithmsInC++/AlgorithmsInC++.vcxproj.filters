@@ -55,6 +55,9 @@
     <Filter Include="Backtracking">
       <UniqueIdentifier>{b08b0dc4-778e-46da-aa53-dea24a712a76}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tests\BacktrackingTests">
+      <UniqueIdentifier>{9d21064e-15ec-4ef9-a604-c28e13cbd175}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -222,6 +225,18 @@
     <ClInclude Include="backtracking.h">
       <Filter>Backtracking</Filter>
     </ClInclude>
+    <ClInclude Include="construct_all_subsets.h">
+      <Filter>Backtracking</Filter>
+    </ClInclude>
+    <ClInclude Include="AllSubsetsTests.h">
+      <Filter>Tests\BacktrackingTests</Filter>
+    </ClInclude>
+    <ClInclude Include="Two-Coloring-Graphs.h">
+      <Filter>GraphTraversal</Filter>
+    </ClInclude>
+    <ClInclude Include="Two-Coloring-GraphTest.h">
+      <Filter>Tests\GraphTraversalTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -370,6 +385,18 @@
     </ClCompile>
     <ClCompile Include="backtracking.cpp">
       <Filter>Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="construct_all_subsets.cpp">
+      <Filter>Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="AllSubsetsTests.cpp">
+      <Filter>Tests\BacktrackingTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Two-Coloring-Graphs.cpp">
+      <Filter>GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="Two-Coloring-GraphTest.cpp">
+      <Filter>Tests\GraphTraversalTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

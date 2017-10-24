@@ -80,7 +80,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AllSubsetsTests.h" />
     <ClInclude Include="backtracking.h" />
+    <ClInclude Include="construct_all_subsets.h" />
     <ClInclude Include="DepthFirstSearch.h" />
     <ClInclude Include="DFSTest.h" />
     <ClInclude Include="DijkstrasAlgorithm.h" />
@@ -134,11 +136,15 @@
     <ClInclude Include="Tests\Support\TimeElapsed.h" />
     <ClInclude Include="TopologicalSort.h" />
     <ClInclude Include="TopologicalSortTest.h" />
+    <ClInclude Include="Two-Coloring-Graphs.h" />
+    <ClInclude Include="Two-Coloring-GraphTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
     <ClCompile Include="AlgorithmsInC++.cpp" />
+    <ClCompile Include="AllSubsetsTests.cpp" />
     <ClCompile Include="backtracking.cpp" />
+    <ClCompile Include="construct_all_subsets.cpp" />
     <ClCompile Include="DepthFirstSearch.cpp" />
     <ClCompile Include="DFSTest.cpp" />
     <ClCompile Include="DijkstrasAlgorithm.cpp" />
@@ -185,6 +191,8 @@
     <ClCompile Include="Tests\SortTests\TreeSortTest.cpp" />
     <ClCompile Include="TopologicalSort.cpp" />
     <ClCompile Include="TopologicalSortTest.cpp" />
+    <ClCompile Include="Two-Coloring-Graphs.cpp" />
+    <ClCompile Include="Two-Coloring-GraphTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataStructures\DataStructures.vcxproj">

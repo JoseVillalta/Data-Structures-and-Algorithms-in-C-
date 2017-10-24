@@ -21,6 +21,6 @@ public:
     void BreadthFirstSearch(int start);
     void PrintGraph();
     void ProcessVertex(int x);
-    void ProcessEdge(int x, int y);
+    virtual void ProcessEdge(int x, int y);
     void FindPath(int start, int end);
 };
