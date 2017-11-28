@@ -237,6 +237,9 @@
     <ClInclude Include="Two-Coloring-GraphTest.h">
       <Filter>Tests\GraphTraversalTests</Filter>
     </ClInclude>
+    <ClInclude Include="Floyd-Warshall.h">
+      <Filter>ShortestPath</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -397,6 +400,9 @@
     </ClCompile>
     <ClCompile Include="Two-Coloring-GraphTest.cpp">
       <Filter>Tests\GraphTraversalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="Floyd-Warshall.cpp">
+      <Filter>ShortestPath</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -158,6 +158,9 @@
     <ClInclude Include="RBTreeNode.h">
       <Filter>Trees</Filter>
     </ClInclude>
+    <ClInclude Include="MinHeap.h">
+      <Filter>Heaps</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -231,6 +234,9 @@
     </ClCompile>
     <ClCompile Include="RedBlackTreeTests.cpp">
       <Filter>Tests\TreeTests</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHeap.cpp">
+      <Filter>Heaps</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

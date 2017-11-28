@@ -87,6 +87,7 @@
     <ClInclude Include="DFSTest.h" />
     <ClInclude Include="DijkstrasAlgorithm.h" />
     <ClInclude Include="DijkstrasSPTest.h" />
+    <ClInclude Include="Floyd-Warshall.h" />
     <ClInclude Include="GraphTraversal\BreadthFirstSearch.h" />
     <ClInclude Include="KrugalsMSTTest.h" />
     <ClInclude Include="KruskalsAlgorithm.h" />
@@ -149,6 +150,7 @@
     <ClCompile Include="DFSTest.cpp" />
     <ClCompile Include="DijkstrasAlgorithm.cpp" />
     <ClCompile Include="DijkstrasSPTest.cpp" />
+    <ClCompile Include="Floyd-Warshall.cpp" />
     <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp" />
     <ClCompile Include="KrugalsMSTTest.cpp" />
     <ClCompile Include="KruskalsAlgorithm.cpp" />

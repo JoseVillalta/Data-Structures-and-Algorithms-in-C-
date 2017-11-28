@@ -10,4 +10,5 @@ public:
 private:
     void TestSort();
     void TestBiggerInputs();
+    void CountingInversions();
 };

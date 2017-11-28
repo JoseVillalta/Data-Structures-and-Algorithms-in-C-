@@ -6,6 +6,16 @@ void MergeSortTest::DoTests()
 {
     TestSort();
     TestBiggerInputs();
+    CountingInversions();
+}
+
+void MergeSortTest::CountingInversions()
+{
+    cout << "Counting Inversions" << endl;
+    vector<int> v = { 2, 1, 3, 1, 2 };
+    auto ms = new MergeSort();
+    ms->Sort(v, 0, 4);
+
 }
 
 void MergeSortTest::TestSort()
