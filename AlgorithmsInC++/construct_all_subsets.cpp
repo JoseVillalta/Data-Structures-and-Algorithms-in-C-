@@ -30,6 +30,7 @@ void SubsetBuilder::process_solution(int  *a, int k, string input)
         }
     }
     cout << "} ";
+    cout << endl;
 }
 
 

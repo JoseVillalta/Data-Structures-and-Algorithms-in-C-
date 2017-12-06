@@ -58,6 +58,9 @@
     <Filter Include="Tests\BacktrackingTests">
       <UniqueIdentifier>{9d21064e-15ec-4ef9-a604-c28e13cbd175}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NetworkFlow">
+      <UniqueIdentifier>{5534f872-1933-4c0d-8d20-97a0eafd8922}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -240,6 +243,18 @@
     <ClInclude Include="Floyd-Warshall.h">
       <Filter>ShortestPath</Filter>
     </ClInclude>
+    <ClInclude Include="NetworkFlow.h">
+      <Filter>NetworkFlow</Filter>
+    </ClInclude>
+    <ClInclude Include="construct_all_permutations.h">
+      <Filter>Backtracking</Filter>
+    </ClInclude>
+    <ClInclude Include="AllPermutationsTest.h">
+      <Filter>Tests\BacktrackingTests</Filter>
+    </ClInclude>
+    <ClInclude Include="permute_string.h">
+      <Filter>Backtracking</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -403,6 +418,18 @@
     </ClCompile>
     <ClCompile Include="Floyd-Warshall.cpp">
       <Filter>ShortestPath</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkFlow.cpp">
+      <Filter>NetworkFlow</Filter>
+    </ClCompile>
+    <ClCompile Include="construct_all_permutations.cpp">
+      <Filter>Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="AllPermutationsTest.cpp">
+      <Filter>Tests\BacktrackingTests</Filter>
+    </ClCompile>
+    <ClCompile Include="permute_string.cpp">
+      <Filter>Backtracking</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

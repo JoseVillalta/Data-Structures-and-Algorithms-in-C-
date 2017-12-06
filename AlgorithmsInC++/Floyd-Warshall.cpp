@@ -14,7 +14,6 @@ void FloydWarshallShortestPath::Init()
 void FloydWarshallShortestPath::InsertEdget(int x, int y, int weight)
 {
     g->weight[x][y] = weight;
-    g->weight[y][x] = weight;
 }
 
 void FloydWarshallShortestPath::ComputeShortestPath()
