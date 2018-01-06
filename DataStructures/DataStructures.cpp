@@ -11,6 +11,7 @@
 #include "StackTests.h"
 #include "LinkedListTests.h"
 #include "RedBlackTreeTests.h"
+#include "BinaryIndexedTreeTest.h"
 #include <iostream>
 
 using namespace std;
@@ -26,6 +27,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto stackTests = new StackTests();
     auto LinkedListTest = new LinkedListTests();
     auto RBTreeTest = new RedBlackTreeTests();
+	auto FenwickTest = new FenwickTreeTest();
     
     treeTests->DoTests();
     charTreeTests->DoTests();
@@ -36,6 +38,7 @@ int _tmain(int argc, _TCHAR* argv[])
     stackTests->DoTests();
     LinkedListTest->DoTests();
     RBTreeTest->DoTests();
+	FenwickTest->DoTests();
 
     return 0;
 }

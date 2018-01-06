@@ -11,7 +11,7 @@ bool SubsetBuilder::is_a_solution(int a[], int k, string input)
 
 int * SubsetBuilder::construct_candidates()
 {
-    int * arr = new int[];
+    int * arr = new int[2];
     arr[0] = 0;
     arr[1] = 1;
     return arr;

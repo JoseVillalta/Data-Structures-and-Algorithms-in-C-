@@ -161,6 +161,12 @@
     <ClInclude Include="MinHeap.h">
       <Filter>Heaps</Filter>
     </ClInclude>
+    <ClInclude Include="BinaryIndexedTree.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryIndexedTreeTest.h">
+      <Filter>Tests\TreeTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -237,6 +243,12 @@
     </ClCompile>
     <ClCompile Include="MinHeap.cpp">
       <Filter>Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryIndexedTree.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryIndexedTreeTest.cpp">
+      <Filter>Tests\TreeTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
