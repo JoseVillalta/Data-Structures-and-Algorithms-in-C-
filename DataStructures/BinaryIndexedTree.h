@@ -10,7 +10,6 @@ public:
 	BinaryIndexedTree(const vector<int>& Arg);
 	void Increase(int index, int delta);
 	int GetSum(int left, int right);
-	~BinaryIndexedTree();
 private:
 	
 	int Sum(int index);

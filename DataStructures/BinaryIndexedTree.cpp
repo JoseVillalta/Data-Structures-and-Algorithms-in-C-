@@ -9,11 +9,6 @@ BinaryIndexedTree::BinaryIndexedTree(const vector<int>& Arg)
 		Increase(i, Arg[i]);
 }
 
-
-BinaryIndexedTree::~BinaryIndexedTree()
-{
-}
-
 void BinaryIndexedTree::Increase(int index, int delta)
 {
 	for (; index < (int)tree.size(); index |= index + 1)

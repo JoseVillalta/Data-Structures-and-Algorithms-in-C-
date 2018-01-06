@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryIndexedTree.h" />
+    <ClInclude Include="BinaryIndexedTreeTest.h" />
     <ClInclude Include="common\swap.h" />
     <ClInclude Include="DLinkedList.h" />
     <ClInclude Include="DoubleLinkedListNode.h" />
@@ -121,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinaryIndexedTree.cpp" />
+    <ClCompile Include="BinaryIndexedTreeTest.cpp" />
     <ClCompile Include="DataStructures.cpp" />
     <ClCompile Include="DLinkedList.cpp" />
     <ClCompile Include="Hash.cpp" />

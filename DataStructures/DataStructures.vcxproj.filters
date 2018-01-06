@@ -164,6 +164,9 @@
     <ClInclude Include="BinaryIndexedTree.h">
       <Filter>Trees</Filter>
     </ClInclude>
+    <ClInclude Include="BinaryIndexedTreeTest.h">
+      <Filter>Tests\TreeTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -243,6 +246,9 @@
     </ClCompile>
     <ClCompile Include="BinaryIndexedTree.cpp">
       <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryIndexedTreeTest.cpp">
+      <Filter>Tests\TreeTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
