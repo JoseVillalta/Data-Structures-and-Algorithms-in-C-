@@ -80,9 +80,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AllPathsTests.h" />
     <ClInclude Include="AllPermutationsTest.h" />
     <ClInclude Include="AllSubsetsTests.h" />
     <ClInclude Include="backtracking.h" />
+    <ClInclude Include="ConstructAllPaths.h" />
     <ClInclude Include="construct_all_permutations.h" />
     <ClInclude Include="construct_all_subsets.h" />
     <ClInclude Include="DepthFirstSearch.h" />
@@ -94,6 +96,8 @@
     <ClInclude Include="KrugalsMSTTest.h" />
     <ClInclude Include="KruskalsAlgorithm.h" />
     <ClInclude Include="MSTTest.h" />
+    <ClInclude Include="MultiSet.h" />
+    <ClInclude Include="MultiSetTests.h" />
     <ClInclude Include="NetworkFlow.h" />
     <ClInclude Include="permute_string.h" />
     <ClInclude Include="PrimsAlgorithm.h" />
@@ -147,9 +151,11 @@
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
     <ClCompile Include="AlgorithmsInC++.cpp" />
+    <ClCompile Include="AllPathsTests.cpp" />
     <ClCompile Include="AllPermutationsTest.cpp" />
     <ClCompile Include="AllSubsetsTests.cpp" />
     <ClCompile Include="backtracking.cpp" />
+    <ClCompile Include="ConstructAllPaths.cpp" />
     <ClCompile Include="construct_all_permutations.cpp" />
     <ClCompile Include="construct_all_subsets.cpp" />
     <ClCompile Include="DepthFirstSearch.cpp" />
@@ -161,6 +167,8 @@
     <ClCompile Include="KrugalsMSTTest.cpp" />
     <ClCompile Include="KruskalsAlgorithm.cpp" />
     <ClCompile Include="MSTTest.cpp" />
+    <ClCompile Include="MultiSet.cpp" />
+    <ClCompile Include="MultiSetTests.cpp" />
     <ClCompile Include="NetworkFlow.cpp" />
     <ClCompile Include="permute_string.cpp" />
     <ClCompile Include="PrimsAlgorithm.cpp" />

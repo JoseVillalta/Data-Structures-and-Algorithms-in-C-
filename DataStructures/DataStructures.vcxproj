@@ -102,6 +102,7 @@
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StackTests.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SuffixTree.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tests\HeapTests\MaxPQTests.h" />
     <ClInclude Include="Tests\HeapTests\YoungTableauTests.h" />
@@ -143,6 +144,9 @@
     <ClCompile Include="Trees\BSTA.cpp" />
     <ClCompile Include="Trees\BSTFactory.cpp" />
     <ClCompile Include="Trees\RadixTree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SuffixTree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
