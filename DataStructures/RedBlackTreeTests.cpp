@@ -4,12 +4,13 @@
 #include "BinarySearchTree.h"
 #include <iostream>
 #include "../AlgorithmsInC++/Tests/Support/TimeElapsed.h"
+#include "../AlgorithmsInC++/Tests/Support/RandomVector.h"
 
 using namespace std;
 void RedBlackTreeTests::DoTests()
 {
 	HappyPathTest();
-	//PerfTest();
+	PerfTest();
 }
 
 void RedBlackTreeTests::HappyPathTest()
@@ -36,9 +37,16 @@ void RedBlackTreeTests::HappyPathTest()
 void RedBlackTreeTests::PerfTest()
 {
 	int limit = 10;
-	while (limit < 100000000)
+	while (limit < 10000000)
 	{
 		CompareWithBST(limit);
+		limit = limit * 10;
+	}
+
+	limit = 10;
+	while (limit < 10000000)
+	{
+		CompareWithBSTv2(limit);
 		limit = limit * 10;
 	}
 
@@ -112,3 +120,68 @@ void RedBlackTreeTests::CompareWithBST(int limit)
 	ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
 	cout << " Elapsed Time Searching Red Black Tree: " << ElapsedMicroseconds.QuadPart << endl;
 }
+
+void RedBlackTreeTests::CompareWithBSTv2(int limit)
+{
+	auto bst = new BST<int>();
+	auto rbt = new RedBlackTree();
+	auto v = new vector<int>();
+
+	int counter = 0;
+
+	cout << "Inserting " << limit << " values to Binary Search Tree using same vector (usv) " << endl;
+	LARGE_INTEGER StartingTime, EndingTime, ElapsedMicroseconds;
+	LARGE_INTEGER Frequency;
+
+	QueryPerformanceFrequency(&Frequency);
+	QueryPerformanceCounter(&StartingTime);
+	// Start Time BST
+
+	GetRandomVector(*v, limit);
+	for(auto i : *v)
+	{
+		bst->Insert(i);
+	}
+	QueryPerformanceCounter(&EndingTime);
+	ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+	cout << " (usv) Elapsed Microseconds for BST is: " << ElapsedMicroseconds.QuadPart << endl;
+
+
+
+	cout << " Inserting " << limit << " values to Red Black Tree (usv) " << endl;
+	QueryPerformanceCounter(&StartingTime);
+	for (auto i : *v)
+	{
+		rbt->Insert(i);
+	}
+	QueryPerformanceCounter(&EndingTime);
+	ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+	cout << " (usv) Elapsed Microseconds for RB Tree: " << ElapsedMicroseconds.QuadPart << endl;
+
+	auto v2 = new vector<int>();
+	GetRandomVector(*v2, limit);
+
+	cout << " (usv) Searching BST " << limit << " times" << endl;
+	QueryPerformanceCounter(&StartingTime);
+	for(auto i : *v2)
+	{
+		bst->Search(i);
+	}
+	QueryPerformanceCounter(&EndingTime);
+	ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+	cout << " (usv) Elapsed Microseconds in BST Search: " << ElapsedMicroseconds.QuadPart << endl;
+
+
+	cout << " (usv) Searching Red Black Tree " << limit << " times" << endl;
+	QueryPerformanceCounter(&StartingTime);
+	for (auto i : *v2)
+	{
+		rbt->Search(i);
+	}
+	QueryPerformanceCounter(&EndingTime);
+	ElapsedMicroseconds = GetTimeElapsed(StartingTime, EndingTime, Frequency);
+	cout << " Elapsed Time Searching Red Black Tree: " << ElapsedMicroseconds.QuadPart << endl;
+	delete v;
+	delete v2;
+}
+
