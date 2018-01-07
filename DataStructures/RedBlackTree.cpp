@@ -14,6 +14,26 @@ void RedBlackTree::InOrderHelper(RBTreeNode<int>* root)
     InOrderHelper(root->right);
 }
 
+RBTreeNode<int> * RedBlackTree::Search(int val)
+{
+	return BSTSearch(root, val);
+}
+
+RBTreeNode<int>* RedBlackTree::BSTSearch(RBTreeNode<int>* root, int val)
+{
+	if (root == nullptr) return root;
+	if (root->data == val) return root;
+
+	if(root->data > val)
+	{
+		return BSTSearch(root->left, val);
+	}
+	else
+	{
+		return BSTSearch(root->right, val);
+	}
+}
+
 
 void RedBlackTree::InOrder()
 {
@@ -55,7 +75,7 @@ RBTreeNode<int> * RedBlackTree::BSTInsert(RBTreeNode<int>* root, RBTreeNode<int>
         root->left = BSTInsert(root->left, pt);
         root->left->parent = root;
     }
-    else if (pt->data > root->data)
+    else if (pt->data >= root->data)
     {
         root->right = BSTInsert(root->right, pt);
         root->right->parent = root;
@@ -201,9 +221,9 @@ void RedBlackTree::FixViolations(RBTreeNode<int>* &root, RBTreeNode<int>* &pt)
 void RedBlackTree::Insert(int val)
 {
     auto pt = new RBTreeNode<int>(val);
+	pt->color = RED;
     root = BSTInsert(root, pt);
     FixViolations(root, pt);
-
 }
 void RedBlackTree::Delete()
 {

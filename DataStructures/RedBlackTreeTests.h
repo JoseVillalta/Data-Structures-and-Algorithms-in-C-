@@ -7,5 +7,8 @@ class RedBlackTreeTests
 {
 public:
     void DoTests();
+	void PerfTest();
+	void CompareWithBST(int limit);
+	void HappyPathTest();
 
 };
