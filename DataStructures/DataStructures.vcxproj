@@ -88,7 +88,7 @@
     <ClInclude Include="DoubleLinkedListNode.h" />
     <ClInclude Include="Graphs\EdgeNode.h" />
     <ClInclude Include="Graphs\Graph.h" />
-    <ClInclude Include="Hash.h" />
+    <ClInclude Include="HashMap.h" />
     <ClInclude Include="HashNode.h" />
     <ClInclude Include="Heaps\PQNode.h" />
     <ClInclude Include="Heaps\PriorityQueue.h" />
@@ -127,7 +127,7 @@
     <ClCompile Include="BinaryIndexedTreeTest.cpp" />
     <ClCompile Include="DataStructures.cpp" />
     <ClCompile Include="DLinkedList.cpp" />
-    <ClCompile Include="Hash.cpp" />
+    <ClCompile Include="HashMap.cpp" />
     <ClCompile Include="Heaps\PriorityQueue.cpp" />
     <ClCompile Include="Heaps\YoungTableau.cpp" />
     <ClCompile Include="LinkedList.cpp" />
