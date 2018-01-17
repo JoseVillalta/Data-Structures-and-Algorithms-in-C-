@@ -29,6 +29,9 @@
 #include "AllSubsetsTests.h"
 #include "Two-Coloring-GraphTest.h"
 #include "AllPermutationsTest.h"
+#include "MultiSetTests.h"
+#include "AllPathsTests.h"
+
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -60,6 +63,9 @@ int _tmain(int argc, _TCHAR* argv[])
     auto allSubsets = new AllSubSetsTests();
     auto twoColoring = new TwoColoringGraphTest();
     auto allPerms = new AllPermutationsTest();
+    auto multiSet = new MultiSetsTest();
+    auto allPaths = new AllPathsTests();
+
     lst->DoTests();
     bst->DoTests();
  //   spt->DoTests();
@@ -87,6 +93,8 @@ int _tmain(int argc, _TCHAR* argv[])
     allSubsets->DoTests();
     twoColoring->DoTests();
     allPerms->DoTests();
+    multiSet->DoTests();
+    allPaths->DoTests();
     return 0;
 }
 

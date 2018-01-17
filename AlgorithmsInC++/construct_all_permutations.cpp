@@ -18,8 +18,8 @@ void PermutationBuilder::Backtrack(int a[], int k, int n)
         ncandidates = ConstructCandidates(a, k, n, c);
         for (i = 0; i < ncandidates; i++)
         {
-            a[k] = c[i];
-            Backtrack(a, k, n);
+            a[k] = c[i];         
+            Backtrack(a, k, n);     
         }
     }
 }
