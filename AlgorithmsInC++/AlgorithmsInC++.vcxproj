@@ -94,6 +94,7 @@
     <ClInclude Include="GraphTraversal\BreadthFirstSearch.h" />
     <ClInclude Include="KrugalsMSTTest.h" />
     <ClInclude Include="KruskalsAlgorithm.h" />
+    <ClInclude Include="MatrixBFS.h" />
     <ClInclude Include="MSTTest.h" />
     <ClInclude Include="NetworkFlow.h" />
     <ClInclude Include="permute_string.h" />
@@ -161,6 +162,7 @@
     <ClCompile Include="GraphTraversal\BreadthFirstSearch.cpp" />
     <ClCompile Include="KrugalsMSTTest.cpp" />
     <ClCompile Include="KruskalsAlgorithm.cpp" />
+    <ClCompile Include="MatrixBFS.cpp" />
     <ClCompile Include="MSTTest.cpp" />
     <ClCompile Include="NetworkFlow.cpp" />
     <ClCompile Include="permute_string.cpp" />

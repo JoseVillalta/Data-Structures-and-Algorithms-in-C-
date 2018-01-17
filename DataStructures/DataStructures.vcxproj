@@ -81,6 +81,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdjecencyMatrix.h" />
     <ClInclude Include="BinaryIndexedTree.h" />
     <ClInclude Include="BinaryIndexedTreeTest.h" />
     <ClInclude Include="common\swap.h" />
