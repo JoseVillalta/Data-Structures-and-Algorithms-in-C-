@@ -9,4 +9,6 @@ public:
     void DoTests();
     void TestTwoColoring();
     void TestBiparteGraph();
+	void TestBiColor();
+	void ThisTestShouldFail();
 };
