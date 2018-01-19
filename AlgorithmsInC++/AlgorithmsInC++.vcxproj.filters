@@ -255,6 +255,27 @@
     <ClInclude Include="permute_string.h">
       <Filter>Backtracking</Filter>
     </ClInclude>
+    <ClInclude Include="AllPathsTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructAllPaths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixBFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiSetTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexCover.h">
+      <Filter>GraphTraversal</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexCoverTests.h">
+      <Filter>Tests\GraphTraversalTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -430,6 +451,27 @@
     </ClCompile>
     <ClCompile Include="permute_string.cpp">
       <Filter>Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="AllPathsTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructAllPaths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixBFS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiSetTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexCover.cpp">
+      <Filter>GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexCoverTests.cpp">
+      <Filter>Tests\GraphTraversalTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

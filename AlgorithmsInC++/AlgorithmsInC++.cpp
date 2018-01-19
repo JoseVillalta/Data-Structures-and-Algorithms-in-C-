@@ -31,6 +31,7 @@
 #include "AllPermutationsTest.h"
 #include "MultiSetTests.h"
 #include "AllPathsTests.h"
+#include "VertexCoverTests.h"
 
 using namespace std;
 
@@ -65,6 +66,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto allPerms = new AllPermutationsTest();
     auto multiSet = new MultiSetsTest();
     auto allPaths = new AllPathsTests();
+	auto vertexCover = new VertexCoverTests();
 
     lst->DoTests();
     bst->DoTests();
@@ -95,6 +97,7 @@ int _tmain(int argc, _TCHAR* argv[])
     allPerms->DoTests();
     multiSet->DoTests();
     allPaths->DoTests();
+	vertexCover->DoTests();
     return 0;
 }
 

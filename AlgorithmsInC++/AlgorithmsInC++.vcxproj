@@ -149,6 +149,8 @@
     <ClInclude Include="TopologicalSortTest.h" />
     <ClInclude Include="Two-Coloring-Graphs.h" />
     <ClInclude Include="Two-Coloring-GraphTest.h" />
+    <ClInclude Include="VertexCover.h" />
+    <ClInclude Include="VertexCoverTests.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\DataStructures\Trees\BinarySearchTree.cpp" />
@@ -214,6 +216,8 @@
     <ClCompile Include="TopologicalSortTest.cpp" />
     <ClCompile Include="Two-Coloring-Graphs.cpp" />
     <ClCompile Include="Two-Coloring-GraphTest.cpp" />
+    <ClCompile Include="VertexCover.cpp" />
+    <ClCompile Include="VertexCoverTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataStructures\DataStructures.vcxproj">
