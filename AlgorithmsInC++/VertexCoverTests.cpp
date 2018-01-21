@@ -9,6 +9,7 @@ void VertexCoverTests::DoTests()
 	graph->InitSearch();
 	graph->InsertEdge(1, 3, false);
 	graph->InsertEdge(1, 2, false);
+	graph->InsertEdge(1, 9, false);
 	graph->InsertEdge(2, 4, false);
 	graph->InsertEdge(4, 5, false);
 	graph->InsertEdge(5, 6, false);
