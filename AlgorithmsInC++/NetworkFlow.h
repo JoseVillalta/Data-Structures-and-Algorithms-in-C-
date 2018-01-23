@@ -1,7 +1,7 @@
 #pragma once
 #define MAXV 1000 //Maximum number of edges
 
-typedef struct
+struct flowEdgeNode
 {
     int v;
     int capacity;
@@ -9,7 +9,7 @@ typedef struct
     int residual;
     flowEdgeNode * next;
 
-}flowEdgeNode;
+};
 
 typedef struct
 {
