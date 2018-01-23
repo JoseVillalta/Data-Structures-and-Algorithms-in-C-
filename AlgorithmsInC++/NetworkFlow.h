@@ -24,11 +24,14 @@ class NetworkFlow
 {
 public:
     NetGraph * g;
+	int parents[MAXV];
     void add_residual_edges();
     void initialize_search();
-    void bfs();
-    bool valid_edge();
-    void find_edge();
-    void augment_path();
+    void bfs(int);
+    bool valid_edge(flowEdgeNode * e);
+    flowEdgeNode * find_edge(int,int);
+    void augment_path(int,int,int);
+	void netflow(int, int);
+	int path_volume(int, int);
 
 };
