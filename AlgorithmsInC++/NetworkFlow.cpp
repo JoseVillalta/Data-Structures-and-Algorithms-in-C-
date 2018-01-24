@@ -1,7 +1,13 @@
 #include "NetworkFlow.h"
 #include "algorithm"
+#include <queue>
 
 using namespace std;
+
+NetworkFlow::NetworkFlow()
+{
+	g = new NetGraph();
+}
 
 void NetworkFlow::netflow(int source, int sink)
 {
@@ -19,7 +25,6 @@ void NetworkFlow::netflow(int source, int sink)
 		bfs(source);
 		volume = path_volume(source, sink);
 	}
-
 }
 
 void NetworkFlow::add_residual_edges()
@@ -56,7 +61,12 @@ flowEdgeNode * NetworkFlow::find_edge(int x, int y)
 
 void NetworkFlow::initialize_search()
 {
-
+	for (int i = 0; i < MAXV; i++)
+	{
+		discovered[i] = false;
+		processed[i] = false;
+		parents[i] = -1;
+	}
 }
 
 bool NetworkFlow::valid_edge(flowEdgeNode * e)
@@ -67,7 +77,27 @@ bool NetworkFlow::valid_edge(flowEdgeNode * e)
 
 void NetworkFlow::bfs(int source)
 {
+	queue<int> q;
+	q.push(source);
+	discovered[source] = true;
 
+	while (!q.empty())
+	{
+		int p = q.front();
+		q.pop();
+		auto edge = g->edges[p];
+		while (edge != nullptr)
+		{
+			int y = edge->v;
+			if (discovered[y] == false && edge->residual > 0)
+			{
+				parents[y] = p;
+				discovered[y] = true;
+				q.push(y);
+			}
+			edge = edge->next;
+		}
+	}
 }
 
 int NetworkFlow::path_volume(int start, int end)
@@ -79,4 +109,25 @@ int NetworkFlow::path_volume(int start, int end)
 		return e->residual;
 	else
 		return min(path_volume(start, parents[end]), e->residual);
+}
+
+void NetworkFlow::insert_edge(int x, int y, int cap)
+{
+	auto e = new flowEdgeNode();
+	e->v = y;
+	e->capacity = cap;
+	e->residual = cap;
+	e->flow = 0;
+	e->next = g->edges[x];
+	g->edges[x] = e;
+
+	// Reverse Edge as well
+	auto e2 = new flowEdgeNode();
+	e2->v = x;
+	e2->capacity = cap;
+	e2->residual = 0;
+	e2->flow = 0;
+	e2->next = g->edges[y];
+	g->edges[y] = e2;
+
 }

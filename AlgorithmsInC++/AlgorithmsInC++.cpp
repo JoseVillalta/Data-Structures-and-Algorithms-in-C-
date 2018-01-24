@@ -32,6 +32,7 @@
 #include "MultiSetTests.h"
 #include "AllPathsTests.h"
 #include "VertexCoverTests.h"
+#include "NetworkFlowTests.h"
 
 using namespace std;
 
@@ -67,6 +68,7 @@ int _tmain(int argc, _TCHAR* argv[])
     auto multiSet = new MultiSetsTest();
     auto allPaths = new AllPathsTests();
 	auto vertexCover = new VertexCoverTests();
+	auto netflow = new NetworkFlowTests();
 
     lst->DoTests();
     bst->DoTests();
@@ -98,6 +100,7 @@ int _tmain(int argc, _TCHAR* argv[])
     multiSet->DoTests();
     allPaths->DoTests();
 	vertexCover->DoTests();
+	netflow->DoTests();
     return 0;
 }
 

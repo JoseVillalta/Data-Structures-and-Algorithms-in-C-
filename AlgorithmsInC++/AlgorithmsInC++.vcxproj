@@ -101,6 +101,7 @@
     <ClInclude Include="MultiSet.h" />
     <ClInclude Include="MultiSetTests.h" />
     <ClInclude Include="NetworkFlow.h" />
+    <ClInclude Include="NetworkFlowTests.h" />
     <ClInclude Include="permute_string.h" />
     <ClInclude Include="PrimsAlgorithm.h" />
     <ClInclude Include="Search\BinarySearch.h" />
@@ -175,6 +176,7 @@
     <ClCompile Include="MultiSet.cpp" />
     <ClCompile Include="MultiSetTests.cpp" />
     <ClCompile Include="NetworkFlow.cpp" />
+    <ClCompile Include="NetworkFlowTests.cpp" />
     <ClCompile Include="permute_string.cpp" />
     <ClCompile Include="PrimsAlgorithm.cpp" />
     <ClCompile Include="Search\BinarySearch.cpp" />

@@ -24,7 +24,10 @@ class NetworkFlow
 {
 public:
     NetGraph * g;
+	NetworkFlow();
 	int parents[MAXV];
+	bool discovered[MAXV];
+	bool processed[MAXV];
     void add_residual_edges();
     void initialize_search();
     void bfs(int);
@@ -33,5 +36,6 @@ public:
     void augment_path(int,int,int);
 	void netflow(int, int);
 	int path_volume(int, int);
+	void insert_edge(int, int, int);
 
 };

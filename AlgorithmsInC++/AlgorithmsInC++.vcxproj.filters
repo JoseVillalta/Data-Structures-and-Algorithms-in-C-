@@ -276,6 +276,9 @@
     <ClInclude Include="VertexCoverTests.h">
       <Filter>Tests\GraphTraversalTests</Filter>
     </ClInclude>
+    <ClInclude Include="NetworkFlowTests.h">
+      <Filter>Tests\GraphTraversalTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -471,6 +474,9 @@
       <Filter>GraphTraversal</Filter>
     </ClCompile>
     <ClCompile Include="VertexCoverTests.cpp">
+      <Filter>Tests\GraphTraversalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkFlowTests.cpp">
       <Filter>Tests\GraphTraversalTests</Filter>
     </ClCompile>
   </ItemGroup>
