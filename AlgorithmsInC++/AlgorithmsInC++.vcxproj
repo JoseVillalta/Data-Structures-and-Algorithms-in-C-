@@ -85,6 +85,7 @@
     <ClInclude Include="AllPermutationsTest.h" />
     <ClInclude Include="AllSubsetsTests.h" />
     <ClInclude Include="backtracking.h" />
+    <ClInclude Include="Bellman-Ford.h" />
     <ClInclude Include="ConstructAllPaths.h" />
     <ClInclude Include="construct_all_permutations.h" />
     <ClInclude Include="construct_all_subsets.h" />
@@ -160,6 +161,7 @@
     <ClCompile Include="AllPermutationsTest.cpp" />
     <ClCompile Include="AllSubsetsTests.cpp" />
     <ClCompile Include="backtracking.cpp" />
+    <ClCompile Include="Bellman-Ford.cpp" />
     <ClCompile Include="ConstructAllPaths.cpp" />
     <ClCompile Include="construct_all_permutations.cpp" />
     <ClCompile Include="construct_all_subsets.cpp" />

@@ -276,8 +276,8 @@
     <ClInclude Include="VertexCoverTests.h">
       <Filter>Tests\GraphTraversalTests</Filter>
     </ClInclude>
-    <ClInclude Include="NetworkFlowTests.h">
-      <Filter>Tests\GraphTraversalTests</Filter>
+    <ClInclude Include="Bellman-Ford.h">
+      <Filter>ShortestPath</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -476,8 +476,8 @@
     <ClCompile Include="VertexCoverTests.cpp">
       <Filter>Tests\GraphTraversalTests</Filter>
     </ClCompile>
-    <ClCompile Include="NetworkFlowTests.cpp">
-      <Filter>Tests\GraphTraversalTests</Filter>
+    <ClCompile Include="Bellman-Ford.cpp">
+      <Filter>ShortestPath</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
