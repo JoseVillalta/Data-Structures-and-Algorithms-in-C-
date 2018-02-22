@@ -1,10 +1,13 @@
 #include "ConstructAllPaths.h"
+#include <iostream>
+
+using namespace std;
 
 void PathBuilder::Backtrack(int a[], int k, int start, int end)
 {
 	if (IsSolution(a, k, end))
     {
-        ProcessSolution();
+        ProcessSolution(a,k);
     }
     else
     {
@@ -57,9 +60,14 @@ bool PathBuilder::IsSolution(int a[], int k, int t)
     return (a[k] == t);
 }
 
-void PathBuilder::ProcessSolution()
+void PathBuilder::ProcessSolution(int a[], int k)
 {
     pathCount++;
+	for (int i = 1; i <= k; i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
 }
 
 void PathBuilder::MakeMove()

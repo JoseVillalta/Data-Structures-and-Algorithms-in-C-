@@ -9,7 +9,7 @@ public:
     int ConstructCandidates(int a[], int k, int n, int c[]);
 	void Backtrack(int a[], int k, int start, int end);
     bool IsSolution(int a[], int k, int t);
-    void ProcessSolution();
+    void ProcessSolution(int a[], int k);
     void MakeMove();
     void UnMakeMove();
     Graph * g;
