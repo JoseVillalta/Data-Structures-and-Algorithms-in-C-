@@ -6,8 +6,8 @@ class PathBuilder
 {
 public:
     int GetAllPaths(Graph * g, int s, int t);
-    void ConstructCandidates(int a[], int k, int n, int c[], int * ncandidates);
-    void Backtrack(int a[], int k, int n);
+    int ConstructCandidates(int a[], int k, int n, int c[]);
+	void Backtrack(int a[], int k, int start, int end);
     bool IsSolution(int a[], int k, int t);
     void ProcessSolution();
     void MakeMove();

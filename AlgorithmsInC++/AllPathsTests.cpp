@@ -14,6 +14,7 @@ void AllPathsTests::AllPathTest()
 
     auto g = new Graph();
     g->nvertices = 6;
+	
 
     InsertEdge(g, 1, 2, false);
     InsertEdge(g, 1, 3, false);
@@ -34,7 +35,7 @@ void AllPathsTests::AllPathTest()
 void AllPathsTests::InsertEdge(Graph* g, int x, int y, bool directed)
 {
     auto node = new edgenode();
-    node->y - y;
+    node->y = y;
     node->next = g->edges[x];
     g->edges[x] = node;
 
